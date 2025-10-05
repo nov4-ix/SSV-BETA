@@ -1,0 +1,524 @@
+/**
+ * 🎛️ Unified Knobs - Perillas Unificadas y Proporcionales
+ * Asegura que todas las perillas tengan el mismo tamaño y estética consistente
+ * Compatible con Ghost Studio, The Creator, Waves Plugins y otros componentes
+ */
+
+/* ===== PERILLAS BASE UNIFICADAS ===== */
+.knob,
+.knob-arturia,
+.knob.literary,
+.expressiveness-knob .knob,
+.ghost-studio .knob,
+.the-creator .knob,
+.waves-plugins .knob {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  background: 
+    radial-gradient(circle at 25% 25%, #6a6a6a, #3a3a3a 40%, #2a2a2a 70%, #1a1a1a 100%),
+    linear-gradient(145deg, #4a4a4a 0%, #2a2a2a 100%) !important;
+  border: 3px solid #666 !important;
+  position: relative !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.5),
+    inset 0 3px 6px rgba(255, 255, 255, 0.1),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4) !important;
+  margin: 0 auto 12px auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Anillo interior de la perilla */
+.knob::after,
+.knob-arturia::after,
+.knob.literary::after,
+.expressiveness-knob .knob::after,
+.ghost-studio .knob::after,
+.the-creator .knob::after,
+.waves-plugins .knob::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 70%),
+    linear-gradient(145deg, #3a3a3a 0%, #1a1a1a 100%) !important;
+  border: 1px solid #555 !important;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Estados hover */
+.knob:hover,
+.knob-arturia:hover,
+.knob.literary:hover,
+.expressiveness-knob .knob:hover,
+.ghost-studio .knob:hover,
+.the-creator .knob:hover,
+.waves-plugins .knob:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.6),
+    inset 0 3px 6px rgba(255, 255, 255, 0.15),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.5) !important;
+  border-color: #777 !important;
+}
+
+/* Estados active */
+.knob:active,
+.knob-arturia:active,
+.knob.literary:active,
+.expressiveness-knob .knob:active,
+.ghost-studio .knob:active,
+.the-creator .knob:active,
+.waves-plugins .knob:active {
+  transform: translateY(0) scale(1.02) !important;
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ===== INDICADORES DE PERILLA UNIFICADOS ===== */
+.knob-indicator,
+.knob-indicator-arturia,
+.knob-pointer,
+.expressiveness-knob .knob-indicator,
+.ghost-studio .knob-indicator,
+.the-creator .knob-indicator,
+.waves-plugins .knob-indicator {
+  position: absolute !important;
+  top: 12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 4px !important;
+  height: 24px !important;
+  background: linear-gradient(180deg, #ff6b35 0%, #cc5529 50%, #ff6b35 100%) !important;
+  border-radius: 2px !important;
+  box-shadow: 
+    0 0 12px rgba(255, 107, 53, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  transform-origin: 50% 30px !important;
+  z-index: 10 !important;
+}
+
+/* ===== CONTENEDORES DE PERILLAS UNIFICADOS ===== */
+.knob-container,
+.knob-container-arturia,
+.expressiveness-knob,
+.ghost-studio .knob-container,
+.the-creator .knob-container,
+.waves-plugins .knob-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-width: 120px !important;
+  padding: 16px !important;
+  background: linear-gradient(145deg, #2d2d2d 0%, #1a1a1a 100%) !important;
+  border-radius: 12px !important;
+  border: 1px solid #404040 !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  margin: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.knob-container:hover,
+.knob-container-arturia:hover,
+.expressiveness-knob:hover,
+.ghost-studio .knob-container:hover,
+.the-creator .knob-container:hover,
+.waves-plugins .knob-container:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ===== ETIQUETAS DE PERILLAS UNIFICADAS ===== */
+.knob-label,
+.knob-label-arturia,
+.expressiveness-control label,
+.ghost-studio .knob-label,
+.the-creator .knob-label,
+.waves-plugins .knob-label {
+  text-align: center !important;
+  min-height: 80px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 4px !important;
+}
+
+.knob-name,
+.knob-name-arturia,
+.expressiveness-control label,
+.ghost-studio .knob-name,
+.the-creator .knob-name,
+.waves-plugins .knob-name {
+  display: block !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #cccccc !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  margin-bottom: 6px !important;
+}
+
+.knob-value,
+.knob-value-arturia,
+.knob-center .knob-value,
+.expressiveness-knob .knob-value,
+.ghost-studio .knob-value,
+.the-creator .knob-value,
+.waves-plugins .knob-value {
+  display: block !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #00bfff !important;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.5) !important;
+  margin-bottom: 6px !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+.knob-description,
+.knob-description-arturia,
+.expressiveness-control .knob-description,
+.ghost-studio .knob-description,
+.the-creator .knob-description,
+.waves-plugins .knob-description {
+  display: block !important;
+  font-size: 10px !important;
+  color: #888 !important;
+  line-height: 1.3 !important;
+  font-style: italic !important;
+  text-align: center !important;
+}
+
+/* ===== INPUTS OCULTOS UNIFICADOS ===== */
+.knob-input,
+.knob-input-arturia,
+.knob-slider,
+.expressiveness-knob .knob-slider,
+.ghost-studio .knob-input,
+.the-creator .knob-slider,
+.waves-plugins .knob-input {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 80px !important;
+  height: 80px !important;
+  cursor: pointer !important;
+  z-index: 5 !important;
+}
+
+/* ===== GRID DE PERILLAS UNIFICADO ===== */
+.knobs-grid,
+.knobs-grid-arturia,
+.expressiveness-control,
+.ghost-studio .knobs-grid,
+.the-creator .knobs-grid,
+.waves-plugins .knobs-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+  gap: 20px !important;
+  align-items: start !important;
+  padding: 20px !important;
+  margin-top: 20px !important;
+}
+
+/* ===== SECCIÓN DE PERILLAS UNIFICADA ===== */
+.knobs-section,
+.knobs-section-arturia,
+.expressiveness-control,
+.ghost-studio .knobs-section,
+.the-creator .knobs-section,
+.waves-plugins .knobs-section {
+  background: linear-gradient(145deg, #2d2d2d 0%, #1a1a1a 100%) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin: 20px 0 !important;
+  border: 1px solid #404040 !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  clear: both !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.knobs-section h3,
+.knobs-section-arturia h3,
+.expressiveness-control h3,
+.ghost-studio .knobs-section h3,
+.the-creator .knobs-section h3,
+.waves-plugins .knobs-section h3 {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin: 0 0 20px 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  text-align: center !important;
+}
+
+/* ===== CENTRO DE PERILLA PARA VALORES ===== */
+.knob-center,
+.knob-center-arturia,
+.expressiveness-knob .knob-center,
+.ghost-studio .knob-center,
+.the-creator .knob-center,
+.waves-plugins .knob-center {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid #1d2330 !important;
+  z-index: 2 !important;
+}
+
+/* ===== ANIMACIONES UNIFICADAS ===== */
+@keyframes pulse-glow-unified {
+  0%, 100% { 
+    box-shadow: 0 0 12px rgba(255, 107, 53, 0.8);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(255, 107, 53, 1);
+  }
+}
+
+.knob-indicator.active,
+.knob-indicator-arturia.active,
+.knob-pointer.active,
+.expressiveness-knob .knob-indicator.active,
+.ghost-studio .knob-indicator.active,
+.the-creator .knob-indicator.active,
+.waves-plugins .knob-indicator.active {
+  animation: pulse-glow-unified 2s ease-in-out infinite !important;
+}
+
+/* ===== RESPONSIVE DESIGN UNIFICADO ===== */
+@media (max-width: 1200px) {
+  .knobs-grid,
+  .knobs-grid-arturia,
+  .expressiveness-control,
+  .ghost-studio .knobs-grid,
+  .the-creator .knobs-grid,
+  .waves-plugins .knobs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .knob,
+  .knob-arturia,
+  .knob.literary,
+  .expressiveness-knob .knob,
+  .ghost-studio .knob,
+  .the-creator .knob,
+  .waves-plugins .knob {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .knob::after,
+  .knob-arturia::after,
+  .knob.literary::after,
+  .expressiveness-knob .knob::after,
+  .ghost-studio .knob::after,
+  .the-creator .knob::after,
+  .waves-plugins .knob::after {
+    width: 42px !important;
+    height: 42px !important;
+  }
+  
+  .knob-indicator,
+  .knob-indicator-arturia,
+  .knob-pointer,
+  .expressiveness-knob .knob-indicator,
+  .ghost-studio .knob-indicator,
+  .the-creator .knob-indicator,
+  .waves-plugins .knob-indicator {
+    height: 20px !important;
+    transform-origin: 50% 26px !important;
+  }
+  
+  .knob-input,
+  .knob-input-arturia,
+  .knob-slider,
+  .expressiveness-knob .knob-slider,
+  .ghost-studio .knob-input,
+  .the-creator .knob-slider,
+  .waves-plugins .knob-input {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .knobs-grid,
+  .knobs-grid-arturia,
+  .expressiveness-control,
+  .ghost-studio .knobs-grid,
+  .the-creator .knobs-grid,
+  .waves-plugins .knobs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .knob-center,
+  .knob-center-arturia,
+  .expressiveness-knob .knob-center,
+  .ghost-studio .knob-center,
+  .the-creator .knob-center,
+  .waves-plugins .knob-center {
+    width: 42px !important;
+    height: 42px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .knob,
+  .knob-arturia,
+  .knob.literary,
+  .expressiveness-knob .knob,
+  .ghost-studio .knob,
+  .the-creator .knob,
+  .waves-plugins .knob {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .knob::after,
+  .knob-arturia::after,
+  .knob.literary::after,
+  .expressiveness-knob .knob::after,
+  .ghost-studio .knob::after,
+  .the-creator .knob::after,
+  .waves-plugins .knob::after {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  .knob-indicator,
+  .knob-indicator-arturia,
+  .knob-pointer,
+  .expressiveness-knob .knob-indicator,
+  .ghost-studio .knob-indicator,
+  .the-creator .knob-indicator,
+  .waves-plugins .knob-indicator {
+    height: 16px !important;
+    transform-origin: 50% 22px !important;
+  }
+  
+  .knob-input,
+  .knob-input-arturia,
+  .knob-slider,
+  .expressiveness-knob .knob-slider,
+  .ghost-studio .knob-input,
+  .the-creator .knob-slider,
+  .waves-plugins .knob-input {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .knobs-grid,
+  .knobs-grid-arturia,
+  .expressiveness-control,
+  .ghost-studio .knobs-grid,
+  .the-creator .knobs-grid,
+  .waves-plugins .knobs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  
+  .knob-center,
+  .knob-center-arturia,
+  .expressiveness-knob .knob-center,
+  .ghost-studio .knob-center,
+  .the-creator .knob-center,
+  .waves-plugins .knob-center {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* ===== COLORES ESPECÍFICOS POR COMPONENTE ===== */
+/* Ghost Studio - Colores naranjas */
+.ghost-studio .knob-indicator,
+.ghost-studio .knob-indicator-arturia {
+  background: linear-gradient(180deg, #ff6b35 0%, #cc5529 50%, #ff6b35 100%) !important;
+  box-shadow: 
+    0 0 12px rgba(255, 107, 53, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* The Creator - Colores rosas */
+.the-creator .knob-indicator,
+.the-creator .knob-indicator-arturia {
+  background: linear-gradient(180deg, #ff49c3 0%, #cc3a9b 50%, #ff49c3 100%) !important;
+  box-shadow: 
+    0 0 12px rgba(255, 73, 195, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Waves Plugins - Colores azules */
+.waves-plugins .knob-indicator,
+.waves-plugins .knob-indicator-arturia {
+  background: linear-gradient(180deg, #00bfff 0%, #0080cc 50%, #00bfff 100%) !important;
+  box-shadow: 
+    0 0 12px rgba(0, 191, 255, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ===== ESTADOS ESPECIALES ===== */
+.knob-container.loading,
+.knob-container-arturia.loading,
+.expressiveness-knob.loading,
+.ghost-studio .knob-container.loading,
+.the-creator .knob-container.loading,
+.waves-plugins .knob-container.loading {
+  opacity: 0.7 !important;
+  pointer-events: none !important;
+}
+
+.knob-container.loading::after,
+.knob-container-arturia.loading::after,
+.expressiveness-knob.loading::after,
+.ghost-studio .knob-container.loading::after,
+.the-creator .knob-container.loading::after,
+.waves-plugins .knob-container.loading::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin: -15px 0 0 -15px !important;
+  border: 3px solid #333 !important;
+  border-top: 3px solid #00bfff !important;
+  border-radius: 50% !important;
+  animation: spin 1s linear infinite !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
