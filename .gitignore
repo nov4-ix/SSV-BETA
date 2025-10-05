@@ -80,4 +80,6 @@ tmp/
 temp/
 
 # Turbo
-.turbo
+.turbodist_electron/
+package.json.bak
+package.json.tmp

@@ -1,0 +1,33 @@
+directories:
+  output: dist_electron
+  buildResources: build
+  app: apps/nexus
+appId: com.son1kvers3.nexus
+productName: Son1kVers3
+asar: true
+files:
+  - filter:
+      - dist/**
+      - electron/**
+      - package.json
+extraMetadata:
+  main: electron/main.cjs
+mac:
+  category: public.app-category.music
+  target:
+    - dmg
+    - zip
+win:
+  target:
+    - nsis
+    - zip
+linux:
+  target:
+    - AppImage
+    - deb
+    - tar.gz
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false
+electronVersion: 38.2.1
