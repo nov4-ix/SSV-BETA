@@ -1,13 +1,30 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Dashboard } from './pages/Dashboard';
+import { Home } from './pages/Home';
+import { Login } from './pages/Login';
+import { MusicGenerator } from './components/MusicGenerator';
+import { AuthGuard } from './components/AuthGuard';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-    </Routes>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/studio" element={
+          <AuthGuard>
+            <MusicGenerator />
+          </AuthGuard>
+        } />
+        <Route path="/ghost-studio" element={
+          <AuthGuard>
+            <MusicGenerator />
+          </AuthGuard>
+        } />
+        {/* Add more routes as needed */}
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
