@@ -1,0 +1,291 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// USER MANAGEMENT
+// ============================================================================
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String?
+  passwordHash  String?
+  avatarUrl     String?
+  role          UserRole @default(USER)
+  
+  // OAuth
+  googleId      String?  @unique
+  githubId      String?  @unique
+  
+  // Subscription
+  subscriptionTier SubscriptionTier @default(FREE)
+  subscriptionStartDate DateTime?
+  subscriptionEndDate   DateTime?
+  stripeCustomerId String? @unique
+  stripeSubscriptionId String? @unique
+  
+  // Usage limits
+  generationsUsedThisMonth Int @default(0)
+  generationsLimit         Int @default(10)
+  storageUsedBytes        BigInt @default(0)
+  storageLimit            BigInt @default(1073741824) // 1GB
+  
+  // Account status
+  isEmailVerified Boolean @default(false)
+  isActive        Boolean @default(true)
+  lastLoginAt     DateTime?
+  
+  // Relations
+  tracks        Track[]
+  projects      Project[]
+  generations   Generation[]
+  refreshTokens RefreshToken[]
+  alvaeAccount  AlvaeAccount?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@index([email])
+  @@index([googleId])
+  @@index([githubId])
+  @@index([subscriptionTier])
+}
+
+enum UserRole {
+  USER
+  PRO
+  ADMIN
+  MODERATOR
+}
+
+enum SubscriptionTier {
+  FREE
+  STARTER
+  PRO
+  ENTERPRISE
+}
+
+// ============================================================================
+// ALVAE ACCOUNTS SYSTEM
+// ============================================================================
+
+model AlvaeAccount {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // ALVAE specific fields
+  role            AlvaeRole
+  tier            AlvaeTier
+  alvaeSymbol     String
+  alvaeColor      String
+  permissions     String[]
+  isBlindado      Boolean  @default(false)
+  
+  // Stripe integration
+  stripeCustomerId String? @unique
+  
+  // Metadata
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([role])
+  @@index([tier])
+  @@index([isBlindado])
+}
+
+enum AlvaeRole {
+  ALVAE_FOUNDER
+  ALVAE_PARTNER
+  ALVAE_TESTER
+  ALVAE_ADMIN
+}
+
+enum AlvaeTier {
+  ALVAE_FOUNDER
+  ALVAE_PARTNER
+  ALVAE_TESTER
+  ALVAE_ADMIN
+}
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  
+  @@index([userId])
+  @@index([token])
+}
+
+// ============================================================================
+// MUSIC GENERATION
+// ============================================================================
+
+model Generation {
+  id          String   @id @default(cuid())
+  
+  // Input parameters
+  prompt      String   @db.Text
+  duration    Int      // seconds
+  genre       String?
+  mood        String?
+  tempo       Int?     // BPM
+  key         String?  // Musical key (C, D, Em, etc.)
+  instruments String[] // Array of instruments
+  style       String?
+  
+  // Processing
+  status      GenerationStatus @default(PENDING)
+  errorMessage String?  @db.Text
+  processingStartedAt DateTime?
+  processingCompletedAt DateTime?
+  processingTimeMs Int?
+  
+  // AI metadata
+  modelVersion String?
+  seedValue    Int?
+  
+  // Results
+  audioUrl     String?
+  waveformUrl  String?
+  spectrogramUrl String?
+  
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trackId     String?  @unique
+  track       Track?   @relation(fields: [trackId], references: [id])
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt(sort: Desc)])
+}
+
+enum GenerationStatus {
+  PENDING
+  QUEUED
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+// ============================================================================
+// TRACKS & PROJECTS
+// ============================================================================
+
+model Track {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  
+  // Audio files
+  audioUrl    String
+  waveformUrl String?
+  spectrogramUrl String?
+  thumbnailUrl String?
+  
+  // Audio metadata
+  duration    Float    // seconds
+  format      String   @default("mp3")
+  fileSize    BigInt
+  sampleRate  Int?
+  bitrate     Int?
+  
+  // Musical metadata
+  genre       String?
+  mood        String?
+  tempo       Int?     // BPM
+  key         String?
+  tags        String[]
+  
+  // Status & visibility
+  status      TrackStatus @default(COMPLETED)
+  isPublic    Boolean  @default(false)
+  isFeatured  Boolean  @default(false)
+  
+  // Analytics
+  playCount   Int      @default(0)
+  downloadCount Int    @default(0)
+  likeCount   Int      @default(0)
+  shareCount  Int      @default(0)
+  
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projectId   String?
+  project     Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  generationId String? @unique
+  generation  Generation?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  publishedAt DateTime?
+  
+  @@index([userId])
+  @@index([projectId])
+  @@index([status])
+  @@index([isPublic])
+  @@index([createdAt(sort: Desc)])
+  @@index([playCount(sort: Desc)])
+}
+
+enum TrackStatus {
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  name        String
+  description String?  @db.Text
+  coverUrl    String?
+  
+  // Settings
+  isPublic    Boolean  @default(false)
+  color       String?  // Hex color for UI
+  
+  // Relations
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tracks      Track[]
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([userId])
+  @@index([createdAt(sort: Desc)])
+}
+
+// ============================================================================
+// ANALYTICS & MONITORING
+// ============================================================================
+
+model ApiUsage {
+  id          String   @id @default(cuid())
+  userId      String
+  endpoint    String
+  method      String
+  statusCode  Int
+  responseTimeMs Int
+  ipAddress   String?
+  userAgent   String?
+  errorMessage String?
+  createdAt   DateTime @default(now())
+  
+  @@index([userId])
+  @@index([createdAt(sort: Desc)])
+}

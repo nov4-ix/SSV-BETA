@@ -1,0 +1,36 @@
+# Reglas para Cursor AI Agent
+
+## Suno Integration - CRÍTICO
+- NUNCA modificar archivos en src/services/suno* sin consultar SUNO_INTEGRATION_DOCS.md
+- NUNCA cambiar endpoints o headers del API de Suno
+- NUNCA crear archivos alternativos (sunoPolling, sunoComplement, etc.)
+- SIEMPRE verificar que los cambios no rompan la extensión Chrome original
+
+## Antes de modificar código de Suno:
+1. Leer SUNO_INTEGRATION_DOCS.md completamente
+2. Hacer backup de archivos a modificar
+3. Probar en ambiente de desarrollo
+4. Verificar que extensión Chrome siga funcionando
+
+## Archivos protegidos:
+- src/config/apiTokens.ts
+- src/services/tokenManager.ts
+- src/services/sunoService.ts
+- src/hooks/useSunoService.ts
+
+## Si ves error 401:
+- NO crear "soluciones alternativas"
+- Verificar token en apiTokens.ts
+- Comparar headers con extensión Chrome (DevTools)
+- Consultar SUNO_INTEGRATION_DOCS.md sección debugging
+
+## Arquitectura del Sistema:
+Frontend React → Extensión Chrome → Suno API
+- La extensión Chrome es el puente crítico
+- NO modificar la lógica de conexión sin entender el flujo completo
+- Mantener compatibilidad con la extensión original
+
+## Reglas de Deployment:
+- Verificar que la extensión Chrome funcione antes de deployar
+- NO cambiar endpoints en producción sin testing exhaustivo
+- Mantener headers exactos como están documentados

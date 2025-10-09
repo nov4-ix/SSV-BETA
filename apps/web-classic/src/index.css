@@ -1,5 +1,29 @@
 /* Web Classic - Global Styles */
-@import '@son1k/shared-ui/styles';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0A0C10;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Color variables */
+:root {
+  --cyan: #00FFE7;
+  --accent: #9AF7EE;
+  --purple: #B84DFF;
+  --green: #00FF88;
+  --bg-primary: #0A0C10;
+  --bg-secondary: #1a1d26;
+}
 
 /* Additional Web Classic specific styles */
 .web-classic-container {

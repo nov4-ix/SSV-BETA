@@ -354,6 +354,37 @@ MIT License - Ver [LICENSE](LICENSE) para detalles.
 
 ---
 
+## 🎵 **Suno Integration**
+
+### ⚠️ IMPORTANTE
+Esta aplicación integra generación de música via Suno AI a través de una extensión de Chrome.
+
+**Antes de modificar código relacionado con Suno:**
+- Lee: `SUNO_INTEGRATION_DOCS.md`
+- Revisa: `.cursorrules`
+- NO modifiques sin entender el flujo completo
+
+### Arquitectura
+```
+Frontend React → Extensión Chrome → Suno API
+```
+
+**Componentes críticos:**
+- `src/config/apiTokens.ts` - Configuración del API
+- `src/services/sunoService.ts` - Servicio principal
+- `src/hooks/useSunoService.ts` - Hook de React
+- `src/components/suno/` - Componentes de UI
+
+**Reglas estrictas:**
+- ❌ NO modificar endpoints o headers
+- ❌ NO crear archivos alternativos
+- ❌ NO cambiar la estructura de requests
+- ✅ Solo modificar UI/UX y manejo de errores
+
+Ver documentación completa en `SUNO_INTEGRATION_DOCS.md`
+
+---
+
 ## 📞 **CONTACTO**
 
 **GitHub**: [SSV-Beta Repository]

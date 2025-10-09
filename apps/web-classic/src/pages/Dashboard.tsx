@@ -42,7 +42,7 @@ export const Dashboard: React.FC = () => {
               Bienvenido al Son1kVerse
             </h1>
             <p className="text-accent text-lg">
-              Tu centro de control para producción musical, clonación de voz y automatización social
+              Tu centro de control para creación musical con IA, clonación de voz y automatización social
             </p>
           </motion.div>
 
