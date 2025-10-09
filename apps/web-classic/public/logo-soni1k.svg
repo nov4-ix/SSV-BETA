@@ -1,0 +1,135 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradientes para efectos de glow -->
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00FFE7;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#9AF7EE;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00FFE7;stop-opacity:0" />
+    </radialGradient>
+    
+    <linearGradient id="circuitGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFE7;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#B84DFF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00FF88;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <!-- Filtros para efectos de glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo con textura sutil -->
+  <rect width="200" height="200" fill="#0A0C10" opacity="0.8"/>
+  
+  <!-- Circuitos de fondo -->
+  <g stroke="url(#circuitGlow)" stroke-width="1" fill="none" opacity="0.3">
+    <!-- Circuitos superiores -->
+    <path d="M20,20 L40,20 L40,40 L60,40 L60,20 L80,20" filter="url(#glow)"/>
+    <path d="M120,20 L140,20 L140,40 L160,40 L160,20 L180,20" filter="url(#glow)"/>
+    
+    <!-- Circuitos laterales -->
+    <path d="M20,60 L20,80 L40,80 L40,100 L20,100" filter="url(#glow)"/>
+    <path d="M180,60 L180,80 L160,80 L160,100 L180,100" filter="url(#glow)"/>
+    
+    <!-- Circuitos inferiores -->
+    <path d="M20,160 L40,160 L40,140 L60,140 L60,160 L80,160" filter="url(#glow)"/>
+    <path d="M120,160 L140,160 L140,140 L160,140 L160,160 L180,160" filter="url(#glow)"/>
+    
+    <!-- Puntos de conexión -->
+    <circle cx="40" cy="40" r="2" fill="#00FFE7" filter="url(#glow)"/>
+    <circle cx="160" cy="40" r="2" fill="#B84DFF" filter="url(#glow)"/>
+    <circle cx="40" cy="160" r="2" fill="#00FF88" filter="url(#glow)"/>
+    <circle cx="160" cy="160" r="2" fill="#00FFE7" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Círculo exterior con grieta (Sello de lo Imperfecto) -->
+  <g transform="translate(100,100)">
+    <!-- Círculo principal -->
+    <circle cx="0" cy="0" r="70" stroke="#00FFE7" stroke-width="2" fill="none" filter="url(#strongGlow)"/>
+    
+    <!-- Grieta en el círculo (lo imperfecto también es sagrado) -->
+    <path d="M-50,-50 L-30,-30 M-30,-30 L-10,-10 M-10,-10 L10,10 M10,10 L30,30 M30,30 L50,50" 
+          stroke="#B84DFF" stroke-width="3" fill="none" filter="url(#glow)"/>
+    
+    <!-- Rayo que atraviesa la grieta -->
+    <path d="M-60,-60 L60,60" stroke="#00FFE7" stroke-width="4" fill="none" filter="url(#strongGlow)"/>
+    
+    <!-- Pirámide central -->
+    <g transform="translate(0,-20)">
+      <!-- Triángulo de la pirámide -->
+      <path d="M0,-30 L-25,15 L25,15 Z" stroke="#9AF7EE" stroke-width="2" fill="none" filter="url(#glow)"/>
+      
+      <!-- Ojo que todo lo ve -->
+      <g transform="translate(0,-5)">
+        <!-- Iris del ojo -->
+        <ellipse cx="0" cy="0" rx="8" ry="6" fill="#0A0C10" stroke="#00FFE7" stroke-width="1" filter="url(#glow)"/>
+        <!-- Pupila -->
+        <circle cx="0" cy="0" r="3" fill="#00FFE7" filter="url(#strongGlow)"/>
+        <!-- Reflejo -->
+        <circle cx="-2" cy="-1" r="1" fill="#ffffff" opacity="0.8"/>
+      </g>
+    </g>
+    
+    <!-- Elementos de radar/compás -->
+    <g stroke="#9AF7EE" stroke-width="1" fill="none" opacity="0.6">
+      <!-- Círculos concéntricos -->
+      <circle cx="0" cy="0" r="45" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="55" filter="url(#glow)"/>
+      
+      <!-- Líneas radiales -->
+      <line x1="0" y1="0" x2="0" y2="-55" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="39" y2="-39" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="55" y2="0" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="39" y2="39" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="0" y2="55" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="-39" y2="39" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="-55" y2="0" filter="url(#glow)"/>
+      <line x1="0" y1="0" x2="-39" y2="-39" filter="url(#glow)"/>
+    </g>
+    
+    <!-- Puntos de datos -->
+    <g fill="#00FFE7" filter="url(#glow)">
+      <circle cx="32" cy="-32" r="1.5"/>
+      <circle cx="45" cy="0" r="1.5"/>
+      <circle cx="32" cy="32" r="1.5"/>
+      <circle cx="0" cy="45" r="1.5"/>
+      <circle cx="-32" cy="32" r="1.5"/>
+      <circle cx="-45" cy="0" r="1.5"/>
+      <circle cx="-32" cy="-32" r="1.5"/>
+      <circle cx="0" cy="-45" r="1.5"/>
+    </g>
+  </g>
+  
+  <!-- Texto SON1KVERS3 -->
+  <g transform="translate(100,170)">
+    <text x="0" y="0" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#00FFE7" filter="url(#glow)">
+      SON1KVERS3
+    </text>
+  </g>
+  
+  <!-- Triángulo invertido bajo el texto -->
+  <g transform="translate(100,185)">
+    <path d="M0,0 L-4,8 L4,8 Z" fill="#00FFE7" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Efectos de glitch sutiles -->
+  <g opacity="0.1">
+    <rect x="0" y="0" width="200" height="2" fill="#00FFE7"/>
+    <rect x="0" y="198" width="200" height="2" fill="#B84DFF"/>
+    <rect x="0" y="0" width="2" height="200" fill="#00FF88"/>
+    <rect x="198" y="0" width="2" height="200" fill="#9AF7EE"/>
+  </g>
+</svg>

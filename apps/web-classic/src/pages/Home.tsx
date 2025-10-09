@@ -89,7 +89,7 @@ export const Home: React.FC = () => {
                   <img 
                     src="/logo-soni1k.svg" 
                     alt="Son1kVerse Logo" 
-                    className="w-10 h-10"
+                    className="w-12 h-12"
                   />
                   <div className="absolute -inset-1 border border-cyan-400/30 rounded-lg animate-pulse"></div>
                 </div>
@@ -100,7 +100,7 @@ export const Home: React.FC = () => {
                     </GlitchText>
                   </h1>
                   <p className="text-xs text-gray-500 font-mono">
-                    DIVINA LIGA • NIVEL ALFA
+                    DIVINA LIGA • PROTOCOL-ALPHA.01
                   </p>
                 </div>
               </div>

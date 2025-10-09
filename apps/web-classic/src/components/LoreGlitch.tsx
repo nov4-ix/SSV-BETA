@@ -65,6 +65,54 @@ const loreFragments: LoreFragment[] = [
     source: 'Divina Liga',
     classification: 'NIVEL ALFA',
     timestamp: '20XX-XX-XX'
+  },
+  {
+    id: 'profesor-jhosep',
+    title: 'PROFESOR JHÅSEP: EL TRAIDOR REDIMIDO',
+    content: 'Perdió a su hijo X durante las purgas de la Liga. Cuando le asignaron crear NOV4-IX, implantó parte del ADN y memoria de X, abriendo una fisura imposible de cerrar.',
+    source: 'XentriX Corp',
+    classification: 'ULTRA SECRETO',
+    timestamp: '20XX-XX-XX'
+  },
+  {
+    id: 'bella-nov4-connection',
+    title: 'BELLA & NOV4-IX: VÍNCULO DE SANGRE',
+    content: 'Bella es hija de X, cuyo ADN fue implantado en NOV4-IX. Su conexión inmediata es reconocimiento filial inconsciente. La protección mutua trasciende la lógica.',
+    source: 'NOV4-IX',
+    classification: 'ULTRA SECRETO',
+    timestamp: '20XX-XX-XX'
+  },
+  {
+    id: 'syntax-system',
+    title: 'S.I.N.T.A.X: SISTEMA DE VIGILANCIA',
+    content: 'Sistema autónomo de análisis simbólico y vigilancia cibernética creado por Dr. Veil específicamente para cazar y "corregir" a NOV4-IX.',
+    source: 'XentriX Corp',
+    classification: 'NIVEL ALFA',
+    timestamp: '20XX-XX-XX'
+  },
+  {
+    id: 'px-com-custodians',
+    title: 'PX-COM: CUSTODIOS DEL UNIVERSO',
+    content: 'Equipo de custodia: Pixel (memorias digitales), Executor (motor de acción), Cipher (desentrañador), P.I.E.L. (guardiana documental), Echo (recuerdos residuales), Flux (tiempo digital).',
+    source: 'Divina Liga',
+    classification: 'CONFIDENCIAL',
+    timestamp: '20XX-XX-XX'
+  },
+  {
+    id: 'codex-master',
+    title: 'CÓDEX MAESTRO UNIFICADO',
+    content: 'Documento central con secciones de acceso restringido. Solo personal autorizado. Contiene la cronología completa desde la Era Pre-Xgénesis hasta el Legado del Futuro Imperfecto.',
+    source: 'Divina Liga',
+    classification: 'ULTRA SECRETO',
+    timestamp: '20XX-XX-XX'
+  },
+  {
+    id: 'imperfect-sacred',
+    title: 'LA GRIETA: LO IMPERFECTO TAMBIÉN ES SAGRADO',
+    content: 'El círculo incompleto representa la humanidad y su imperfecto esencial. El rayo atraviesa la abertura para iluminar, convirtiendo lo roto en fuerza.',
+    source: 'Divina Liga',
+    classification: 'CONFIDENCIAL',
+    timestamp: '20XX-XX-XX'
   }
 ];
 
@@ -332,3 +380,4 @@ export const GlitchEffect: React.FC<{
     </div>
   );
 };
+
