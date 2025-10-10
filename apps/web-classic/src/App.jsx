@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from "react";
-
 // ✅ Diseño: dark, elegante, con acentos neon (azul glitch / rosa)
 // ✅ Librerías pensadas para Vite + Tailwind + shadcn/ui (opcionales):
 //    - Tailwind ya estiliza. Si usas shadcn/ui, puedes mapear los estilos fácilmente.
@@ -413,38 +412,96 @@ function Footer() {
 }
 
 // ────────────────────────────────────────────────────────────────────────────────
-// APP PRINCIPAL
+// LAUNCHER DE CONSOLA (imagen con hotspots enterprise)
 // ────────────────────────────────────────────────────────────────────────────────
-function App() {
-  const [online, setOnline] = useState(false);
+function TapeConsoleLauncher({ src }) {
+  /**
+   * Mapea zonas clicables (porcentaje) a herramientas.
+   * Ajústalas si usas otra resolución; están calibradas para una relación ~1300x768.
+   */
+  const DESTS = [
+    { key: 'generator', label: 'The Generator', href: 'https://the-generator.son1kvers3.com',   area: { left: 7.5,  top: 83.5, width: 6.6, height: 6.2 } },
+    { key: 'ghost',     label: 'Ghost Studio',  href: 'https://ghost-studio.son1kvers3.com',     area: { left: 15.0, top: 83.5, width: 6.6, height: 6.2 } },
+    { key: 'postpilot', label: 'Nova Post Pilot',href: 'https://nov4-post-pilot.son1kvers3.com',  area: { left: 22.7, top: 83.5, width: 6.6, height: 6.2 } },
+    { key: 'daw',       label: 'DAW',           href: 'https://daw.son1kvers3.com',              area: { left: 30.4, top: 83.5, width: 6.6, height: 6.2 } },
+    { key: 'clone',     label: 'Clone Station', href: 'https://clone-station.son1kvers3.com',    area: { left: 67.6, top: 83.5, width: 6.6, height: 6.2 } },
+    { key: 'nexus',     label: 'Nexus Visual',  href: 'https://nexus.visual.son1kvers3.com',     area: { left: 75.3, top: 83.5, width: 6.6, height: 6.2 } }
+  ];
 
-  useEffect(() => {
-    let mounted = true;
-    const ping = async () => {
-      try {
-        const r = await fetch(API.health());
-        if (!mounted) return;
-        setOnline(r.ok);
-      } catch {
-        setOnline(false);
-      }
-    };
-    ping();
-    const interval = setInterval(ping, 30000); // ping cada 30s
-    return () => {
-      mounted = false;
-      clearInterval(interval);
-    };
-  }, []);
+  const [prefetching, setPrefetching] = React.useState(null);
 
-  const handleEnterStudio = () => {
-    document.querySelector('#ghost')?.scrollIntoView({behavior:'smooth'});
+  // Prefetch básico al pasar el cursor (no rompe CSP, pero permite DNS/TLS warmup)
+  const warmUp = (href) => {
+    try {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = new URL(href).origin;
+      document.head.appendChild(link);
+      setPrefetching(href);
+    } catch (_) {}
   };
 
   return (
-    <div className="min-h-screen" style={{ background: palette.bg }}>
-      <Navbar online={online} onEnterStudio={handleEnterStudio} />
+    <section className="mx-auto max-w-6xl px-4 pb-16">
+      <div className="text-white text-xl font-semibold mb-4">Launcher de Herramientas</div>
+      <div className="relative w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950">
+        {/* Imagen principal */}
+        <img src={src} alt="Consola de cinta – launcher de herramientas" className="w-full h-auto block select-none pointer-events-none" draggable={false} />
+        {/* Hotspots */}
+        {DESTS.map((d) => (
+          <a
+            key={d.key}
+            href={d.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={d.label}
+            title={d.label}
+            onMouseEnter={() => warmUp(d.href)}
+            className="absolute group focus:outline-none"
+            style={{
+              left: `${d.area.left}%`,
+              top: `${d.area.top}%`,
+              width: `${d.area.width}%`,
+              height: `${d.area.height}%`,
+            }}
+          >
+            <span className="sr-only">{d.label}</span>
+            <span className="absolute inset-0 rounded-md ring-2 ring-transparent group-focus:ring-cyan-400" aria-hidden />
+            <span aria-hidden className="absolute inset-0 rounded-md bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </a>
+        ))}
+      </div>
+      <p className="mt-3 text-xs text-neutral-500">Consejo: ajusta las áreas en porcentaje en <code>DESTS</code>. Incluye accesibilidad (teclado/foco), seguridad (<code>noopener</code>) y warm-up por <code>preconnect</code>.</p>
+    </section>
+  );
+}
+
+// ────────────────────────────────────────────────────────────────────────────────
+// APP
+// ────────────────────────────────────────────────────────────────────────────────
+export default function App() {
+  const [enter, setEnter] = useState(false);
+  const [backendOnline, setBackendOnline] = useState(false);
+
+  useEffect(() => {
+    const check = async () => {
+      try { const r = await fetch(API.health()); setBackendOnline(r.ok); }
+      catch { setBackendOnline(false); }
+    };
+    check();
+  }, []);
+
+  return (
+    <div style={{ background: palette.bg, color: palette.text, minHeight: '100dvh' }}>
+      <Navbar online={backendOnline} onEnterStudio={() => setEnter(true)} />
       <Hero />
+      <div className="mx-auto max-w-7xl px-4 mt-2">
+        <Card className="p-4 mb-6">
+          <p className="text-xs text-neutral-400">API Base: <span className="text-neutral-200">{API_BASE}</span></p>
+        </Card>
+      </div>
+      {/* NEW: Launcher con hotspots sobre la imagen de consola */}
+      <TapeConsoleLauncher src={import.meta?.env?.VITE_TAPE_IMG || '/tape-console.jpg'} />
       <GhostStudio />
       <GenerationDeck />
       <ArchiveStrip />
@@ -454,4 +511,23 @@ function App() {
   );
 }
 
-export default App;
+// ────────────────────────────────────────────────────────────────────────────────
+// NOTAS DE INTEGRACIÓN (README breve)
+// ────────────────────────────────────────────────────────────────────────────────
+// 1) Crea proyecto Vite:
+//    npm create vite@latest sv-frontend -- --template react
+//    cd sv-frontend && npm i && npm i -D tailwindcss postcss autoprefixer
+//    npx tailwindcss init -p
+// 2) tailwind.config.js -> content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"]
+// 3) index.css -> @tailwind base; @tailwind components; @tailwind utilities;
+// 4) En .env: VITE_API_BASE=http://localhost:8000 (o URL de ALFA-SSV)
+// 5) Reemplaza App.jsx por este archivo y arranca: npm run dev
+// 6) Endpoints usados (ajústalos a tu repo ALFA-SSV):
+//    GET    /health
+//    GET    /voices
+//    POST   /generate        { prompt, preset, title, tags, knobs }
+//    POST   /preview         { prompt|file, knobs }
+//    POST   /upload          multipart/form-data (file)
+//    GET    /integrations/check
+//    GET/POST /archive
+// 7) Los módulos de UI son neutrales: si utilizas shadcn/ui, mapea NeonButton → <Button variant="ghost"/> y Card→<Card/>.
