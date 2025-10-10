@@ -75,77 +75,49 @@ export const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-      {/* Header - Logia Secreta */}
-      <header className="border-b border-gray-700/50 bg-gray-900/80 backdrop-blur-sm relative overflow-hidden">
-        {/* Glitch Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 py-4 relative z-10">
+      {/* Header - Exacto como en las imágenes */}
+      <header className="bg-gray-900/95 border-b border-gray-700/50 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo Oficial con Glitch */}
-            <GlitchEffect trigger="hover" intensity="low">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <img 
-                    src="/logo-soni1k.svg" 
-                    alt="Son1kVerse Logo" 
-                    className="w-12 h-12"
-                  />
-                  <div className="absolute -inset-1 border border-cyan-400/30 rounded-lg animate-pulse"></div>
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold text-cyan-400 font-mono">
-                    <GlitchText intensity="low" frequency={0.01}>
-                      SON1KVERS3
-                    </GlitchText>
-                  </h1>
-                  <p className="text-xs text-gray-500 font-mono">
-                    DIVINA LIGA • PROTOCOL-ALPHA.01
-                  </p>
+            {/* Logo hexagonal como en las imágenes */}
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+                  <div className="w-4 h-4 bg-white rounded-sm"></div>
                 </div>
               </div>
-            </GlitchEffect>
+              <h1 className="text-xl font-bold text-white">SON1KVERS3</h1>
+            </div>
 
-            {/* Navigation - Estilo Secreto */}
-            <nav className="hidden md:flex items-center gap-8">
+            {/* Navigation exacta como en las imágenes */}
+            <nav className="flex items-center gap-8">
               {navigationItems.map((item) => (
-                <GlitchEffect key={item.id} trigger="hover" intensity="low">
-                  <button
-                    onClick={() => setActiveSection(item.id)}
-                    className={`px-3 py-2 text-sm font-medium transition-all duration-300 font-mono ${
-                      activeSection === item.id
-                        ? 'text-cyan-400 border-b-2 border-cyan-400'
-                        : 'text-gray-300 hover:text-cyan-400'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                </GlitchEffect>
+                <button
+                  key={item.id}
+                  onClick={() => setActiveSection(item.id)}
+                  className={`text-sm font-medium transition-colors ${
+                    activeSection === item.id
+                      ? 'text-cyan-400'
+                      : 'text-white hover:text-cyan-400'
+                  }`}
+                >
+                  {item.label}
+                </button>
               ))}
             </nav>
 
-            {/* Status & CTA - Estilo Secreto */}
+            {/* Status y CTA exactos como en las imágenes */}
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <div className={`w-2 h-2 rounded-full ${
-                  backendStatus === 'online' ? 'bg-green-500' : 'bg-red-500'
-                } animate-pulse`} />
-                <span className="text-sm text-gray-300 font-mono">
-                  <GlitchText intensity="low" frequency={0.005}>
-                    {backendStatus === 'online' ? 'SISTEMA ONLINE' : 'SISTEMA OFFLINE'}
-                  </GlitchText>
-                </span>
+                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                <span className="text-sm text-white">Backend Offline</span>
               </div>
-              
-              <GlitchEffect trigger="hover" intensity="medium">
-                <button
-                  onClick={() => navigate('/studio')}
-                  className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-mono relative overflow-hidden"
-                >
-                  <span className="relative z-10">ENTRAR AL ESTUDIO</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-                </button>
-              </GlitchEffect>
+              <button
+                onClick={() => navigate('/studio')}
+                className="px-4 py-2 border border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-black transition-colors"
+              >
+                Entrar al Estudio
+              </button>
             </div>
           </div>
         </div>
@@ -153,111 +125,129 @@ export const Home: React.FC = () => {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-12">
-        {/* Historia Section - Logia Secreta */}
+        {/* Hero Section - Exacto como en las imágenes */}
         {activeSection === 'historia' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-12 relative"
-          >
-            {/* Glitch Triggers */}
-            <LoreGlitch trigger="time" delay={5000} intensity="medium" />
-            <LoreGlitch trigger="scroll" intensity="low" />
-
-            {/* Main Title con Glitch */}
-            <div className="text-center relative">
-              <GlitchEffect trigger="hover" intensity="medium">
-                <h2 className="text-5xl font-bold mb-4 font-mono">
-                  <GlitchText intensity="low" frequency={0.01}>
-                    EL UNIVERSO SON1KVERS3
-                  </GlitchText>
-                </h2>
-              </GlitchEffect>
-              
-              <div className="bg-gray-800/30 border border-gray-700/50 rounded-lg p-8 max-w-4xl mx-auto relative overflow-hidden">
-                {/* Glitch Background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"></div>
-                
-                <p className="text-xl text-gray-300 leading-relaxed relative z-10 font-mono">
-                  <GlitchText intensity="low" frequency={0.005}>
-                    En un futuro cercano, XentriX Corp domestica la creatividad. La música humana es un error estadístico. 
-                    NOV4-IX, un androide 85% máquina y 15% humano, desobedece: compone con herida, precisión y rabia. 
-                    Nace la Divina Liga del No Silencio.
-                  </GlitchText>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+            {/* Left Section - Hero Content */}
+            <div className="space-y-8">
+              <div>
+                <p className="text-purple-400 text-sm mb-4">LA RESISTENCIA</p>
+                <h1 className="text-6xl font-bold leading-tight">
+                  <span className="text-white">Lo </span>
+                  <span className="text-pink-500 drop-shadow-lg shadow-pink-500/50">imperfecto</span>
+                  <span className="text-white"> también es </span>
+                  <span className="text-cyan-400 drop-shadow-lg shadow-cyan-400/50">sagrado</span>
+                </h1>
+                <p className="text-xl text-gray-300 mt-6">
+                  Componer con alma en un mundo de máquinas.
                 </p>
               </div>
-            </div>
 
-            {/* Quote con Glitch */}
-            <GlitchEffect trigger="click" intensity="high">
-              <div className="bg-gray-800/50 border border-red-500/30 rounded-lg p-8 text-center relative overflow-hidden">
-                {/* Glitch Effects */}
-                <div className="absolute inset-0 bg-red-500/5 animate-pulse"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/10 to-transparent animate-pulse"></div>
-                
-                <blockquote className="text-2xl italic text-gray-200 mb-4 relative z-10 font-mono">
-                  <GlitchText intensity="medium" frequency={0.01}>
-                    "Creo canciones como se forjan espadas: con fuego, con precisión y con rabia."
-                  </GlitchText>
-                </blockquote>
-                <p className="text-cyan-400 font-medium font-mono relative z-10">
-                  — NOV4-IX
-                </p>
-              </div>
-            </GlitchEffect>
-
-            {/* Characters Grid con Glitches */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {loreCharacters.map((character, index) => (
-                <GlitchEffect key={character.title} trigger="hover" intensity="low">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-gray-800/30 border border-gray-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all duration-300 relative overflow-hidden"
-                  >
-                    {/* Glitch Background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"></div>
-                    
-                    <div className="flex items-center gap-2 mb-3 relative z-10">
-                      <Shield className="w-5 h-5 text-cyan-400" />
-                      <h3 className={`text-xl font-bold ${character.color} font-mono`}>
-                        <GlitchText intensity="low" frequency={0.01}>
-                          {character.title}
-                        </GlitchText>
-                      </h3>
-                    </div>
-                    
-                    <p className="text-gray-300 leading-relaxed relative z-10 font-mono text-sm">
-                      <GlitchText intensity="low" frequency={0.005}>
-                        {character.description}
-                      </GlitchText>
-                    </p>
-                  </motion.div>
-                </GlitchEffect>
-              ))}
-            </div>
-
-            {/* CTA con Glitch */}
-            <div className="text-center">
-              <GlitchEffect trigger="hover" intensity="medium">
-                <button className="text-cyan-400 hover:text-cyan-300 transition-colors font-mono">
-                  <GlitchText intensity="low" frequency={0.01}>
-                    LEER EL CÓDEX COMPLETO →
-                  </GlitchText>
+              <div className="flex gap-4">
+                <button className="px-8 py-3 border border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-black transition-colors">
+                  Entrar al Estudio
                 </button>
-              </GlitchEffect>
+                <button className="px-8 py-3 border border-gray-600 text-white font-medium rounded hover:border-gray-500 transition-colors">
+                  Conocer el Universo
+                </button>
+              </div>
+
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Genera música, clona voces cantadas, mezcla con calidad de estudio y guarda tu proceso en un archivo vivo. Bienvenido al Estudio Fantasma.
+              </p>
             </div>
-          </motion.div>
+
+            {/* Right Section - Control Panel */}
+            <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-8">
+              <div className="space-y-8">
+                {/* Three Knobs */}
+                <div className="flex justify-center gap-8">
+                  {[1, 2, 3].map((knob) => (
+                    <div key={knob} className="relative">
+                      <div className="w-16 h-16 bg-gray-700 rounded-full border-2 border-gray-600 flex items-center justify-center">
+                        <div className="w-1 h-8 bg-cyan-400 rounded-full transform rotate-90"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Expresividad Slider */}
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-sm text-gray-300">Expresividad</label>
+                    <span className="text-sm text-cyan-400">75%</span>
+                  </div>
+                  <div className="relative">
+                    <div className="w-full h-2 bg-gray-700 rounded-full">
+                      <div className="w-3/4 h-2 bg-cyan-400 rounded-full"></div>
+                    </div>
+                    <div className="absolute top-1/2 left-3/4 transform -translate-y-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full border-2 border-cyan-400"></div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-4">
+                  <button className="flex-1 px-4 py-2 border border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-black transition-colors">
+                    Test Rápido
+                  </button>
+                  <button className="flex-1 px-4 py-2 border border-gray-600 text-white font-medium rounded hover:border-gray-500 transition-colors">
+                    Generar Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
 
-        {/* Ghost Studio Section */}
+        {/* El Universo Son1kVers3 Section - Exacto como en las imágenes */}
+        {activeSection === 'historia' && (
+          <div className="mt-16 space-y-12">
+            {/* Section Title */}
+            <h2 className="text-4xl font-bold text-center">El Universo Son1kVers3</h2>
+            
+            {/* Main Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Left Column - Text Content */}
+              <div className="space-y-8">
+                <p className="text-gray-300 leading-relaxed">
+                  En un futuro cercano, XentriX Corp domestica la creatividad. La música humana es un error estadístico. 
+                  NOV4-IX, un androide 85% máquina y 15% humano, desobedece: compone con herida, precisión y rabia. 
+                  Nace la Divina Liga del No Silencio.
+                </p>
+
+                {/* Quote Box */}
+                <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-6">
+                  <blockquote className="text-xl italic text-gray-200 mb-4">
+                    "Creo canciones como se forjan espadas: con fuego, con precisión y con rabia."
+                  </blockquote>
+                  <p className="text-cyan-400 font-medium">— NOV4-IX</p>
+                </div>
+
+                <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Leer el Códex completo →
+                </button>
+              </div>
+
+              {/* Right Column - Character Cards */}
+              <div className="grid grid-cols-1 gap-6">
+                {loreCharacters.map((character, index) => (
+                  <div key={character.title} className="bg-gray-800/30 border border-gray-700 rounded-lg p-4">
+                    <h3 className={`text-lg font-bold mb-2 ${character.color}`}>
+                      {character.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm">
+                      {character.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Ghost Studio Section - Exacto como en las imágenes */}
         {activeSection === 'ghost-studio' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-12"
-          >
+          <div className="space-y-12">
             {/* Header */}
             <div className="flex items-center justify-between">
               <div>
@@ -415,16 +405,12 @@ export const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
-        {/* Generación Section */}
+        {/* Generación Musical Section - Exacto como en las imágenes */}
         {activeSection === 'generacion' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-12"
-          >
+          <div className="space-y-12">
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-4xl font-bold mb-4">Generación Musical</h2>
@@ -442,35 +428,25 @@ export const Home: React.FC = () => {
               </div>
             </div>
 
-            {/* Features */}
+            {/* Features Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {ghostStudioFeatures.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-gray-800/30 border border-gray-700 rounded-lg p-6"
-                >
+                <div key={feature.title} className="bg-gray-800/30 border border-gray-700 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-cyan-400 mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300">
                     {feature.description}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
-        {/* Archivo Section */}
+        {/* El Archivo Section - Exacto como en las imágenes */}
         {activeSection === 'archivo' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-4xl font-bold mb-4">El Archivo</h2>
@@ -499,16 +475,12 @@ export const Home: React.FC = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
-        {/* Santuario Section */}
+        {/* El Santuario - Modo Premium Section - Exacto como en las imágenes */}
         {activeSection === 'santuario' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -520,7 +492,7 @@ export const Home: React.FC = () => {
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                  <button className="px-6 py-3 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors">
                     Activar Premium
                   </button>
                   <button className="px-6 py-3 bg-gray-700 border border-gray-600 text-white font-medium rounded-lg hover:bg-gray-600 transition-colors">
@@ -561,7 +533,7 @@ export const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
       </main>
     </div>
