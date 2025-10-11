@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SubdomainDetector from './components/SubdomainDetector';
 import Son1kverseMain from './components/Son1kverseMain';
 
 // ────────────────────────────────────────────────────────────────────────────────
@@ -264,6 +265,17 @@ export default function App() {
   if (enter) {
     return (
       <Son1kverseMain 
+        userId={userId}
+        sessionId={sessionId}
+      />
+    );
+  }
+
+  // Detectar subdominio y mostrar herramienta correspondiente
+  const hostname = window.location.hostname;
+  if (hostname.includes('.son1kvers3.com') || hostname.includes('son1kvers3.com')) {
+    return (
+      <SubdomainDetector 
         userId={userId}
         sessionId={sessionId}
       />

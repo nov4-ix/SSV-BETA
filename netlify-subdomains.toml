@@ -1,0 +1,185 @@
+# 🌌 SON1KVERSE - CONFIGURACIÓN DE SUBDOMINIOS
+# 
+# Configuración para deployar cada herramienta en su subdominio dedicado
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  QWEN_API_KEY = "sk-qwen-netlify-xxxxxxxxxxxxxxxx"
+  QWEN_MODEL = "qwen2-7b-instruct"
+  CACHE_SECRET = "netlify-cache-secret"
+  SUPABASE_URL = "https://son1kverse.supabase.co"
+  SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  SUNO_API_KEY = "Bearer REEMPLAZA_AQUI_TU_TOKEN"
+  SUNO_BASE_URL = "https://ai.imgkits.com/suno"
+  SUNO_POLLING_URL = "https://usa.imgkits.com/node-api/suno"
+  MAX_REQUEST_SIZE = "10485760"
+  REQUEST_TIMEOUT = "30000"
+  CACHE_TTL = "300"
+
+# 🌐 CONFIGURACIÓN DE REDIRECCIONES Y SUBDOMINIOS
+[[redirects]]
+  from = "https://son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# 🎵 GHOST STUDIO SUBDOMAIN
+[[redirects]]
+  from = "https://ghost-studio.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Ghost-Studio = "true"}
+
+# 🚀 NOVA POST PILOT SUBDOMAIN
+[[redirects]]
+  from = "https://nova-post-pilot.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Nova-Post-Pilot = "true"}
+
+# 🛡️ SANCTUARY SUBDOMAIN
+[[redirects]]
+  from = "https://sanctuary.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Sanctuary = "true"}
+
+# 🎛️ THE GENERATOR SUBDOMAIN
+[[redirects]]
+  from = "https://the-generator.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-The-Generator = "true"}
+
+# 🤖 PIXEL SUBDOMAIN (opcional)
+[[redirects]]
+  from = "https://pixel.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Pixel = "true"}
+
+# 🎼 SUNO SUBDOMAIN (opcional)
+[[redirects]]
+  from = "https://suno.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Suno = "true"}
+
+# 📝 LETRAS SUBDOMAIN (opcional)
+[[redirects]]
+  from = "https://letras.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Letras = "true"}
+
+# 🧠 PROMPTS SUBDOMAIN (opcional)
+[[redirects]]
+  from = "https://prompts.son1kvers3.com/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-Prompts = "true"}
+
+# 🔧 FUNCIONES DE NETLIFY
+[[functions]]
+  directory = "netlify/functions"
+
+# 🎵 FUNCIONES DE GHOST STUDIO
+[functions.analyze-audio]
+  timeout = 30
+  node_bundler = "esbuild"
+
+[functions.arrangement-prompt]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🎛️ FUNCIONES DE THE GENERATOR
+[functions.structured-lyrics]
+  timeout = 45
+  node_bundler = "esbuild"
+
+[functions.generator-prompt]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🛡️ FUNCIONES DEL SANCTUARY
+[functions.sanctuary-chat]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🚀 FUNCIONES DE NOVA POST PILOT
+[functions.nova-post-pilot]
+  timeout = 45
+  node_bundler = "esbuild"
+
+# 🤖 FUNCIONES DE PIXEL
+[functions.pixel-assistant]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 📝 FUNCIONES DE LETRAS
+[functions.qwen-lyrics]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🧠 FUNCIONES DE PROMPTS
+[functions.qwen-smart-prompts]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🌐 FUNCIONES DE TRADUCCIÓN
+[functions.qwen-translate]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# ⚡ FUNCIONES DE OPTIMIZACIÓN
+[functions.optimize-prompt]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🔒 CONFIGURACIÓN DE SEGURIDAD
+[security]
+  [security.headers]
+    for = "/*"
+    [security.headers.values]
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"
+      Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://dashscope.aliyuncs.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://dashscope.aliyuncs.com https://son1kverse.supabase.co https://ai.imgkits.com https://usa.imgkits.com;"
+
+# 📊 CONFIGURACIÓN DE ANALYTICS (opcional)
+[analytics]
+  enabled = true
+
+# 🚀 CONFIGURACIÓN DE EDGE FUNCTIONS (opcional)
+[edge_functions]
+  directory = "netlify/edge-functions"
+
+# 🌐 CONFIGURACIÓN DE FORMS (opcional)
+[forms]
+  [forms.contact]
+    name = "contact"
+    action = "/thank-you"
+    method = "POST"
+    [forms.contact.fields]
+      name = { required = true }
+      email = { required = true }
+      message = { required = true }

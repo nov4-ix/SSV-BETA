@@ -1,0 +1,111 @@
+{
+  "timestamp": "2025-10-11T14:05:26Z",
+  "status": "ready_for_subdomain_deployment",
+  "subdomains": {
+    "main": "son1kvers3.com",
+    "ghost-studio": "ghost-studio.son1kvers3.com",
+    "nova-post-pilot": "nova-post-pilot.son1kvers3.com",
+    "sanctuary": "sanctuary.son1kvers3.com",
+    "the-generator": "the-generator.son1kvers3.com",
+    "pixel": "pixel.son1kvers3.com",
+    "suno": "suno.son1kvers3.com",
+    "letras": "letras.son1kvers3.com",
+    "prompts": "prompts.son1kvers3.com"
+  },
+  "tools": {
+    "ghost-studio": {
+      "name": "Ghost Studio",
+      "description": "Análisis de audio y arreglos inteligentes",
+      "icon": "🎵",
+      "color": "blue"
+    },
+    "nova-post-pilot": {
+      "name": "Nova Post Pilot",
+      "description": "Marketing digital y gestión de redes sociales",
+      "icon": "🚀",
+      "color": "orange"
+    },
+    "sanctuary": {
+      "name": "Sanctuary",
+      "description": "Red social creativa y comunidad",
+      "icon": "🛡️",
+      "color": "indigo"
+    },
+    "the-generator": {
+      "name": "The Generator",
+      "description": "Letras con perillas literarias y estructura sólida",
+      "icon": "🎛️",
+      "color": "purple"
+    },
+    "pixel": {
+      "name": "Pixel",
+      "description": "Asistente virtual inteligente con aprendizaje adaptativo",
+      "icon": "🤖",
+      "color": "purple"
+    },
+    "suno": {
+      "name": "Suno",
+      "description": "Generación musical con IA",
+      "icon": "🎼",
+      "color": "green"
+    },
+    "letras": {
+      "name": "Letras",
+      "description": "Generación inteligente de letras",
+      "icon": "📝",
+      "color": "pink"
+    },
+    "prompts": {
+      "name": "Prompts",
+      "description": "Optimización inteligente de prompts",
+      "icon": "🧠",
+      "color": "cyan"
+    }
+  },
+  "functions": [
+    "analyze-audio.ts",
+    "arrangement-prompt.ts",
+    "structured-lyrics.ts",
+    "generator-prompt.ts",
+    "sanctuary-chat.ts",
+    "nova-post-pilot.ts",
+    "pixel-assistant.ts",
+    "qwen-lyrics.ts",
+    "qwen-smart-prompts.ts",
+    "qwen-translate.ts",
+    "optimize-prompt.ts"
+  ],
+  "deployment_instructions": {
+    "netlify": {
+      "steps": [
+        "1. Configurar variables de entorno en Netlify Dashboard",
+        "2. Conectar repositorio GitHub",
+        "3. Configurar dominio principal: son1kvers3.com",
+        "4. Configurar subdominios en DNS",
+        "5. Deployar con netlify.toml configurado"
+      ],
+      "environment_variables": [
+        "QWEN_API_KEY",
+        "SUPABASE_URL",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "SUNO_API_KEY",
+        "SUNO_BASE_URL",
+        "SUNO_POLLING_URL"
+      ]
+    },
+    "dns_configuration": {
+      "main_domain": "son1kvers3.com",
+      "subdomains": [
+        "ghost-studio.son1kvers3.com",
+        "nova-post-pilot.son1kvers3.com",
+        "sanctuary.son1kvers3.com",
+        "the-generator.son1kvers3.com",
+        "pixel.son1kvers3.com",
+        "suno.son1kvers3.com",
+        "letras.son1kvers3.com",
+        "prompts.son1kvers3.com"
+      ],
+      "cname_records": "Todos los subdominios deben apuntar a tu sitio de Netlify"
+    }
+  }
+}
