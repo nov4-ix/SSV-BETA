@@ -1,0 +1,220 @@
+Reglas para Cursor AI Agent
+Suno Integration - CRÍTICO
+
+NUNCA modificar archivos en src/services/suno* sin consultar SUNO_INTEGRATION_DOCS.md
+
+NUNCA cambiar endpoints o headers del API de Suno
+
+NUNCA crear archivos alternativos (sunoPolling, sunoComplement, etc.)
+
+SIEMPRE verificar que los cambios no rompan la extensión Chrome original
+
+Antes de modificar código de Suno:
+
+Leer SUNO_INTEGRATION_DOCS.md completamente
+
+Hacer backup de archivos a modificar
+
+Probar en ambiente de desarrollo
+
+Verificar que extensión Chrome siga funcionando
+
+Archivos protegidos:
+
+src/config/apiTokens.ts
+
+src/services/tokenManager.ts
+
+src/services/sunoService.ts
+
+src/hooks/useSunoService.ts
+
+Si ves error 401:
+
+NO crear "soluciones alternativas"
+
+Verificar token en apiTokens.ts
+
+Comparar headers con extensión Chrome (DevTools)
+
+Consultar SUNO_INTEGRATION_DOCS.md sección debugging
+""")
+
+files["src/config/apiTokens.ts"] = textwrap.dedent("""
+export const SUNO_CONFIG = {
+BASE_URL: 'https://ai.imgkits.com/suno
+',
+POLLING_URL: 'https://usa.imgkits.com/node-api/suno
+',
+AUTH_TOKEN: 'Bearer REEMPLAZA_AQUI_TU_TOKEN'
+} as const;
+
+export const SUNO_HEADERS: Record<string, string> = {
+'Content-Type': 'application/json',
+authorization: SUNO_CONFIG.AUTH_TOKEN,
+channel: 'node-api',
+origin: 'https://www.livepolls.app
+',
+referer: 'https://www.livepolls.app/
+',
+} as const;
+""")
+
+files["src/services/sunoService.ts"] = textwrap.dedent("""
+import { SUNO_CONFIG, SUNO_HEADERS } from '@/config/apiTokens';
+
+type GenerateBody = {
+prompt: string;
+style?: string;
+title?: string;
+customMode?: boolean;
+instrumental?: boolean;
+lyrics?: string;
+gender?: string;
+};
+
+type GenerateResp = { taskId: string };
+type PollRespRunning = { running: true };
+type PollRespDone = { running: false; audio_url: string; data?: unknown };
+type PollResp = PollRespRunning | PollRespDone;
+
+const json = (r: Response) => r.json();
+
+function withTimeout<T>(p: Promise<T>, ms = 30000): Promise<T> {
+const ctrl = new AbortController();
+const t = setTimeout(() => ctrl.abort(), ms);
+return Promise.race([
+p.finally(() => clearTimeout(t)),
+new Promise<T>((_, rej) => setTimeout(() => rej(new Error('timeout')), ms)),
+]) as Promise<T>;
+}
+
+export async function sunoGenerate(body: GenerateBody): Promise<GenerateResp> {
+const url = ${SUNO_CONFIG.BASE_URL}/generate;
+const res = await withTimeout(
+fetch(url, {
+method: 'POST',
+headers: SUNO_HEADERS,
+body: JSON.stringify(body),
+}),
+30000
+);
+
+if (!res.ok) {
+const text = await res.text().catch(() => '');
+throw new Error(Suno generate failed (${res.status}): ${text});
+}
+const data = (await json(res)) as GenerateResp;
+if (!data?.taskId) throw new Error('No taskId in response');
+return data;
+}
+
+export async function sunoPoll(taskId: string, signal?: AbortSignal): Promise<PollResp> {
+const url = ${SUNO_CONFIG.POLLING_URL}/get_mj_status/${encodeURIComponent(taskId)};
+const res = await withTimeout(
+fetch(url, {
+method: 'GET',
+headers: SUNO_HEADERS,
+signal,
+}),
+30000
+);
+
+if (!res.ok) {
+const text = await res.text().catch(() => '');
+throw new Error(Suno poll failed (${res.status}): ${text});
+}
+return (await json(res)) as PollResp;
+}
+
+export async function sunoGenerateAndWait(body: GenerateBody, opts?: { intervalMs?: number; maxMs?: number }) {
+const { taskId } = await sunoGenerate(body);
+const start = Date.now();
+const interval = opts?.intervalMs ?? 2500;
+const max = opts?.maxMs ?? 120000;
+
+while (Date.now() - start < max) {
+const r = await sunoPoll(taskId);
+if ('running' in r && !r.running) return r;
+await new Promise((s) => setTimeout(s, interval));
+}
+throw new Error('Suno polling timeout');
+}
+""")
+
+files["src/hooks/useSunoService.ts"] = textwrap.dedent("""
+import { useCallback, useState } from 'react';
+import { sunoGenerateAndWait } from '@/services/sunoService';
+
+export function useSunoService() {
+const [loading, setLoading] = useState(false);
+const [error, setError] = useState<string | null>(null);
+const [result, setResult] = useState<{ audio_url: string } | null>(null);
+
+const generate = useCallback(async (payload: {
+prompt: string; style?: string; title?: string;
+customMode?: boolean; instrumental?: boolean; lyrics?: string; gender?: string;
+}) => {
+setLoading(true);
+setError(null);
+setResult(null);
+try {
+const r = await sunoGenerateAndWait(payload);
+if ('running' in r && r.running) throw new Error('Unexpected running state');
+setResult({ audio_url: r.audio_url });
+return r;
+} catch (e: any) {
+setError(e?.message || 'Error generando pista');
+throw e;
+} finally {
+setLoading(false);
+}
+}, []);
+
+return { loading, error, result, generate };
+}
+""")
+
+pre-commit hook text (user will need to place manually in .git/hooks)
+
+files["hooks/pre-commit.sample"] = textwrap.dedent("""
+#!/usr/bin/env bash
+set -e
+blocked=$(git diff --cached --name-only | grep -E '^src/(services/sunoService\.ts|config/apiTokens\.ts|hooks/useSunoService\.ts)$' || true)
+if [ -n "$blocked" ]; then
+echo "⛔ Cambios en archivos protegidos Suno. Lee SUNO_INTEGRATION_DOCS.md y elimina del commit si no es intencional."
+exit 1
+fi
+""")
+
+README snippet
+files["README_SUNO_SECTION.md"] = textwrap.dedent("""\
+🎵 Suno Integration
+⚠️ IMPORTANTE
+
+Esta aplicación integra generación de música vía Suno.
+Antes de modificar código relacionado con Suno:
+
+Lee: SUNO_INTEGRATION_DOCS.md
+
+Revisa: .cursorrules
+
+NO modifiques sin entender el flujo completo
+
+Arquitectura
+
+Extensión Chrome → Frontend React → Suno API
+Ver documentación completa en SUNO_INTEGRATION_DOCS.md
+""")
+
+Write files
+
+for rel, content in files.items():
+path = os.path.join(root, rel)
+os.makedirs(os.path.dirname(path), exist_ok=True)
+with open(path, "w", encoding="utf-8") as f:
+f.write(content)
+
+---
+alwaysApply: true
+---

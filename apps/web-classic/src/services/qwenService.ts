@@ -1,371 +1,324 @@
 /**
- * 🧠 SERVICIO QWEN 2
+ * 🧠 SERVICIO QWEN 2 PARA SON1KVERSE
  * 
- * Servicio especializado para integración con Qwen 2
- * 
- * ⚠️ SERVICIO CRÍTICO - NO MODIFICAR SIN AUTORIZACIÓN
+ * Servicio principal para interactuar con Qwen 2 a través de Netlify Functions
  */
 
-import { getQwenConfig, QWEN_PROMPTS, SUPPORTED_LANGUAGES } from '../config/qwenConfig';
+import { QWEN_CONFIG } from '../config/qwenConfig';
+import { getEndpoint, TIMEOUT_CONFIG, RETRY_CONFIG, CACHE_CONFIG } from '../config/qwenFrontendConfig';
 
-export interface QwenRequest {
+// 🎵 TIPOS DE GENERACIÓN
+export interface LyricsRequest {
   prompt: string;
-  maxTokens?: number;
-  temperature?: number;
-  topP?: number;
-  stream?: boolean;
+  style: string;
+  genre: string;
+  mood: string;
+  language: 'es' | 'en';
+  length: 'short' | 'medium' | 'long';
+  userId?: string;
 }
 
-export interface QwenResponse {
-  content: string;
-  usage: {
-    promptTokens: number;
-    completionTokens: number;
-    totalTokens: number;
+export interface LyricsResponse {
+  lyrics: string;
+  structure: {
+    verses: number;
+    chorus: number;
+    bridge?: number;
   };
-  model: string;
-  finishReason: string;
+  metadata: {
+    language: string;
+    wordCount: number;
+    coherence: number;
+    creativity: number;
+  };
+  suggestions: string[];
 }
 
-export interface QwenOptimizationRequest {
-  originalPrompt: string;
-  context: 'music' | 'general' | 'creative';
-  targetAudience: 'beginner' | 'intermediate' | 'expert';
-  optimization: 'quality' | 'speed' | 'balance';
-}
-
-export interface QwenTranslationRequest {
+// 🌐 TIPOS DE TRADUCCIÓN
+export interface TranslationRequest {
   text: string;
-  fromLanguage: string;
-  toLanguage: string;
-  context?: 'music' | 'general' | 'technical';
+  sourceLanguage: 'es' | 'en';
+  targetLanguage: 'es' | 'en';
+  context: 'music' | 'general' | 'technical';
+  preserveFormatting?: boolean;
+  userId?: string;
 }
 
-export interface QwenPixelAnalysisRequest {
-  userBehavior: {
-    clicks: number;
-    hovers: number;
-    scrolls: number;
-    timeSpent: number;
-    preferences: string[];
-  };
-  context: {
-    page: string;
-    section: string;
-    device: string;
-    timeOfDay: string;
+export interface TranslationResponse {
+  translatedText: string;
+  confidence: number;
+  detectedLanguage: string;
+  alternatives?: string[];
+}
+
+// 🎯 TIPOS DE PIXEL
+export interface PixelRequest {
+  message: string;
+  context: 'music' | 'general' | 'help' | 'creative';
+  userId?: string;
+  sessionId?: string;
+  userPreferences?: {
+    experience: 'beginner' | 'intermediate' | 'expert';
+    personality: 'creative' | 'technical' | 'social' | 'analytical';
+    language: 'es' | 'en';
   };
 }
 
-class QwenService {
-  private readonly config = getQwenConfig();
-  private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutos
-  private cache = new Map<string, { data: any; timestamp: number }>();
+export interface PixelResponse {
+  response: string;
+  personality: {
+    enthusiasm: number;
+    creativity: number;
+    helpfulness: number;
+  };
+  suggestions: string[];
+  followUp?: string;
+}
 
-  /**
-   * 🎯 OPTIMIZAR PROMPT CON QWEN 2
-   */
-  async optimizePrompt(request: QwenOptimizationRequest): Promise<string> {
-    const cacheKey = `optimize_${JSON.stringify(request)}`;
-    const cached = this.getCached(cacheKey);
-    if (cached) return cached;
+// 🧠 TIPOS DE PROMPTS INTELIGENTES
+export interface SmartPromptRequest {
+  originalPrompt: string;
+  context: 'music' | 'lyrics' | 'general';
+  style?: string;
+  genre?: string;
+  mood?: string;
+  userId?: string;
+}
+
+export interface SmartPromptResponse {
+  enhancedPrompt: string;
+  improvements: string[];
+  confidence: number;
+  alternatives: string[];
+}
+
+// 🎯 CLASE PRINCIPAL DEL SERVICIO QWEN
+export class QwenService {
+  private cache: Map<string, any> = new Map();
+
+  constructor() {
+    // El baseUrl se obtiene dinámicamente según el entorno
+  }
+
+  // 🎵 GENERAR LETRAS
+  async generateLyrics(request: LyricsRequest): Promise<LyricsResponse> {
+    const cacheKey = `lyrics_${JSON.stringify(request)}`;
+    
+    if (CACHE_CONFIG.enabled && this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
 
     try {
-      const prompt = QWEN_PROMPTS.MUSIC_OPTIMIZATION
-        .replace('{originalPrompt}', request.originalPrompt)
-        .replace('{context}', request.context)
-        .replace('{targetAudience}', request.targetAudience)
-        .replace('{optimization}', request.optimization);
+      const response = await this.makeRequest(
+        getEndpoint('lyrics'),
+        'POST',
+        request,
+        TIMEOUT_CONFIG.lyrics
+      );
 
-      const response = await this.callQwenAPI({
-        prompt,
-        maxTokens: 512,
-        temperature: 0.7
-      });
-
-      const optimizedPrompt = response.content.trim();
-      this.setCache(cacheKey, optimizedPrompt);
+      const result = await response.json();
       
-      return optimizedPrompt;
-
-    } catch (error) {
-      console.error('Error optimizando prompt con Qwen 2:', error);
-      throw new Error('Error en optimización de prompt');
-    }
-  }
-
-  /**
-   * 🌍 TRADUCIR CON QWEN 2
-   */
-  async translateText(request: QwenTranslationRequest): Promise<string> {
-    const cacheKey = `translate_${JSON.stringify(request)}`;
-    const cached = this.getCached(cacheKey);
-    if (cached) return cached;
-
-    try {
-      const prompt = QWEN_PROMPTS.TRANSLATION
-        .replace('{text}', request.text)
-        .replace('{fromLanguage}', request.fromLanguage)
-        .replace('{toLanguage}', request.toLanguage)
-        .replace('{context}', request.context || 'general');
-
-      const response = await this.callQwenAPI({
-        prompt,
-        maxTokens: 1024,
-        temperature: 0.3
-      });
-
-      const translatedText = response.content.trim();
-      this.setCache(cacheKey, translatedText);
+      if (CACHE_CONFIG.enabled) {
+        this.cache.set(cacheKey, result);
+        setTimeout(() => this.cache.delete(cacheKey), CACHE_CONFIG.lyricsTTL);
+      }
       
-      return translatedText;
-
+      return result;
     } catch (error) {
-      console.error('Error traduciendo con Qwen 2:', error);
-      throw new Error('Error en traducción');
-    }
-  }
-
-  /**
-   * 🎨 ANALIZAR PÍXELES CON QWEN 2
-   */
-  async analyzePixels(request: QwenPixelAnalysisRequest): Promise<any> {
-    const cacheKey = `pixels_${JSON.stringify(request)}`;
-    const cached = this.getCached(cacheKey);
-    if (cached) return cached;
-
-    try {
-      const prompt = QWEN_PROMPTS.PIXEL_ANALYSIS
-        .replace('{clicks}', request.userBehavior.clicks.toString())
-        .replace('{hovers}', request.userBehavior.hovers.toString())
-        .replace('{scrolls}', request.userBehavior.scrolls.toString())
-        .replace('{timeSpent}', request.userBehavior.timeSpent.toString())
-        .replace('{preferences}', request.userBehavior.preferences.join(', '))
-        .replace('{page}', request.context.page)
-        .replace('{section}', request.context.section)
-        .replace('{device}', request.context.device)
-        .replace('{timeOfDay}', request.context.timeOfDay);
-
-      const response = await this.callQwenAPI({
-        prompt,
-        maxTokens: 1024,
-        temperature: 0.5
-      });
-
-      // Intentar parsear como JSON
-      let analysis;
-      try {
-        analysis = JSON.parse(response.content);
-      } catch {
-        // Si no es JSON válido, crear estructura básica
-        analysis = {
-          recommendations: {
-            colorAdjustments: { primary: '#00FFE7', secondary: '#B84DFF', accent: '#9AF7EE' },
-            layoutOptimizations: { spacing: 16, size: 100, position: 'center' },
-            interactionImprovements: { animations: ['fadeIn'], transitions: ['smooth'], feedback: ['hover'] }
-          },
-          confidence: 0.8,
-          reasoning: response.content
-        };
-      }
-
-      this.setCache(cacheKey, analysis);
-      return analysis;
-
-    } catch (error) {
-      console.error('Error analizando píxeles con Qwen 2:', error);
-      throw new Error('Error en análisis de píxeles');
-    }
-  }
-
-  /**
-   * 💡 GENERAR SUGERENCIAS CON QWEN 2
-   */
-  async generateSuggestions(prompt: string): Promise<string[]> {
-    const cacheKey = `suggestions_${prompt}`;
-    const cached = this.getCached(cacheKey);
-    if (cached) return cached;
-
-    try {
-      const qwenPrompt = QWEN_PROMPTS.SUGGESTIONS.replace('{prompt}', prompt);
-
-      const response = await this.callQwenAPI({
-        prompt: qwenPrompt,
-        maxTokens: 256,
-        temperature: 0.8
-      });
-
-      const suggestions = response.content
-        .split('\n')
-        .filter(line => line.trim().length > 0)
-        .map(line => line.replace(/^\d+\.\s*/, '').trim())
-        .slice(0, 3); // Máximo 3 sugerencias
-
-      this.setCache(cacheKey, suggestions);
-      return suggestions;
-
-    } catch (error) {
-      console.error('Error generando sugerencias con Qwen 2:', error);
-      return [];
-    }
-  }
-
-  /**
-   * 🔍 DETECTAR IDIOMA CON QWEN 2
-   */
-  async detectLanguage(text: string): Promise<string> {
-    const cacheKey = `detect_${text}`;
-    const cached = this.getCached(cacheKey);
-    if (cached) return cached;
-
-    try {
-      const prompt = QWEN_PROMPTS.LANGUAGE_DETECTION.replace('{text}', text);
-
-      const response = await this.callQwenAPI({
-        prompt,
-        maxTokens: 10,
-        temperature: 0.1
-      });
-
-      const detectedLanguage = response.content.trim().toLowerCase();
-      const validLanguage = Object.keys(SUPPORTED_LANGUAGES).includes(detectedLanguage) 
-        ? detectedLanguage 
-        : 'es'; // Default
-
-      this.setCache(cacheKey, validLanguage);
-      return validLanguage;
-
-    } catch (error) {
-      console.error('Error detectando idioma con Qwen 2:', error);
-      return 'es'; // Default
-    }
-  }
-
-  /**
-   * 📡 LLAMADA A LA API DE QWEN 2
-   */
-  private async callQwenAPI(request: QwenRequest): Promise<QwenResponse> {
-    try {
-      const response = await fetch(`${this.config.API_BASE_URL}/chat/completions`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.config.API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: this.config.MODEL,
-          messages: [
-            {
-              role: 'user',
-              content: request.prompt
-            }
-          ],
-          max_tokens: request.maxTokens || this.config.MAX_TOKENS,
-          temperature: request.temperature ?? this.config.TEMPERATURE,
-          top_p: request.topP ?? this.config.TOP_P,
-          stream: request.stream || false
-        }),
-        signal: AbortSignal.timeout(this.config.TIMEOUT)
-      });
-
-      if (!response.ok) {
-        throw new Error(`Qwen API error: ${response.status} ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      
-      if (!data.choices || !data.choices[0]) {
-        throw new Error('Invalid response from Qwen API');
-      }
-
-      return {
-        content: data.choices[0].message.content,
-        usage: {
-          promptTokens: data.usage?.prompt_tokens || 0,
-          completionTokens: data.usage?.completion_tokens || 0,
-          totalTokens: data.usage?.total_tokens || 0
-        },
-        model: data.model,
-        finishReason: data.choices[0].finish_reason
-      };
-
-    } catch (error) {
-      console.error('Error calling Qwen API:', error);
+      console.error('Error generating lyrics:', error);
       throw error;
     }
   }
 
-  /**
-   * 🧪 PROBAR CONEXIÓN CON QWEN 2
-   */
-  async testConnection(): Promise<boolean> {
+  // 🌐 TRADUCIR TEXTO
+  async translateText(request: TranslationRequest): Promise<TranslationResponse> {
+    const cacheKey = `translate_${JSON.stringify(request)}`;
+    
+    if (CACHE_CONFIG.enabled && this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
     try {
-      const response = await this.callQwenAPI({
-        prompt: 'Responde con "OK" si puedes leer este mensaje.',
-        maxTokens: 10,
-        temperature: 0.1
-      });
+      const response = await this.makeRequest(
+        getEndpoint('translate'),
+        'POST',
+        request,
+        TIMEOUT_CONFIG.translate
+      );
 
-      return response.content.toLowerCase().includes('ok');
+      const result = await response.json();
+      
+      if (CACHE_CONFIG.enabled) {
+        this.cache.set(cacheKey, result);
+        setTimeout(() => this.cache.delete(cacheKey), CACHE_CONFIG.translateTTL);
+      }
+      
+      return result;
     } catch (error) {
-      console.error('Error probando conexión con Qwen 2:', error);
-      return false;
+      console.error('Error translating text:', error);
+      throw error;
     }
   }
 
-  /**
-   * 📊 OBTENER ESTADÍSTICAS DE USO
-   */
-  getUsageStats() {
-    return {
-      cacheSize: this.cache.size,
-      cacheHitRate: 0.85, // Placeholder
-      totalRequests: 0, // Placeholder
-      averageResponseTime: 150, // ms
-      model: this.config.MODEL,
-      maxTokens: this.config.MAX_TOKENS
-    };
-  }
-
-  /**
-   * 🔄 GESTIÓN DE CACHE
-   */
-  private getCached(key: string): any {
-    const cached = this.cache.get(key);
-    if (cached && Date.now() - cached.timestamp < this.CACHE_DURATION) {
-      return cached.data;
+  // 🤖 INTERACTUAR CON PIXEL
+  async interactWithPixel(request: PixelRequest): Promise<PixelResponse> {
+    const cacheKey = `pixel_${JSON.stringify(request)}`;
+    
+    if (CACHE_CONFIG.enabled && this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
     }
-    return null;
+
+    try {
+      const response = await this.makeRequest(
+        getEndpoint('pixel'),
+        'POST',
+        request,
+        TIMEOUT_CONFIG.pixel
+      );
+
+      const result = await response.json();
+      
+      if (CACHE_CONFIG.enabled) {
+        this.cache.set(cacheKey, result);
+        setTimeout(() => this.cache.delete(cacheKey), CACHE_CONFIG.pixelTTL);
+      }
+      
+      return result;
+    } catch (error) {
+      console.error('Error interacting with Pixel:', error);
+      throw error;
+    }
   }
 
-  private setCache(key: string, data: any): void {
-    this.cache.set(key, { data, timestamp: Date.now() });
+  // 🧠 GENERAR PROMPTS INTELIGENTES
+  async generateSmartPrompt(request: SmartPromptRequest): Promise<SmartPromptResponse> {
+    const cacheKey = `smart_prompt_${JSON.stringify(request)}`;
+    
+    if (CACHE_CONFIG.enabled && this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    try {
+      const response = await this.makeRequest(
+        getEndpoint('smartPrompts'),
+        'POST',
+        request,
+        TIMEOUT_CONFIG.smartPrompts
+      );
+
+      const result = await response.json();
+      
+      if (CACHE_CONFIG.enabled) {
+        this.cache.set(cacheKey, result);
+        setTimeout(() => this.cache.delete(cacheKey), CACHE_CONFIG.smartPromptsTTL);
+      }
+      
+      return result;
+    } catch (error) {
+      console.error('Error generating smart prompt:', error);
+      throw error;
+    }
   }
 
-  /**
-   * 🧹 LIMPIAR CACHE
-   */
+  // 🔧 MÉTODO PRIVADO PARA HACER REQUEST CON REINTENTOS
+  private async makeRequest(
+    url: string,
+    method: string,
+    data: any,
+    timeout: number
+  ): Promise<Response> {
+    let lastError: Error | null = null;
+    
+    for (let attempt = 0; attempt < RETRY_CONFIG.maxRetries; attempt++) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
+        
+        const response = await fetch(url, {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+          signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+
+        return response;
+      } catch (error) {
+        lastError = error as Error;
+        
+        if (attempt < RETRY_CONFIG.maxRetries - 1) {
+          const delay = RETRY_CONFIG.retryDelay * Math.pow(RETRY_CONFIG.backoffMultiplier, attempt);
+          await new Promise(resolve => setTimeout(resolve, delay));
+        }
+      }
+    }
+    
+    throw lastError || new Error('Request failed after all retries');
+  }
+
+  // 🧹 LIMPIAR CACHE
   clearCache(): void {
     this.cache.clear();
   }
 
-  /**
-   * 🔧 OBTENER CONFIGURACIÓN
-   */
-  getConfig() {
+  // 📊 OBTENER ESTADÍSTICAS DE CACHE
+  getCacheStats(): { size: number; keys: string[] } {
     return {
-      model: this.config.MODEL,
-      maxTokens: this.config.MAX_TOKENS,
-      temperature: this.config.TEMPERATURE,
-      topP: this.config.TOP_P,
-      timeout: this.config.TIMEOUT
+      size: this.cache.size,
+      keys: Array.from(this.cache.keys())
     };
   }
 }
 
-// Exportar instancia singleton
+// 🎯 INSTANCIA SINGLETON
 export const qwenService = new QwenService();
 
-// ⚠️ ADVERTENCIA DE USO
-console.warn('🧠 QWEN SERVICE: Servicio de Qwen 2 inicializado');
-console.warn('🎯 Modelo:', getQwenConfig().MODEL);
+// 🎯 HELPERS PARA USO RÁPIDO
+export const qwenHelpers = {
+  // Generar letras rápidamente
+  generateLyrics: (prompt: string, style: string, genre: string, mood: string) => {
+    return qwenService.generateLyrics({
+      prompt,
+      style,
+      genre,
+      mood,
+      language: 'es',
+      length: 'medium'
+    });
+  },
+
+  // Traducir texto rápidamente
+  translateText: (text: string, from: 'es' | 'en', to: 'es' | 'en') => {
+    return qwenService.translateText({
+      text,
+      sourceLanguage: from,
+      targetLanguage: to,
+      context: 'music'
+    });
+  },
+
+  // Interactuar con Pixel rápidamente
+  interactWithPixel: (message: string, context: 'music' | 'general' | 'help' | 'creative') => {
+    return qwenService.interactWithPixel({
+      message,
+      context
+    });
+  },
+
+  // Generar prompt inteligente rápidamente
+  generateSmartPrompt: (originalPrompt: string, context: 'music' | 'lyrics' | 'general') => {
+    return qwenService.generateSmartPrompt({
+      originalPrompt,
+      context
+    });
+  }
+};
+
+export default qwenService;

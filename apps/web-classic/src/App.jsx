@@ -1,46 +1,29 @@
-import React, { useEffect, useMemo, useState } from "react";
-// ✅ Diseño: dark, elegante, con acentos neon (azul glitch / rosa)
-// ✅ Librerías pensadas para Vite + Tailwind + shadcn/ui (opcionales):
-//    - Tailwind ya estiliza. Si usas shadcn/ui, puedes mapear los estilos fácilmente.
-// ✅ Este componente es autónomo y puede pegarse como App.jsx en un proyecto Vite React.
-// ✅ Endpoints configurables para ALFA-SSV (ajusta API_BASE o usa variables de entorno).
+import React, { useState, useEffect } from 'react';
+import Son1kverseMain from './components/Son1kverseMain';
 
 // ────────────────────────────────────────────────────────────────────────────────
 // CONFIG API
 // ────────────────────────────────────────────────────────────────────────────────
-const API_BASE = import.meta?.env?.VITE_API_BASE || "http://localhost:8000"; // cambia según tu backend
-const API = {
-  health: () => `${API_BASE}/health`,
-  // generación musical a partir de texto o demo
-  generate: () => `${API_BASE}/generate`, // POST { prompt, preset, tags, knobs }
-  // lista de voces APLIO
-  voices: () => `${API_BASE}/voices`, // GET
-  // preview de mezcla / clip corto
-  preview: () => `${API_BASE}/preview`, // POST { prompt|file, knobs }
-  // subir demo de audio
-  upload: () => `${API_BASE}/upload`, // POST multipart/form-data { file }
-  // verificar integridad de APIs externas
-  checkApis: () => `${API_BASE}/integrations/check`, // GET
-  // archivo de proyectos del usuario
-  archive: () => `${API_BASE}/archive`, // GET (query), POST (save)
-  // auth (placeholder)
-  login: () => `${API_BASE}/auth/login`,
-};
+const API_BASE = import.meta?.env?.VITE_API_BASE || "http://localhost:8000";
 
 // ────────────────────────────────────────────────────────────────────────────────
 // PALETA & UTILIDADES DE UI
 // ────────────────────────────────────────────────────────────────────────────────
 const cx = (...a) => a.filter(Boolean).join(" ");
 const palette = {
-  bg: "#0b0b0d",
-  panel: "#0f1218",
-  card: "#10131a",
-  ink: "#161a22",
-  text: "#e7e7ea",
-  muted: "#b9b9c2",
-  neon: "#00d1ff",
-  pink: "#ff49c3",
-  gold: "#ffcc00",
+  bg: "#0b0b0d", // Very dark blue-black background
+  panel: "#0f1218", // Slightly lighter dark blue-gray for panels
+  card: "#10131a", // Card backgrounds
+  ink: "#161a22", // Darker ink color
+  text: "#e7e7ea", // Light gray/off-white text
+  muted: "#b9b9c2", // Lighter gray for muted text
+  neon: "#00d1ff", // Neon cyan accent
+  pink: "#ff49c3", // Pink accent for glitch effects
+  gold: "#ffcc00", // Gold accent
+  status: {
+    online: "#00ff88", // Green for online status
+    offline: "#ff4444", // Red for offline status
+  }
 };
 
 // ────────────────────────────────────────────────────────────────────────────────
@@ -52,10 +35,11 @@ function StatusDot({ online }) {
       <span
         className={cx(
           "h-2.5 w-2.5 rounded-full",
-          online ? "bg-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.9)]" : "bg-rose-500 shadow-[0_0_12px_rgba(244,63,94,0.9)]"
+          online ? "shadow-[0_0_12px_rgba(0,255,136,0.9)]" : "shadow-[0_0_12px_rgba(255,68,68,0.9)]"
         )}
+        style={{ background: online ? palette.status.online : palette.status.offline }}
       />
-      <span className="text-xs text-neutral-400">{online ? "Backend Online" : "Backend Offline"}</span>
+      <span className="text-xs" style={{ color: palette.muted }}>{online ? "Backend Online" : "Backend Offline"}</span>
     </span>
   );
 }
@@ -71,26 +55,6 @@ function NeonButton({ children, className, ...props }) {
       )}
       {...props}
     />
-  );
-}
-
-function GhostSlider({ label, value, setValue, suffix = "%" }) {
-  return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between text-xs text-neutral-400">
-        <span>{label}</span>
-        <span className="text-neutral-300">{Math.round(value)}{suffix}</span>
-      </div>
-      <input
-        type="range"
-        min={0}
-        max={100}
-        step={1}
-        value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
-        className="w-full h-2 rounded-full bg-neutral-800 accent-cyan-400"
-      />
-    </div>
   );
 }
 
@@ -171,7 +135,10 @@ function Hero() {
                   <div key={i} className="h-20 rounded-xl bg-neutral-900 border border-neutral-800 grid place-items-center text-neutral-300">◯</div>
                 ))}
               </div>
-              <GhostSlider label="Expresividad" value={75} setValue={() => {}} />
+              <div className="text-center">
+                <div className="text-sm text-neutral-400 mb-2">🤖 Pixel Learning System</div>
+                <div className="text-xs text-neutral-500">Sistema de aprendizaje adaptativo activo</div>
+              </div>
               <div className="grid grid-cols-2 gap-3 pt-2">
                 <NeonButton className="w-full">Test Rápido</NeonButton>
                 <button className="w-full px-4 py-2 rounded-xl border border-neutral-700 text-neutral-200 hover:text-white hover:border-neutral-500 transition">Generar Preview</button>
@@ -185,162 +152,7 @@ function Hero() {
 }
 
 // ────────────────────────────────────────────────────────────────────────────────
-// GHOST STUDIO (núcleo de UX)
-// ────────────────────────────────────────────────────────────────────────────────
-function GhostStudio() {
-  const [online, setOnline] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [prompt, setPrompt] = useState("una balada emotiva con piano y cuerdas, estilo neo-soul, tempo 70 BPM, voz femenina expresiva");
-  const [preset, setPreset] = useState("Professional");
-  const [title, setTitle] = useState("");
-  const [tags, setTags] = useState("pop, ballad, emotional, piano");
-  const [demoFile, setDemoFile] = useState(null);
-
-  // knobs / mezcla rápida
-  const [tuning, setTuning] = useState(60);
-  const [express, setExpress] = useState(75);
-  const [eqLow, setEqLow] = useState(20);
-  const [eqMid, setEqMid] = useState(45);
-  const [eqHigh, setEqHigh] = useState(35);
-  const [air, setAir] = useState(50);
-  const [saturation, setSaturation] = useState(30);
-
-  const knobs = useMemo(() => ({ tuning, express, eqLow, eqMid, eqHigh, air, saturation }), [tuning, express, eqLow, eqMid, eqHigh, air, saturation]);
-
-  useEffect(() => {
-    let mounted = true;
-    const ping = async () => {
-      try {
-        const r = await fetch(API.health());
-        if (!mounted) return;
-        setOnline(r.ok);
-      } catch {
-        setOnline(false);
-      }
-    };
-    ping();
-  }, []);
-
-  const handleGenerate = async () => {
-    setLoading(true);
-    try {
-      const body = { prompt, preset, title, tags, knobs };
-      const r = await fetch(API.generate(), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-      const data = await r.json().catch(() => ({}));
-      alert(data?.message || (r.ok ? "Generación enviada. Revisa tu Archivo." : "No se pudo generar"));
-    } catch (e) {
-      console.error(e);
-      alert("Error conectando con el backend.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleVerifyApis = async () => {
-    try {
-      const r = await fetch(API.checkApis());
-      const d = await r.json().catch(() => ({}));
-      alert("Integraciones: " + JSON.stringify(d));
-    } catch {
-      alert("No se pudo verificar integraciones");
-    }
-  };
-
-  const handleUpload = async () => {
-    if (!demoFile) return alert("Selecciona un archivo de demo");
-    const fd = new FormData();
-    fd.append("file", demoFile);
-    try {
-      const r = await fetch(API.upload(), { method: "POST", body: fd });
-      const d = await r.json().catch(() => ({}));
-      alert(d?.message || (r.ok ? "Demo subida" : "Fallo subiendo demo"));
-    } catch {
-      alert("Error al subir demo");
-    }
-  };
-
-  return (
-    <section id="ghost" className="mx-auto max-w-7xl px-4 pb-24">
-      <div className="flex items-center gap-2 mb-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-white">Ghost Studio</h2>
-        <span className="text-xs text-neutral-400">·</span>
-        <StatusDot online={online} />
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Panel izquierda: Prompt */}
-        <Card className="p-6">
-          <div className="text-sm text-neutral-400 mb-3">Prompt de Generación Musical</div>
-          <textarea
-            className="w-full h-40 rounded-xl bg-neutral-950/80 border border-neutral-800 p-4 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <div>
-              <div className="text-xs text-neutral-400 mb-1">Preset</div>
-              <select value={preset} onChange={(e)=>setPreset(e.target.value)} className="w-full rounded-xl bg-neutral-950 border border-neutral-800 p-2 text-neutral-200">
-                <option>Professional</option>
-                <option>Demo</option>
-                <option>Experimental</option>
-              </select>
-            </div>
-
-            <div>
-              <div className="text-xs text-neutral-400 mb-1">Título (opcional)</div>
-              <input value={title} onChange={(e)=>setTitle(e.target.value)} className="w-full rounded-xl bg-neutral-950 border border-neutral-800 p-2 text-neutral-200" placeholder="Mi canción" />
-            </div>
-
-            <div className="md:col-span-2">
-              <div className="text-xs text-neutral-400 mb-1">Tags / Estilo</div>
-              <input value={tags} onChange={(e)=>setTags(e.target.value)} className="w-full rounded-xl bg-neutral-950 border border-neutral-800 p-2 text-neutral-200" placeholder="pop, ballad, emotional, piano" />
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-3 mt-6">
-            <NeonButton onClick={handleGenerate} disabled={loading}>{loading ? "Generando…" : "Generar Música"}</NeonButton>
-            <button onClick={handleVerifyApis} className="px-4 py-2 rounded-xl border border-neutral-700 text-neutral-200 hover:text-white hover:border-neutral-500 transition">Verificar APIs</button>
-          </div>
-        </Card>
-
-        {/* Panel derecha: Knobs */}
-        <Card className="p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <GhostSlider label="Afinación" value={tuning} setValue={setTuning} />
-            <GhostSlider label="Expresividad" value={express} setValue={setExpress} />
-
-            <div className="sm:col-span-2">
-              <div className="text-sm text-neutral-400 mb-3">EQ (SSL-style)</div>
-              <div className="grid grid-cols-4 gap-4">
-                <GhostSlider label="Low" value={eqLow} setValue={setEqLow} />
-                <GhostSlider label="Mid" value={eqMid} setValue={setEqMid} />
-                <GhostSlider label="High" value={eqHigh} setValue={setEqHigh} />
-                <GhostSlider label="Air" value={air} setValue={setAir} />
-              </div>
-            </div>
-
-            <div className="sm:col-span-2">
-              <div className="text-sm text-neutral-400 mb-3">Saturación (Rupert‑style)</div>
-              <GhostSlider label="Drive" value={saturation} setValue={setSaturation} />
-            </div>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3">
-            <label className="w-full">
-              <input type="file" accept="audio/*" onChange={(e)=>setDemoFile(e.target.files?.[0]||null)} className="hidden" />
-              <div className="w-full px-4 py-2 rounded-xl border border-neutral-700 text-neutral-200 hover:text-white hover:border-neutral-500 transition cursor-pointer text-center">Subir demo</div>
-            </label>
-            <NeonButton onClick={handleUpload} className="w-full">Cargar Demo</NeonButton>
-          </div>
-        </Card>
-      </div>
-    </section>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────────────────────
-// SECCIONES ADICIONALES (Generación, Archivo, Santuario, Planes)
+// SECCIONES ADICIONALES
 // ────────────────────────────────────────────────────────────────────────────────
 function SectionHeader({ id, title, cta, onCta }) {
   return (
@@ -356,12 +168,19 @@ function SectionHeader({ id, title, cta, onCta }) {
 function GenerationDeck() {
   return (
     <section id="generacion" className="pb-8">
-      <SectionHeader id="generacion" title="Generación Musical" />
+      <SectionHeader id="generacion" title="Generación Musical con IA" />
       <div className="mx-auto max-w-7xl px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {["Voces APLIO","Perilla de Expresividad","Pre‑producción guiada"].map((t,i)=> (
+        {[
+          { title: "🤖 Pixel Assistant", desc: "Asistente virtual con personalidad profunda" },
+          { title: "🎵 Generación de Letras", desc: "Letras con coherencia narrativa usando Qwen 2" },
+          { title: "🧠 Prompts Inteligentes", desc: "Mejora automática de prompts musicales" },
+          { title: "🌐 Traducción Automática", desc: "Traducción invisible español-inglés para Suno" },
+          { title: "🎛️ Integración Suno", desc: "Generación musical completa con IA" },
+          { title: "📊 Sistema de Aprendizaje", desc: "Pixel aprende y se adapta al usuario" }
+        ].map((t,i)=> (
           <Card key={i} className="p-5">
-            <div className="text-white font-medium mb-2">{t}</div>
-            <p className="text-sm text-neutral-400">Módulos listos para flujos de estudio con calidad y carácter. Todo en un mismo flujo.</p>
+            <div className="text-white font-medium mb-2">{t.title}</div>
+            <p className="text-sm text-neutral-400">{t.desc}</p>
           </Card>
         ))}
       </div>
@@ -375,7 +194,7 @@ function ArchiveStrip() {
       <SectionHeader id="archivo" title="El Archivo" cta="Ver todo" onCta={()=>{}} />
       <div className="mx-auto max-w-7xl px-4">
         <Card className="p-6">
-          <p className="text-neutral-300">Tu memoria creativa: canciones, presets y sesiones guardadas.</p>
+          <p className="text-neutral-300">Tu memoria creativa: canciones, presets y sesiones guardadas con sistema de aprendizaje personalizado.</p>
         </Card>
       </div>
     </section>
@@ -389,7 +208,7 @@ function Sanctuary() {
         <Card className="p-6 flex items-center justify-between">
           <div>
             <div className="text-white text-xl font-semibold mb-1">El Santuario — Modo Premium</div>
-            <p className="text-neutral-400 text-sm">La red secreta de la Divina Liga: colaboración, misiones poéticas y ritual de entrada al Estudio Fantasma.</p>
+            <p className="text-neutral-400 text-sm">La red secreta de la Divina Liga: colaboración, misiones poéticas y ritual de entrada al Estudio Fantasma con Pixel como compañero.</p>
           </div>
           <div className="flex gap-3">
             <NeonButton>Activar Premium</NeonButton>
@@ -406,91 +225,52 @@ function Footer() {
     <footer className="border-t border-neutral-900/80 mt-12" style={{background: "#0e1118"}}>
       <div className="mx-auto max-w-7xl px-4 py-8 text-xs text-neutral-400">
         © Son1kVers3 2025 · Archivo Central · PX‑COM // PROTOCOL‑ALPHA.01 · Sello de lo Imperfecto ¤⚡
+        <br />
+        Powered by Qwen 2, Supabase, Netlify Functions, y Pixel Learning System
       </div>
     </footer>
   );
 }
 
 // ────────────────────────────────────────────────────────────────────────────────
-// LAUNCHER DE CONSOLA (imagen con hotspots enterprise)
-// ────────────────────────────────────────────────────────────────────────────────
-function TapeConsoleLauncher({ src }) {
-  /**
-   * Mapea zonas clicables (porcentaje) a herramientas.
-   * Ajústalas si usas otra resolución; están calibradas para una relación ~1300x768.
-   */
-  const DESTS = [
-    { key: 'generator', label: 'The Generator', href: 'https://the-generator.son1kvers3.com',   area: { left: 7.5,  top: 83.5, width: 6.6, height: 6.2 } },
-    { key: 'ghost',     label: 'Ghost Studio',  href: 'https://ghost-studio.son1kvers3.com',     area: { left: 15.0, top: 83.5, width: 6.6, height: 6.2 } },
-    { key: 'postpilot', label: 'Nova Post Pilot',href: 'https://nov4-post-pilot.son1kvers3.com',  area: { left: 22.7, top: 83.5, width: 6.6, height: 6.2 } },
-    { key: 'daw',       label: 'DAW',           href: 'https://daw.son1kvers3.com',              area: { left: 30.4, top: 83.5, width: 6.6, height: 6.2 } },
-    { key: 'clone',     label: 'Clone Station', href: 'https://clone-station.son1kvers3.com',    area: { left: 67.6, top: 83.5, width: 6.6, height: 6.2 } },
-    { key: 'nexus',     label: 'Nexus Visual',  href: 'https://nexus.visual.son1kvers3.com',     area: { left: 75.3, top: 83.5, width: 6.6, height: 6.2 } }
-  ];
-
-  const [prefetching, setPrefetching] = React.useState(null);
-
-  // Prefetch básico al pasar el cursor (no rompe CSP, pero permite DNS/TLS warmup)
-  const warmUp = (href) => {
-    try {
-      const link = document.createElement('link');
-      link.rel = 'preconnect';
-      link.href = new URL(href).origin;
-      document.head.appendChild(link);
-      setPrefetching(href);
-    } catch (_) {}
-  };
-
-  return (
-    <section className="mx-auto max-w-6xl px-4 pb-16">
-      <div className="text-white text-xl font-semibold mb-4">Launcher de Herramientas</div>
-      <div className="relative w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-950">
-        {/* Imagen principal */}
-        <img src={src} alt="Consola de cinta – launcher de herramientas" className="w-full h-auto block select-none pointer-events-none" draggable={false} />
-        {/* Hotspots */}
-        {DESTS.map((d) => (
-          <a
-            key={d.key}
-            href={d.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={d.label}
-            title={d.label}
-            onMouseEnter={() => warmUp(d.href)}
-            className="absolute group focus:outline-none"
-            style={{
-              left: `${d.area.left}%`,
-              top: `${d.area.top}%`,
-              width: `${d.area.width}%`,
-              height: `${d.area.height}%`,
-            }}
-          >
-            <span className="sr-only">{d.label}</span>
-            <span className="absolute inset-0 rounded-md ring-2 ring-transparent group-focus:ring-cyan-400" aria-hidden />
-            <span aria-hidden className="absolute inset-0 rounded-md bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </a>
-        ))}
-      </div>
-      <p className="mt-3 text-xs text-neutral-500">Consejo: ajusta las áreas en porcentaje en <code>DESTS</code>. Incluye accesibilidad (teclado/foco), seguridad (<code>noopener</code>) y warm-up por <code>preconnect</code>.</p>
-    </section>
-  );
-}
-
-// ────────────────────────────────────────────────────────────────────────────────
-// APP
+// APP PRINCIPAL
 // ────────────────────────────────────────────────────────────────────────────────
 export default function App() {
   const [enter, setEnter] = useState(false);
   const [backendOnline, setBackendOnline] = useState(false);
+  const [userId] = useState(() => `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
+  const [sessionId] = useState(() => `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
 
   useEffect(() => {
     const check = async () => {
-      try { const r = await fetch(API.health()); setBackendOnline(r.ok); }
-      catch { setBackendOnline(false); }
+      try { 
+        console.log('Checking backend health at:', `${API_BASE}/health`);
+        const r = await fetch(`${API_BASE}/health`); 
+        console.log('Backend response:', r.status, r.ok);
+        setBackendOnline(r.ok); 
+      }
+      catch (error) { 
+        console.error('Backend health check failed:', error);
+        setBackendOnline(false); 
+      }
     };
     check();
+    // Check every 5 seconds
+    const interval = setInterval(check, 5000);
+    return () => clearInterval(interval);
   }, []);
 
+  // Si el usuario entra al estudio, mostrar el componente principal
+  if (enter) {
+    return (
+      <Son1kverseMain 
+        userId={userId}
+        sessionId={sessionId}
+      />
+    );
+  }
+
+  // Página de landing por defecto
   return (
     <div style={{ background: palette.bg, color: palette.text, minHeight: '100dvh' }}>
       <Navbar online={backendOnline} onEnterStudio={() => setEnter(true)} />
@@ -498,11 +278,10 @@ export default function App() {
       <div className="mx-auto max-w-7xl px-4 mt-2">
         <Card className="p-4 mb-6">
           <p className="text-xs text-neutral-400">API Base: <span className="text-neutral-200">{API_BASE}</span></p>
+          <p className="text-xs text-neutral-400 mt-1">User ID: <span className="text-neutral-200">{userId}</span></p>
+          <p className="text-xs text-neutral-400 mt-1">Session ID: <span className="text-neutral-200">{sessionId}</span></p>
         </Card>
       </div>
-      {/* NEW: Launcher con hotspots sobre la imagen de consola */}
-      <TapeConsoleLauncher src={import.meta?.env?.VITE_TAPE_IMG || '/tape-console.jpg'} />
-      <GhostStudio />
       <GenerationDeck />
       <ArchiveStrip />
       <Sanctuary />
@@ -510,24 +289,3 @@ export default function App() {
     </div>
   );
 }
-
-// ────────────────────────────────────────────────────────────────────────────────
-// NOTAS DE INTEGRACIÓN (README breve)
-// ────────────────────────────────────────────────────────────────────────────────
-// 1) Crea proyecto Vite:
-//    npm create vite@latest sv-frontend -- --template react
-//    cd sv-frontend && npm i && npm i -D tailwindcss postcss autoprefixer
-//    npx tailwindcss init -p
-// 2) tailwind.config.js -> content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"]
-// 3) index.css -> @tailwind base; @tailwind components; @tailwind utilities;
-// 4) En .env: VITE_API_BASE=http://localhost:8000 (o URL de ALFA-SSV)
-// 5) Reemplaza App.jsx por este archivo y arranca: npm run dev
-// 6) Endpoints usados (ajústalos a tu repo ALFA-SSV):
-//    GET    /health
-//    GET    /voices
-//    POST   /generate        { prompt, preset, title, tags, knobs }
-//    POST   /preview         { prompt|file, knobs }
-//    POST   /upload          multipart/form-data (file)
-//    GET    /integrations/check
-//    GET/POST /archive
-// 7) Los módulos de UI son neutrales: si utilizas shadcn/ui, mapea NeonButton → <Button variant="ghost"/> y Card→<Card/>.

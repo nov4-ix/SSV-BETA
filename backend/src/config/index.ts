@@ -9,10 +9,10 @@ const envSchema = z.object({
   API_VERSION: z.string().default('v1'),
   
   // Database
-  DATABASE_URL: z.string().url(),
+  DATABASE_URL: z.string().url().optional(),
   
   // Redis
-  REDIS_URL: z.string().url(),
+  REDIS_URL: z.string().url().optional(),
   
   // JWT
   JWT_SECRET: z.string().min(32),
@@ -21,10 +21,10 @@ const envSchema = z.object({
   JWT_REFRESH_EXPIRES_IN: z.string().default('30d'),
   
   // AWS S3
-  AWS_ACCESS_KEY_ID: z.string(),
-  AWS_SECRET_ACCESS_KEY: z.string(),
+  AWS_ACCESS_KEY_ID: z.string().optional(),
+  AWS_SECRET_ACCESS_KEY: z.string().optional(),
   AWS_REGION: z.string().default('us-east-1'),
-  S3_BUCKET_NAME: z.string(),
+  S3_BUCKET_NAME: z.string().optional(),
   
   // CORS
   CORS_ORIGIN: z.string().transform(s => s.split(',')),

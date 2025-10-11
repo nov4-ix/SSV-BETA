@@ -1,0 +1,81 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  QWEN_API_KEY = "sk-qwen-netlify-xxxxxxxxxxxxxxxx"
+  QWEN_MODEL = "qwen2-7b-instruct"
+  CACHE_SECRET = "netlify-cache-secret"
+  SUPABASE_URL = "https://son1kverse.supabase.co"
+  SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  SUNO_API_KEY = "Bearer REEMPLAZA_AQUI_TU_TOKEN"
+  SUNO_BASE_URL = "https://ai.imgkits.com/suno"
+  SUNO_POLLING_URL = "https://usa.imgkits.com/node-api/suno"
+  MAX_REQUEST_SIZE = "10485760"
+  REQUEST_TIMEOUT = "30000"
+  CACHE_TTL = "300"
+  SUPABASE_URL = "https://son1kverse.supabase.co"
+  SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+
+[[functions]]
+  directory = "netlify/functions"
+
+# 🎵 FUNCIONES DE ANÁLISIS DE AUDIO
+[functions.analyze-audio]
+  timeout = 30
+
+# 🎼 FUNCIONES DE PROMPTS DE ARREGLO
+[functions.arrangement-prompt]
+  timeout = 30
+
+# 📝 FUNCIONES DE LETRAS ESTRUCTURADAS
+[functions.structured-lyrics]
+  timeout = 45
+
+# 🎛️ FUNCIONES DE PROMPTS DE THE GENERATOR
+[functions.generator-prompt]
+  timeout = 30
+
+# 🛡️ FUNCIONES DEL SANCTUARIO
+[functions.sanctuary-chat]
+  timeout = 30
+  node_bundler = "esbuild"
+
+# 🚀 FUNCIONES DE NOVA POST PILOT
+[functions.nova-post-pilot]
+  timeout = 45
+  node_bundler = "esbuild"
+
+[functions.qwen-lyrics]
+  timeout = 30
+
+[functions.qwen-translate]
+  timeout = 30
+
+[functions.pixel-assistant]
+  timeout = 30
+
+[functions.qwen-smart-prompts]
+  timeout = 30
+
+[functions.optimize-prompt]
+  timeout = 30
+
+[[edge_functions]]
+  directory = "netlify/edge-functions"
+
+[edge_functions.cache-response]
+  path = "/api/cache/*"
+
+[[redirects]]
+  from = "/api/qwen/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"

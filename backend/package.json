@@ -5,6 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "dev:simple": "tsx watch src/simple-server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "test": "vitest",

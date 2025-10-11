@@ -83,3 +83,4 @@ temp/
 .turbodist_electron/
 package.json.bak
 package.json.tmp
+.vercel
