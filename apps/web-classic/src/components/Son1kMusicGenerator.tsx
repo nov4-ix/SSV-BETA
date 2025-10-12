@@ -227,17 +227,18 @@ export default function Son1kMusicGenerator({ className = '' }: Son1kMusicGenera
         <div className="songs-results">
           <h3>🎶 Canciones Generadas ({musicData.songs.length})</h3>
           <div className="songs-grid">
-            {musicData.songs.map((song: any, index: number) => (
-              <div key={song.id} className="song-card">
-                <div className="song-image">
-                  <img src={song.image_url} alt={song.title} />
-                </div>
-                <div className="song-info">
-                  <h4>{song.title}</h4>
-                  <p className="song-tags">
-                    {song.tags}
-                  </p>
-                  <div className="song-actions">
+            {musicData.songs.map((song: any, index: number) => {
+              return (
+                <div key={song.id} className="song-card">
+                  <div className="song-image">
+                    <img src={song.image_url} alt={song.title} />
+                  </div>
+                  <div className="song-info">
+                    <h4>{song.title}</h4>
+                    <p className="song-tags">
+                      {song.tags}
+                    </p>
+                    <div className="song-actions">
                       <audio controls className="audio-player">
                         <source src={song.stream_audio_url || song.audio_url} type="audio/mpeg" />
                         Tu navegador no soporta audio.
