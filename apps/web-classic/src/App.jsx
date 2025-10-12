@@ -312,8 +312,8 @@ function Navbar({ online, onEnterStudio, user, onLogin, onLogout }) {
 
         <nav className="hidden md:flex items-center gap-6 text-sm" style={{color: currentPalette.text}}>
           <a className="hover:opacity-80 transition-opacity" href="#historia">Codex Maestro</a>
-          <a className="hover:opacity-80 transition-opacity" href="https://ghost-studio.son1kvers3.com" target="_blank">Ghost Studio</a>
-          <a className="hover:opacity-80 transition-opacity" href="https://the-generator.son1kvers3.com" target="_blank">The Generator</a>
+          <a className="hover:opacity-80 transition-opacity" href="https://ghost-studio-1e38nw4c2-son1kvers3s-projects-c3cdfb54.vercel.app" target="_blank">Ghost Studio</a>
+          <a className="hover:opacity-80 transition-opacity" href="https://the-generator-9f0w4cruh-son1kvers3s-projects-c3cdfb54.vercel.app" target="_blank">The Generator</a>
           <a className="hover:opacity-80 transition-opacity" href="#santuario">Santuario</a>
           <a className="hover:opacity-80 transition-opacity" href="https://nov4-post-pilot.son1kvers3.com" target="_blank">Nov4-Post-Pilot</a>
           <a className="hover:opacity-80 transition-opacity" href="#planes">Planes</a>
@@ -605,7 +605,7 @@ function ToolsLauncher() {
               
               {/* Ghost Studio */}
               <button
-                onClick={() => window.open('https://ghost-studio.son1kvers3.com', '_blank')}
+                onClick={() => window.open('https://ghost-studio-1e38nw4c2-son1kvers3s-projects-c3cdfb54.vercel.app', '_blank')}
                 className="w-full p-4 rounded-lg border-2 font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-between group"
                 style={{
                   borderColor: `${currentPalette.purple}80`,
@@ -626,7 +626,7 @@ function ToolsLauncher() {
 
               {/* The Generator */}
               <button
-                onClick={() => window.open('https://the-generator.son1kvers3.com', '_blank')}
+                onClick={() => window.open('https://the-generator-9f0w4cruh-son1kvers3s-projects-c3cdfb54.vercel.app', '_blank')}
                 className="w-full p-4 rounded-lg border-2 font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-between group"
                 style={{
                   borderColor: `${currentPalette.neon}80`,
