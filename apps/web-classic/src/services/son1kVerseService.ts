@@ -255,17 +255,6 @@ export class Son1kVerseService {
   }
 }
 
-// 🌐 EXPORTAR SERVICIOS INDIVIDUALES
-export {
-  Son1kMusicService,
-  PixelAssistantService,
-  LyricsService,
-  SmartPromptsService,
-  SanctuaryService,
-  NovaPostPilotService,
-  AudioAnalysisService,
-};
-
 // 📊 EXPORTAR TIPOS
 export type {
   NetlifyFunctionResponse,
