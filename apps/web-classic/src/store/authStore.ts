@@ -14,6 +14,7 @@ interface AuthState {
   register: (data: RegisterData) => Promise<void>;
   logout: () => Promise<void>;
   getProfile: () => Promise<void>;
+  checkAuth: () => Promise<void>;
   clearError: () => void;
   setLoading: (loading: boolean) => void;
 }
@@ -120,6 +121,36 @@ export const useAuthStore = create<AuthState>()(
           });
         } catch (error: any) {
           console.error('Profile fetch error:', error);
+          set({
+            isAuthenticated: false,
+            user: null,
+            isLoading: false,
+            error: null,
+          });
+        }
+      },
+
+      checkAuth: async () => {
+        set({ isLoading: true });
+        try {
+          if (authService.isAuthenticated()) {
+            const user = await authService.getProfile();
+            set({
+              user,
+              isAuthenticated: true,
+              isLoading: false,
+              error: null,
+            });
+          } else {
+            set({
+              isAuthenticated: false,
+              user: null,
+              isLoading: false,
+              error: null,
+            });
+          }
+        } catch (error: any) {
+          console.error('Auth check error:', error);
           set({
             isAuthenticated: false,
             user: null,

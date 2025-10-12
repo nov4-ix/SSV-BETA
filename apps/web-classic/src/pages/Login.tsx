@@ -14,7 +14,7 @@ const loginSchema = z.object({
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
-export const Login: React.FC = () => {
+const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const { login, register, isLoading, error, clearError } = useAuthStore();
@@ -186,3 +186,5 @@ export const Login: React.FC = () => {
     </div>
   );
 };
+
+export default Login;

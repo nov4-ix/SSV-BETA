@@ -21,12 +21,12 @@ export const SUNO_CONFIG: SunoConfig = {
   POLLING_URL: 'https://usa.imgkits.com/node-api/suno',
   
   // Token de autenticación - ACTUALIZAR SOLO EL VALOR
-  AUTH_TOKEN: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...', // ⚠️ ACTUALIZAR ESTE TOKEN
+  AUTH_TOKEN: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQUFJpaEQ5S2xBZHhCNkxWWkxweEpuRjc3ZHJjRm1hUyIsImV4cCI6MTc2MDI3Mzk5Mn0.VawUyvM6Zqik2fdRSHchm60_gXs4VUcFpc5Mw00K9Ew',
   
   // Headers OBLIGATORIOS - NO MODIFICAR ESTRUCTURA
   HEADERS: {
     'Content-Type': 'application/json',
-    'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...', // ⚠️ ACTUALIZAR ESTE TOKEN
+    'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQUFJpaEQ5S2xBZHhCNkxWWkxweEpuRjc3ZHJjRm1hUyIsImV4cCI6MTc2MDI3Mzk5Mn0.VawUyvM6Zqik2fdRSHchm60_gXs4VUcFpc5Mw00K9Ew',
     'channel': 'node-api',              // ⚠️ REQUERIDO - NO CAMBIAR
     'origin': 'https://www.livepolls.app',     // ⚠️ REQUERIDO - NO CAMBIAR
     'referer': 'https://www.livepolls.app/'    // ⚠️ REQUERIDO - NO CAMBIAR

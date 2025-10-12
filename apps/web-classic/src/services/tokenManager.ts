@@ -139,7 +139,13 @@ class TokenManager {
       // Hacer una llamada de prueba a la API de Suno
       const response = await fetch(`${SUNO_CONFIG.BASE_URL}/test`, {
         method: 'GET',
-        headers: SUNO_CONFIG.HEADERS,
+        headers: {
+          'Content-Type': 'application/json',
+          'authorization': SUNO_CONFIG.AUTH_TOKEN,
+          'channel': 'node-api',
+          'origin': 'https://www.livepolls.app',
+          'referer': 'https://www.livepolls.app/'
+        },
       });
 
       // Si recibimos 401, el token es inválido

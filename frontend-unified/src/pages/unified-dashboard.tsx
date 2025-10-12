@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { MatrixRain } from '../components/effects/matrix-rain';
-import { NexusScene } from '../components/effects/nexus-scene';
-import { GhostStudio } from './ghost-studio';
+// import { MatrixRain } from '../components/effects/matrix-rain';
+// import { NexusScene } from '../components/effects/nexus-scene';
+// import { GhostStudio } from './ghost-studio';
+import { ColorPaletteManager } from '../components/admin/ColorPaletteManager';
 import { 
   Music, 
   Users, 
@@ -11,9 +12,10 @@ import {
   Settings, 
   BarChart3, 
   Play,
-  Pause,
+  // Pause,
   Volume2,
-  VolumeX
+  VolumeX,
+  Palette
 } from 'lucide-react';
 
 interface DashboardStats {
@@ -29,10 +31,11 @@ interface DashboardStats {
 }
 
 export function UnifiedDashboard() {
-  const [activeView, setActiveView] = useState<'nexus' | 'studio' | 'dashboard'>('nexus');
+  const [activeView, setActiveView] = useState<'nexus' | 'studio' | 'dashboard' | 'colors'>('nexus');
   const [matrixIntensity, setMatrixIntensity] = useState<'low' | 'medium' | 'high'>('medium');
   const [audioEnabled, setAudioEnabled] = useState(true);
   const [ambientSound, setAmbientSound] = useState(false);
+  // const [showColorPalette, setShowColorPalette] = useState(false);
   const navigate = useNavigate();
 
   // Mock stats - in real app, this would come from API
@@ -95,6 +98,14 @@ export function UnifiedDashboard() {
       color: '#FFD93D',
       stats: '98.5% uptime',
     },
+    {
+      id: 'colors',
+      name: 'Color Palette',
+      description: 'Gestión de colores del sistema',
+      icon: Palette,
+      color: '#FF6B9D',
+      stats: 'Personalización visual',
+    },
   ];
 
   const handleModuleClick = (moduleId: string) => {
@@ -111,6 +122,9 @@ export function UnifiedDashboard() {
       case 'analytics':
         navigate('/analytics');
         break;
+      case 'colors':
+        setActiveView('colors');
+        break;
       default:
         break;
     }
@@ -121,10 +135,16 @@ export function UnifiedDashboard() {
     // In real app, this would control actual ambient audio
   };
 
+  const handlePaletteChange = (newPalette: any) => {
+    // Enviar la nueva paleta al frontend web-classic
+    console.log('Nueva paleta aplicada:', newPalette);
+    // Aquí se podría implementar una API call para actualizar la paleta en tiempo real
+  };
+
   return (
     <div className="unified-dashboard min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Effects */}
-      <MatrixRain intensity={matrixIntensity} />
+      {/* <MatrixRain intensity={matrixIntensity} /> */}
       
       {/* Ambient Sound Overlay */}
       {ambientSound && (
@@ -199,28 +219,62 @@ export function UnifiedDashboard() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
+              className="p-6"
             >
-              <NexusScene 
-                onIconClick={(icon, index) => {
-                  if (icon.module === 'music-generation') {
-                    setActiveView('studio');
-                  } else {
-                    navigate(icon.url);
-                  }
-                }}
-              />
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-cyan-400 mb-8">Panel de Administración Son1kvers3</h2>
+                <p className="text-gray-300 mb-6">Bienvenido al panel de administración unificado</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {modules.map((module) => (
+                    <motion.div
+                      key={module.id}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => handleModuleClick(module.id)}
+                      className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 cursor-pointer hover:border-gray-600 transition-colors group"
+                    >
+                      <div className="flex items-center gap-4 mb-4">
+                        <div 
+                          className="p-3 rounded-lg"
+                          style={{ backgroundColor: `${module.color}20` }}
+                        >
+                          <module.icon 
+                            className="w-6 h-6" 
+                            style={{ color: module.color }}
+                          />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                            {module.name}
+                          </h3>
+                          <p className="text-sm text-gray-400">{module.stats}</p>
+                        </div>
+                      </div>
+                      <p className="text-sm text-gray-300">{module.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           )}
 
-          {activeView === 'studio' && (
+          {activeView === 'colors' && (
             <motion.div
-              key="studio"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              key="colors"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
+              className="p-6"
             >
-              <GhostStudio />
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-cyan-400 mb-8">Gestión de Colores</h2>
+                <ColorPaletteManager 
+                  isOpen={true}
+                  onClose={() => setActiveView('dashboard')}
+                  onPaletteChange={handlePaletteChange}
+                />
+              </div>
             </motion.div>
           )}
 
@@ -348,6 +402,16 @@ export function UnifiedDashboard() {
               }`}
             >
               Dashboard
+            </button>
+            <button
+              onClick={() => setActiveView('colors')}
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                activeView === 'colors' 
+                  ? 'bg-pink-500 text-white' 
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+              }`}
+            >
+              Colores
             </button>
           </div>
         </motion.footer>

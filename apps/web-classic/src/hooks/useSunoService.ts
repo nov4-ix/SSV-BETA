@@ -1,190 +1,136 @@
-/**
- * 🎵 HOOK DE REACT PARA SERVICIO DE GENERACIÓN MUSICAL
- * 
- * Hook personalizado para manejar la generación musical con Son1kVerse AI
- * 
- * ⚠️ NO MODIFICAR SIN LEER SUNO_INTEGRATION_DOCS.md
- */
+// src/hooks/useSunoService.ts
 
-import { useState, useCallback, useEffect } from 'react';
-import { sunoService } from '../services/sunoService';
-import { clientManager } from '../services/clientManager';
-import { tokenManager } from '../services/tokenManager';
-import { SunoGenerationRequest, SunoGenerationResponse } from '../services/sunoService';
+import { useState, useCallback } from 'react';
+import { sunoService, SunoGenerationParams, SunoGenerationResponse, SunoSong } from '../services/sunoService';
 
 export interface UseSunoServiceReturn {
   // Estado
-  isGenerating: boolean;
-  isConnected: boolean;
+  loading: boolean;
   error: string | null;
-  lastGeneration: SunoGenerationResponse | null;
+  songs: SunoSong[];
+  progress: number;
   
   // Métodos
-  generateMusic: (request: SunoGenerationRequest) => Promise<SunoGenerationResponse>;
-  testConnection: () => Promise<boolean>;
-  cancelGeneration: (taskId: string) => Promise<boolean>;
-  
-  // Información del servicio
-  serviceStatus: any;
-  clientStats: any;
+  generateAndWait: (params: SunoGenerationParams) => Promise<SunoGenerationResponse>;
+  generate: (params: SunoGenerationParams) => Promise<SunoGenerationResponse>;
+  getStatus: (taskId: string) => Promise<SunoGenerationResponse>;
+  updateToken: (token: string) => Promise<boolean>;
+  clearError: () => void;
+  clearSongs: () => void;
 }
 
-export const useSunoService = (): UseSunoServiceReturn => {
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [isConnected, setIsConnected] = useState(false);
+export function useSunoService(): UseSunoServiceReturn {
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [lastGeneration, setLastGeneration] = useState<SunoGenerationResponse | null>(null);
-  const [serviceStatus, setServiceStatus] = useState<any>(null);
+  const [songs, setSongs] = useState<SunoSong[]>([]);
+  const [progress, setProgress] = useState(0);
 
-  // Inicializar servicio
-  useEffect(() => {
-    initializeService();
-  }, []);
-
-  // Actualizar estado del servicio periódicamente
-  useEffect(() => {
-    const interval = setInterval(() => {
-      updateServiceStatus();
-    }, 30000); // Cada 30 segundos
-
-    return () => clearInterval(interval);
-  }, []);
-
-  /**
-   * 🚀 INICIALIZAR SERVICIO
-   */
-  const initializeService = useCallback(async () => {
-    try {
-      setError(null);
-      
-      // Probar conexión
-      const connected = await sunoService.testConnection();
-      setIsConnected(connected);
-      
-      if (!connected) {
-        setError('No se pudo conectar con el servicio de IA musical');
-      }
-      
-      // Actualizar estado del servicio
-      updateServiceStatus();
-      
-    } catch (err) {
-      console.error('Error inicializando servicio:', err);
-      setError('Error inicializando servicio de IA musical');
-      setIsConnected(false);
-    }
-  }, []);
-
-  /**
-   * 📊 ACTUALIZAR ESTADO DEL SERVICIO
-   */
-  const updateServiceStatus = useCallback(() => {
-    try {
-      const status = sunoService.getServiceStatus();
-      setServiceStatus(status);
-    } catch (err) {
-      console.error('Error actualizando estado del servicio:', err);
-    }
-  }, []);
-
-  /**
-   * 🎵 GENERAR MÚSICA
-   */
-  const generateMusic = useCallback(async (request: SunoGenerationRequest): Promise<SunoGenerationResponse> => {
-    setIsGenerating(true);
+  const generateAndWait = useCallback(async (params: SunoGenerationParams): Promise<SunoGenerationResponse> => {
+    setLoading(true);
     setError(null);
+    setProgress(0);
     
     try {
-      // Verificar que el servicio esté conectado
-      if (!isConnected) {
-        throw new Error('Servicio de IA musical no conectado');
+      console.log('[useSunoService] Starting generation...', params);
+      
+      const result = await sunoService.generateAndWait(params, (progressValue) => {
+        setProgress(progressValue);
+      });
+      
+      if (result.success && result.data.songs) {
+        setSongs(result.data.songs);
+        setProgress(100);
       }
       
-      // Verificar que el cliente pueda generar
-      if (!clientManager.canGenerate()) {
-        throw new Error('Límite de generaciones del cliente alcanzado');
-      }
-      
-      // Generar música
-      const response = await sunoService.generateMusic(request);
-      
-      // Guardar última generación
-      setLastGeneration(response);
-      
-      return response;
-      
+      return result;
     } catch (err: any) {
-      const errorMessage = err.message || 'Error generando música';
+      const errorMessage = err?.message || 'Error generando música';
       setError(errorMessage);
       throw err;
     } finally {
-      setIsGenerating(false);
+      setLoading(false);
     }
-  }, [isConnected]);
+  }, []);
 
-  /**
-   * 🧪 PROBAR CONEXIÓN
-   */
-  const testConnection = useCallback(async (): Promise<boolean> => {
+  const generate = useCallback(async (params: SunoGenerationParams): Promise<SunoGenerationResponse> => {
+    setLoading(true);
+    setError(null);
+    setProgress(0);
+    
     try {
-      setError(null);
-      const connected = await sunoService.testConnection();
-      setIsConnected(connected);
+      console.log('[useSunoService] Starting generation...', params);
       
-      if (!connected) {
-        setError('No se pudo conectar con el servicio de IA musical');
+      const result = await sunoService.generate(params);
+      
+      return result;
+    } catch (err: any) {
+      const errorMessage = err?.message || 'Error generando música';
+      setError(errorMessage);
+      throw err;
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const getStatus = useCallback(async (taskId: string): Promise<SunoGenerationResponse> => {
+    try {
+      console.log('[useSunoService] Checking status...', taskId);
+      
+      const result = await sunoService.getStatus(taskId);
+      
+      if (result.success && result.data.songs) {
+        setSongs(result.data.songs);
+        setProgress(100);
       }
       
-      return connected;
-    } catch (err) {
-      console.error('Error probando conexión:', err);
-      setError('Error probando conexión');
-      setIsConnected(false);
+      return result;
+    } catch (err: any) {
+      const errorMessage = err?.message || 'Error verificando estado';
+      setError(errorMessage);
+      throw err;
+    }
+  }, []);
+
+  const updateToken = useCallback(async (token: string): Promise<boolean> => {
+    try {
+      console.log('[useSunoService] Updating token...');
+      
+      const success = await sunoService.updateToken(token);
+      
+      if (success) {
+        setError(null);
+      }
+      
+      return success;
+    } catch (err: any) {
+      const errorMessage = err?.message || 'Error actualizando token';
+      setError(errorMessage);
       return false;
     }
   }, []);
 
-  /**
-   * ❌ CANCELAR GENERACIÓN
-   */
-  const cancelGeneration = useCallback(async (taskId: string): Promise<boolean> => {
-    try {
-      setError(null);
-      const cancelled = await sunoService.cancelGeneration(taskId);
-      
-      if (!cancelled) {
-        setError('No se pudo cancelar la generación');
-      }
-      
-      return cancelled;
-    } catch (err) {
-      console.error('Error cancelando generación:', err);
-      setError('Error cancelando generación');
-      return false;
-    }
+  const clearError = useCallback(() => {
+    setError(null);
   }, []);
 
-  // Obtener estadísticas del cliente
-  const clientStats = clientManager.getClientStats();
+  const clearSongs = useCallback(() => {
+    setSongs([]);
+    setProgress(0);
+  }, []);
 
   return {
     // Estado
-    isGenerating,
-    isConnected,
+    loading,
     error,
-    lastGeneration,
+    songs,
+    progress,
     
     // Métodos
-    generateMusic,
-    testConnection,
-    cancelGeneration,
-    
-    // Información del servicio
-    serviceStatus,
-    clientStats
+    generateAndWait,
+    generate,
+    getStatus,
+    updateToken,
+    clearError,
+    clearSongs
   };
-};
-
-// ⚠️ ADVERTENCIA DE USO
-console.warn('🎵 USE SUNO SERVICE: Hook de generación musical inicializado');
-console.warn('📖 Para más información, consulta: SUNO_INTEGRATION_DOCS.md');
+}

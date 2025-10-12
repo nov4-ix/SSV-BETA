@@ -1,0 +1,200 @@
+/* MobileApp.css - Estilos específicos para móviles */
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   CONFIGURACIÓN MÓVIL BASE
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   COMPONENTES MÓVILES
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+.mobile-card {
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-card:active {
+  transform: scale(0.98);
+}
+
+.mobile-button {
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.mobile-button:active {
+  transform: scale(0.95);
+}
+
+.mobile-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mobile-input-group input {
+  transition: all 0.2s ease;
+}
+
+.mobile-input-group input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE DESIGN
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .mobile-card {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  
+  .mobile-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-card {
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 12px;
+  }
+  
+  .mobile-button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   TOUCH INTERACTIONS
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+.mobile-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (hover: none) {
+  .mobile-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   SCROLL BEHAVIOR
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   ALVAE SYMBOL STYLES
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+.alvae-symbol {
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  animation: alvae-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes alvae-glow {
+  from {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 0 16px rgba(255, 215, 0, 0.8);
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   LOADING STATES
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ff6b35;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   ACCESSIBILITY
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .alvae-symbol {
+    animation: none;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   DARK MODE SUPPORT
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  /* Los estilos ya están optimizados para modo oscuro */
+}
+
+/* ────────────────────────────────────────────────────────────────────────────────
+   SAFE AREAS (iPhone X+)
+   ──────────────────────────────────────────────────────────────────────────────── */
+
+@supports (padding: max(0px)) {
+  .mobile-header {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-top: max(12px, env(safe-area-inset-top));
+  }
+  
+  .mobile-section {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+}

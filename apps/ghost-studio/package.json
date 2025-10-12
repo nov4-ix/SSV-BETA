@@ -16,8 +16,8 @@
     "react-router-dom": "^6.8.0",
     "zustand": "^4.4.0",
     "framer-motion": "^10.16.0",
-    "@son1k/shared-ui": "workspace:*",
-    "@son1k/shared-utils": "workspace:*"
+    "lucide-react": "^0.545.0",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
