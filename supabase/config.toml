@@ -1,78 +1,42 @@
-# 🗄️ CONFIGURACIÓN DE SUPABASE PARA SON1KVERSE
+# 🗄️ CONFIGURACIÓN SIMPLE DE SUPABASE
 # 
-# Configuración del proyecto Supabase
+# Configuración básica para desarrollo local
 
 project_id = "son1kverse"
-api_url = "https://son1kverse.supabase.co"
-anon_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-service_role_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 
 [db]
-# Configuración de la base de datos
-host = "db.son1kverse.supabase.co"
-port = 5432
-database = "postgres"
-user = "postgres"
-password = "your-password-here"
-
-[api]
-# Configuración de la API
-port = 54321
-schemas = ["public", "storage", "graphql_public"]
-extra_search_path = ["public", "extensions"]
-max_rows = 1000
+port = 54322
+major_version = 15
 
 [db.pooler]
-# Configuración del pooler
 port = 54329
 pool_mode = "transaction"
 default_pool_size = 15
 max_client_conn = 100
 
 [realtime]
-# Configuración de tiempo real
 enabled = true
-port = 54322
-ip_version = "ipv4"
+ip_version = "IPv4"
 
 [studio]
-# Configuración del Studio
-enabled = true
-port = 54323
-api_url = "https://son1kverse.supabase.co"
-
-[inbucket]
-# Configuración de Inbucket (para emails de desarrollo)
 enabled = true
 port = 54324
-smtp_port = 54325
-pop3_port = 54326
+
+[inbucket]
+enabled = true
+port = 54325
+smtp_port = 54326
+pop3_port = 54327
 
 [storage]
-# Configuración de Storage
 enabled = true
 file_size_limit = "50MiB"
-buckets = [
-  { name = "qwen-models", public = false },
-  { name = "generated-audio", public = true },
-  { name = "ai-cache", public = false },
-  { name = "user-uploads", public = false }
-]
 
 [edge_functions]
-# Configuración de Edge Functions
-enabled = true
-port = 54327
-
-[analytics]
-# Configuración de Analytics
 enabled = true
 port = 54328
-vector_port = 54329
-# Configuración de PostHog
-api_key = "your-posthog-api-key"
-host = "https://app.posthog.com"
 
-[functions]
-# Configuración de funciones
-verify_jwt = true
+[analytics]
+enabled = true
+port = 54329
+vector_port = 54330

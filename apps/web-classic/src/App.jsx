@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SubdomainDetector from './components/SubdomainDetector';
 import Son1kverseMain from './components/Son1kverseMain';
 import Son1kMusicGenerator from './components/Son1kMusicGenerator';
+import { Son1kVerseTest } from './components/Son1kVerseTest';
 import './components/Son1kMusicGenerator.css';
 
 // ────────────────────────────────────────────────────────────────────────────────
@@ -1170,6 +1171,19 @@ export default function App() {
           </p>
         </div>
         <Son1kMusicGenerator />
+      </section>
+
+      {/* Son1kVerse Backend Test */}
+      <section className="mx-auto max-w-7xl px-4 py-16">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4" style={{color: currentPalette.text}}>
+            🌌 Backend Test Panel
+          </h2>
+          <p className="text-lg" style={{color: currentPalette.muted}}>
+            Prueba todas las funciones de Netlify y servicios de Son1kVerse
+          </p>
+        </div>
+        <Son1kVerseTest />
       </section>
       
       <div className="mx-auto max-w-7xl px-4 mt-2">

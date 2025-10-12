@@ -84,3 +84,6 @@ temp/
 package.json.bak
 package.json.tmp
 .vercel
+
+# Local Netlify folder
+.netlify
