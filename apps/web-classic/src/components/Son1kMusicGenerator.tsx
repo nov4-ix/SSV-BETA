@@ -237,7 +237,7 @@ export default function Son1kMusicGenerator({ className = '' }: Son1kMusicGenera
                   <p className="song-tags">
                     {song.tags}
                   </p>
-                    <div className="song-actions">
+                  <div className="song-actions">
                       <audio controls className="audio-player">
                         <source src={song.stream_audio_url || song.audio_url} type="audio/mpeg" />
                         Tu navegador no soporta audio.
@@ -252,7 +252,8 @@ export default function Son1kMusicGenerator({ className = '' }: Son1kMusicGenera
                     </div>
                   </div>
                 </div>
-              );
+              </div>
+            );
             })}
           </div>
         </div>

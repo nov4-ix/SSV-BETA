@@ -69,7 +69,7 @@ export interface QwenLyricsResponse {
 }
 
 // 🌐 CONFIGURACIÓN DE ENDPOINTS
-const NETLIFY_FUNCTIONS_BASE = 'https://son1k.netlify.app/.netlify/functions';
+const NETLIFY_FUNCTIONS_BASE = 'https://68ebcc1e58a3244416592635--son1k.netlify.app/.netlify/functions';
 
 // 🔧 FUNCIÓN HELPER PARA LLAMADAS A NETLIFY FUNCTIONS
 async function callNetlifyFunction<T>(

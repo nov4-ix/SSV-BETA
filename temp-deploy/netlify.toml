@@ -1,0 +1,31 @@
+# 🌌 SON1KVERSE FUNCTIONS - CONFIGURACIÓN SIMPLE
+# 
+# Configuración solo para funciones de Netlify
+
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+  QWEN_API_KEY = "sk-qwen-netlify-demo-key-123456789"
+  QWEN_MODEL = "qwen2-7b-instruct"
+  CACHE_SECRET = "netlify-cache-secret"
+  SUPABASE_URL = "https://son1kverse-temp.supabase.co"
+  SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNvbjFrdmVyc2UtdGVtcCIsInJvbGUiOiJzZXJ2aWNlX3JvbGUiLCJpYXQiOjE2OTcwOTIwMDAsImV4cCI6MjAxMjY2ODAwMH0.temp-service-key"
+  SUNO_API_KEY = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQUFJpaEQ5S2xBZHhCNkxWWkxweEpuRjc3ZHJjRm1hUyIsImV4cCI6MTc2MDI3Mzk5Mn0.VawUyvM6Zqik2fdRSHchm60_gXs4VUcFpc5Mw00K9Ew"
+  SUNO_BASE_URL = "https://ai.imgkits.com/suno"
+  SUNO_POLLING_URL = "https://usa.imgkits.com/node-api/suno"
+  MAX_REQUEST_SIZE = "10485760"
+  REQUEST_TIMEOUT = "30000"
+  CACHE_TTL = "300"
+
+# 🌐 CONFIGURACIÓN DE REDIRECCIONES PARA FUNCIONES
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
