@@ -252,8 +252,7 @@ export default function Son1kMusicGenerator({ className = '' }: Son1kMusicGenera
                     </div>
                   </div>
                 </div>
-              </div>
-            );
+              );
             })}
           </div>
         </div>
