@@ -961,3 +961,71 @@
 2025-10-14T09:16:53.593240Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
 2025-10-14T09:16:53.686354Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
 2025-10-14T09:16:53.686370Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:17:30.288054Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:17:30.288171Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:17:31.787299Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:17:31.787315Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:17:31.987083Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:17:31.987100Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:17:34.887620Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:17:34.887649Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:17:34.991139Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:17:34.991151Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:17:35.087018Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:17:35.087032Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:17:55.587559Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760433475532-14f4dd904209f8.mjs")}
+2025-10-14T09:17:55.587573Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:19:56.389153Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760433596349-d5c6605d4af808.mjs")}
+2025-10-14T09:19:56.389407Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:20:51.989415Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760433651939-fe258f8f7fbc2.mjs")}
+2025-10-14T09:20:51.989440Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:22:44.990474Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760433764914-dbf19fb2d09aa.mjs")}
+2025-10-14T09:22:44.990545Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:25:31.292609Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760433931249-8d411826f96388.mjs")}
+2025-10-14T09:25:31.292681Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:26:47.692695Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760434007676-f0f9a6717cda18.mjs")}
+2025-10-14T09:26:47.692813Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:26:47.829394Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760434007676-f0f9a6717cda18.mjs")}
+2025-10-14T09:26:47.829424Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:28:34.494356Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/components/ui/Knob.tsx")}
+2025-10-14T09:28:34.494382Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:28:35.339927Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/components/ui/Knob.tsx")}
+2025-10-14T09:28:35.339944Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:28:52.804452Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:28:52.804527Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:29:08.194311Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:29:08.194330Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:29:20.194930Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:29:20.194946Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:30:00.294925Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:30:00.294939Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:30:04.794914Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760434204717-e584bc95c6a188.mjs")}
+2025-10-14T09:30:04.794929Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:30:47.495303Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/components/ui/Knob.tsx"), AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:30:47.495319Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:30:47.596520Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:30:47.596545Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:31:48.297014Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/services/qwenGeneratorService.ts")}
+2025-10-14T09:31:48.297028Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:31:49.011828Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/services/qwenGeneratorService.ts")}
+2025-10-14T09:31:49.011843Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:31:49.113197Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/services/qwenGeneratorService.ts")}
+2025-10-14T09:31:49.113212Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:32:00.096889Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:32:00.096904Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:32:17.098014Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:32:17.098030Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:32:56.197586Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:32:56.197707Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:33:16.822794Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:33:16.822809Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:33:37.097275Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:33:37.097290Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:33:42.596756Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760434422565-3b87b94bd40f3.mjs")}
+2025-10-14T09:33:42.596771Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:34:49.298670Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:34:49.298685Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:34:51.397593Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/MusicGenerator.tsx")}
+2025-10-14T09:34:51.397607Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T09:40:14.101871Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760434814002-eaa83f345f639.mjs")}
+2025-10-14T09:40:14.101999Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))

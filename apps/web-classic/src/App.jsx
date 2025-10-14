@@ -46,7 +46,7 @@ function App() {
     try {
       const response = await fetch(`${API_BASE}/health`);
       setBackendOnline(response.ok);
-  } catch (error) {
+    } catch (error) {
       console.error('Backend health check failed:', error);
       setBackendOnline(false);
     }
@@ -80,7 +80,7 @@ function App() {
     setUser({
       username: `Usuario_${provider}`,
       tier: 'free',
-                 alvaeSymbol: ''
+      alvaeSymbol: ''
     });
     setShowRegister(false);
   };
@@ -120,15 +120,15 @@ function App() {
                 <path d="M35 25 L50 15 L65 25 L55 40 L65 55 L50 65 L35 55 L45 40 Z" fill="#FFD700" stroke="#FFD700" stroke-width="2"/>
                 <path d="M50 20 L50 80 M20 50 L80 50" stroke="#FFD700" stroke-width="2" opacity="0.7"/>
               </svg>
-          </div>
+            </div>
             <div class="nexus-golden-lines">
               <div class="golden-line line-1"></div>
               <div class="golden-line line-2"></div>
               <div class="golden-line line-3"></div>
               <div class="golden-line line-4"></div>
-          </div>
-            <div class="nexus-text-epic">MODO NEXUS ACTIVADO</div>
             </div>
+            <div class="nexus-text-epic">MODO NEXUS ACTIVADO</div>
+          </div>
         `;
         document.body.appendChild(nexusOverlay);
         
@@ -184,22 +184,22 @@ function App() {
     window.open('https://the-generator.son1kvers3.com', '_blank');
   };
 
-// ────────────────────────────────────────────────────────────────────────────────
+  // ────────────────────────────────────────────────────────────────────────────────
   // RENDERIZADO CONDICIONAL
-// ────────────────────────────────────────────────────────────────────────────────
+  // ────────────────────────────────────────────────────────────────────────────────
 
   if (enter) {
-  return (
+    return (
       <div className="min-h-screen bg-gray-900">
         <SubdomainDetector />
         <Son1kverseMain userId={userId} sessionId={sessionId} />
-    </div>
-  );
-}
+      </div>
+    );
+  }
 
-// ────────────────────────────────────────────────────────────────────────────────
+  // ────────────────────────────────────────────────────────────────────────────────
   // INTERFAZ PROFESIONAL PRINCIPAL
-// ────────────────────────────────────────────────────────────────────────────────
+  // ────────────────────────────────────────────────────────────────────────────────
 
   return (
     <div className={`min-h-screen bg-gray-900 ${nexusMode ? 'nexus-mode-active' : ''}`}>
@@ -235,27 +235,27 @@ function App() {
         <div className="navbar-right">
           <div className="status-indicator">
             <div className={`status-dot ${backendOnline ? 'online' : ''}`}></div>
-              </div>
+          </div>
           <div className="flex flex-col items-end gap-2">
             <div className="flex items-center gap-3">
               {user ? (
                 <>
                   <span className="text-white text-sm">Hola, {user.username}</span>
-              <button
+                  <button 
                     className="btn-secondary"
                     onClick={handleLogout}
-              >
-                Cerrar Sesión
-              </button>
+                  >
+                    Cerrar Sesión
+                  </button>
                 </>
-          ) : (
+              ) : (
                 <>
-              <button
+                  <button 
                     className="btn-secondary"
                     onClick={() => setShowLogin(true)}
-              >
-                Iniciar Sesión
-              </button>
+                  >
+                    Iniciar Sesión
+                  </button>
                   <button 
                     className="btn-secondary"
                     onClick={() => setShowRegister(true)}
@@ -270,9 +270,9 @@ function App() {
               >
                 Entrar al Estudio
               </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
       </nav>
 
       {/* Línea Divisoria Verde de Luz al ras de las pestañas */}
@@ -290,21 +290,21 @@ function App() {
               Componer con alma en un mundo de máquinas.
             </p>
             <div className="hero-buttons">
-            <button 
+              <button 
                 className="btn-primary"
                 onClick={() => setEnter(true)}
               >
                 Entrar al Estudio
-            </button>
-            <button 
+              </button>
+              <button 
                 className="btn-secondary"
                 onClick={handleCodexMaestro}
               >
                 Codex Maestro
-            </button>
+              </button>
+            </div>
           </div>
-        </div>
-
+          
           <div className="hero-right slide-in-right">
             <div className="interactive-panel">
               <h3 className="panel-title">Controles Creativos</h3>
@@ -313,19 +313,19 @@ function App() {
                 <div className="dial-control">
                   <div className="dial">
                     <div className="dial-indicator"></div>
-                      </div>
+                  </div>
                   <div className="dial-label">Tono</div>
-                    </div>
+                </div>
                 <div className="dial-control">
                   <div className="dial">
                     <div className="dial-indicator"></div>
                   </div>
                   <div className="dial-label">Ritmo</div>
-              </div>
+                </div>
                 <div className="dial-control">
                   <div className="dial">
                     <div className="dial-indicator"></div>
-              </div>
+                  </div>
                   <div className="dial-label">Armonía</div>
                 </div>
               </div>
@@ -353,9 +353,9 @@ function App() {
                 </button>
               </div>
             </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Línea Divisoria Verde de Luz */}
       <div className="section-divider"></div>
@@ -367,7 +367,7 @@ function App() {
             Genera música, clona voces cantadas, mezcla con calidad de estudio y guarda tu proceso en un archivo vivo. 
             Bienvenido al Estudio Fantasma.
           </p>
-    </div>
+        </div>
       </section>
 
       {/* Sección de Características */}
@@ -387,8 +387,8 @@ function App() {
               <span className="feature-tag">Voces APLIO</span>
               <span className="feature-tag">Perilla de Expresividad</span>
               <span className="feature-tag">Pre-producción guiada</span>
-                  </div>
-                    </div>
+            </div>
+          </div>
           
           <div className="feature-card fade-in">
             <h3 className="feature-title">Ghost Studio</h3>
@@ -399,7 +399,7 @@ function App() {
               <span className="feature-tag">Análisis IA</span>
               <span className="feature-tag">Arreglos</span>
               <span className="feature-tag">Mezcla profesional</span>
-                    </div>
+            </div>
           </div>
           
           <div className="feature-card fade-in">
@@ -411,8 +411,8 @@ function App() {
               <span className="feature-tag">IA Adaptativa</span>
               <span className="feature-tag">Aprendizaje</span>
               <span className="feature-tag">Sugerencias</span>
+            </div>
           </div>
-      </div>
           
           <div className="feature-card fade-in">
             <h3 className="feature-title">The Generator</h3>
@@ -423,9 +423,9 @@ function App() {
               <span className="feature-tag">Letras IA</span>
               <span className="feature-tag">Control Creativo</span>
               <span className="feature-tag">Perillas literarias</span>
-                  </div>
-                  </div>
-                  
+            </div>
+          </div>
+          
           <div className="feature-card fade-in">
             <h3 className="feature-title">Nova Post Pilot</h3>
             <p className="feature-description">
@@ -435,9 +435,9 @@ function App() {
               <span className="feature-tag">Marketing IA</span>
               <span className="feature-tag">Redes Sociales</span>
               <span className="feature-tag">Automatización</span>
-                  </div>
-                  </div>
-                  
+            </div>
+          </div>
+          
           <div className="feature-card fade-in">
             <h3 className="feature-title">Sanctuary</h3>
             <p className="feature-description">
@@ -447,9 +447,9 @@ function App() {
               <span className="feature-tag">Comunidad</span>
               <span className="feature-tag">Colaboración</span>
               <span className="feature-tag">Red Social</span>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Línea Divisoria Verde de Luz */}
@@ -462,7 +462,7 @@ function App() {
           <div className="top-10-grid">
             <div className="top-10-item">
               <div className="top-10-rank">1</div>
-              <button
+              <button 
                 className="top-10-play"
                 onClick={() => handlePlaySong('Neon Dreams')}
               >
@@ -470,7 +470,7 @@ function App() {
               </button>
               <div className="top-10-song">Neon Dreams</div>
               <div className="top-10-artist">AI Composer</div>
-                </div>
+            </div>
             <div className="top-10-item">
               <div className="top-10-rank">2</div>
               <button 
@@ -484,7 +484,7 @@ function App() {
             </div>
             <div className="top-10-item">
               <div className="top-10-rank">3</div>
-              <button
+              <button 
                 className="top-10-play"
                 onClick={() => handlePlaySong('Electric Pulse')}
               >
@@ -492,7 +492,7 @@ function App() {
               </button>
               <div className="top-10-song">Electric Pulse</div>
               <div className="top-10-artist">Pixel Assistant</div>
-                </div>
+            </div>
             <div className="top-10-item">
               <div className="top-10-rank">4</div>
               <button 
@@ -506,7 +506,7 @@ function App() {
             </div>
             <div className="top-10-item">
               <div className="top-10-rank">5</div>
-              <button
+              <button 
                 className="top-10-play"
                 onClick={() => handlePlaySong('Quantum Melody')}
               >
@@ -514,7 +514,7 @@ function App() {
               </button>
               <div className="top-10-song">Quantum Melody</div>
               <div className="top-10-artist">Nova Pilot</div>
-                </div>
+            </div>
             <div className="top-10-item">
               <div className="top-10-rank">6</div>
               <button 
@@ -528,7 +528,7 @@ function App() {
             </div>
             <div className="top-10-item">
               <div className="top-10-rank">7</div>
-              <button
+              <button 
                 className="top-10-play"
                 onClick={() => handlePlaySong('Neural Network')}
               >
@@ -536,7 +536,7 @@ function App() {
               </button>
               <div className="top-10-song">Neural Network</div>
               <div className="top-10-artist">AI Composer</div>
-                </div>
+            </div>
             <div className="top-10-item">
               <div className="top-10-rank">8</div>
               <button 
@@ -550,7 +550,7 @@ function App() {
             </div>
             <div className="top-10-item">
               <div className="top-10-rank">9</div>
-              <button
+              <button 
                 className="top-10-play"
                 onClick={() => handlePlaySong('Algorithmic Soul')}
               >
@@ -558,7 +558,7 @@ function App() {
               </button>
               <div className="top-10-song">Algorithmic Soul</div>
               <div className="top-10-artist">Pixel Assistant</div>
-                </div>
+            </div>
             <div className="top-10-item">
               <div className="top-10-rank">10</div>
               <button 
@@ -571,8 +571,8 @@ function App() {
               <div className="top-10-artist">The Generator</div>
             </div>
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
       {/* Línea Divisoria Verde de Luz */}
       <div className="section-divider"></div>
@@ -602,7 +602,7 @@ function App() {
               >
                 Comenzar Gratis
               </button>
-                  </div>
+            </div>
             
             <div className="tier-card">
               <h3 className="tier-name">PRO</h3>
@@ -620,9 +620,9 @@ function App() {
                 onClick={() => handlePurchaseTier('PRO')}
               >
                 Comprar Pro
-                    </button>
-          </div>
-
+              </button>
+            </div>
+            
             <div className="tier-card popular">
               <h3 className="tier-name">PREMIUM</h3>
               <div className="tier-price">$49 <span className="period">/mes</span></div>
@@ -661,10 +661,10 @@ function App() {
               >
                 Contactar Ventas
               </button>
+            </div>
           </div>
-          </div>
-      </div>
-    </section>
+        </div>
+      </section>
 
       {/* Modal de Login */}
       {showLogin && (
@@ -697,19 +697,19 @@ function App() {
               </button>
             </form>
           </div>
-                </div>
-              )}
-              
+        </div>
+      )}
+
       {/* Modal de Registro */}
       {showRegister && (
         <div className="register-modal">
           <div className="register-content">
-                <button 
+            <button 
               className="login-close"
               onClick={() => setShowRegister(false)}
             >
               ×
-                </button>
+            </button>
             <h2 className="register-title">Crear Cuenta</h2>
             
             <div className="social-login">
@@ -737,12 +737,12 @@ function App() {
               >
                 Email
               </button>
-                  </div>
+            </div>
             
             <div className="divider-text">
               <span>o regístrate con email</span>
-        </div>
-
+            </div>
+            
             <form onSubmit={(e) => { e.preventDefault(); handleRegister('Email'); }} className="login-form">
               <input
                 type="email"
@@ -762,8 +762,8 @@ function App() {
                 Crear Cuenta
               </button>
             </form>
+          </div>
         </div>
-      </div>
       )}
       
       {/* Botón NEXUS Escondido - Descubrimiento */}

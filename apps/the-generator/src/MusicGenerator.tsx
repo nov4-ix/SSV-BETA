@@ -8,7 +8,9 @@ import { musicService, MusicGeneration, MusicGenerationRequest } from './service
 import { clientManager } from './services/clientManager';
 import { useSunoService } from './hooks/useSunoService';
 import { UsageLimit } from './components/UsageLimit';
-import { Play, Pause, Download, Trash2, RefreshCw, Music, Zap } from 'lucide-react';
+import { Knob } from './components/ui/Knob';
+import { qwenGeneratorService, LiteraryKnobs } from './services/qwenGeneratorService';
+import { Play, Pause, Download, Trash2, RefreshCw, Music, Zap, BookOpen, Sparkles } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const generationSchema = z.object({
@@ -30,6 +32,15 @@ export const MusicGenerator: React.FC = () => {
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [limits, setLimits] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
+  
+  // Estados para las perillas de control
+  const [tempo, setTempo] = useState(120);
+  const [energy, setEnergy] = useState(70);
+  const [creativity, setCreativity] = useState(80);
+  
+  // Estados para prompts generados
+  const [generatedPrompts, setGeneratedPrompts] = useState<any>(null);
+  const [isGeneratingPrompts, setIsGeneratingPrompts] = useState(false);
 
   const {
     register,
@@ -79,23 +90,30 @@ export const MusicGenerator: React.FC = () => {
       // Detectar si el prompt menciona instrumentos eléctricos
       const hasElectricInstruments = /electric|overdrive|distortion|rock|metal|punk|indie|alternative/i.test(data.prompt);
 
+      // Agregar parámetros de las perillas al prompt
+      const tempoText = tempo < 100 ? 'slow tempo' : tempo > 140 ? 'fast tempo' : 'medium tempo';
+      const energyText = energy < 40 ? 'low energy' : energy > 80 ? 'high energy' : 'medium energy';
+      const creativityText = creativity > 80 ? 'experimental and creative' : creativity < 40 ? 'traditional and simple' : 'balanced';
+
+      const controlParams = `${tempoText}, ${energyText}, ${creativityText}`;
+
       if (data.instrumental) {
         if (hasElectricInstruments) {
-          finalPrompt = `ELECTRIC GUITARS ONLY, NO ACOUSTIC: [${data.style.toUpperCase()}] ${data.prompt}`;
+          finalPrompt = `ELECTRIC GUITARS ONLY, NO ACOUSTIC: [${data.style.toUpperCase()}] ${data.prompt} - ${controlParams}`;
         } else {
-          finalPrompt = `[${data.style.toUpperCase()}] ${data.prompt}`;
+          finalPrompt = `[${data.style.toUpperCase()}] ${data.prompt} - ${controlParams}`;
         }
       } else if (data.lyrics) {
         if (hasElectricInstruments) {
-          finalPrompt = `ELECTRIC GUITARS ONLY, NO ACOUSTIC: [${data.style.toUpperCase()}] ${data.prompt}\n\n[Verse 1]\n${data.lyrics}`;
+          finalPrompt = `ELECTRIC GUITARS ONLY, NO ACOUSTIC: [${data.style.toUpperCase()}] ${data.prompt} - ${controlParams}\n\n[Verse 1]\n${data.lyrics}`;
         } else {
-          finalPrompt = `[${data.style.toUpperCase()}] ${data.prompt}\n\n[Verse 1]\n${data.lyrics}`;
+          finalPrompt = `[${data.style.toUpperCase()}] ${data.prompt} - ${controlParams}\n\n[Verse 1]\n${data.lyrics}`;
         }
       } else {
         if (hasElectricInstruments) {
-          finalPrompt = `ELECTRIC GUITARS ONLY, NO ACOUSTIC: [${data.style.toUpperCase()}] ${data.prompt}`;
+          finalPrompt = `ELECTRIC GUITARS ONLY, NO ACOUSTIC: [${data.style.toUpperCase()}] ${data.prompt} - ${controlParams}`;
         } else {
-          finalPrompt = `[${data.style.toUpperCase()}] ${data.prompt}`;
+          finalPrompt = `[${data.style.toUpperCase()}] ${data.prompt} - ${controlParams}`;
         }
       }
 
@@ -148,6 +166,73 @@ export const MusicGenerator: React.FC = () => {
       toast.success('Descarga iniciada');
     } catch (error) {
       toast.error('Error descargando archivo');
+    }
+  };
+
+  // 🎛️ GENERAR PROMPTS CREATIVOS CON QWEN
+  const handleGeneratePrompts = async () => {
+    try {
+      setIsGeneratingPrompts(true);
+      
+      const creativityLevel = qwenGeneratorService.convertCreativityToLevel(creativity);
+      
+      const promptRequest = {
+        prompt: watch('prompt') || 'Una canción épica',
+        style: watch('style') || 'rock',
+        genre: watch('style') || 'alternative',
+        mood: energy < 40 ? 'calm' : energy > 80 ? 'energetic' : 'balanced',
+        creativityLevel,
+        targetInstrumentation: ['electric guitar', 'drums', 'bass'],
+        arrangementGoals: ['dynamic build-up', 'catchy chorus', 'emotional bridge'],
+        userId: user?.id || 'anonymous'
+      };
+
+      const prompts = await qwenGeneratorService.generateIntelligentPrompts(promptRequest);
+      setGeneratedPrompts(prompts);
+      
+      toast.success('¡Prompts creativos generados!');
+    } catch (error: any) {
+      console.error('Error generando prompts:', error);
+      toast.error('Error generando prompts creativos');
+    } finally {
+      setIsGeneratingPrompts(false);
+    }
+  };
+
+  // 📝 GENERAR LETRAS INTELIGENTES CON PERILLAS LITERARIAS
+  const handleGenerateLyrics = async () => {
+    try {
+      setIsGeneratingPrompts(true);
+      
+      const literaryKnobs = qwenGeneratorService.convertControlKnobsToLiterary(tempo, energy, creativity);
+      
+      const lyricsRequest = {
+        prompt: watch('prompt') || 'Una historia de amor',
+        literaryKnobs,
+        structure: {
+          type: 'verse-chorus-bridge' as const
+        },
+        style: watch('style') || 'pop',
+        genre: watch('style') || 'alternative',
+        mood: energy < 40 ? 'melancholic' : energy > 80 ? 'uplifting' : 'contemplative',
+        userId: user?.id || 'anonymous'
+      };
+
+      const lyricsResponse = await qwenGeneratorService.generateStructuredLyrics(lyricsRequest);
+      
+      // Actualizar el campo de letras con las generadas
+      const lyricsField = document.querySelector('textarea[name="lyrics"]') as HTMLTextAreaElement;
+      if (lyricsField) {
+        lyricsField.value = lyricsResponse.lyrics;
+        lyricsField.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+      
+      toast.success('¡Letras inteligentes generadas!');
+    } catch (error: any) {
+      console.error('Error generando letras:', error);
+      toast.error('Error generando letras inteligentes');
+    } finally {
+      setIsGeneratingPrompts(false);
     }
   };
 
@@ -322,6 +407,77 @@ export const MusicGenerator: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Perillas de Control Literarias */}
+                <div className="bg-gray-700/50 rounded-xl p-6 border border-gray-600">
+                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                    <BookOpen className="w-5 h-5 mr-2 text-purple-400" />
+                    Perillas Literarias
+                  </h3>
+                  <div className="grid grid-cols-3 gap-6 mb-6">
+                    <Knob
+                      value={tempo}
+                      onChange={setTempo}
+                      min={60}
+                      max={200}
+                      step={5}
+                      label="Profundidad Narrativa"
+                      size="small"
+                      color="green"
+                    />
+                    <Knob
+                      value={energy}
+                      onChange={setEnergy}
+                      min={0}
+                      max={100}
+                      step={5}
+                      label="Intensidad Emocional"
+                      size="small"
+                      color="blue"
+                    />
+                    <Knob
+                      value={creativity}
+                      onChange={setCreativity}
+                      min={0}
+                      max={100}
+                      step={5}
+                      label="Complejidad Poética"
+                      size="small"
+                      color="purple"
+                    />
+                  </div>
+                  
+                  {/* Botones de Generación Inteligente */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <button
+                      type="button"
+                      onClick={handleGeneratePrompts}
+                      disabled={isGeneratingPrompts}
+                      className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all duration-300"
+                    >
+                      {isGeneratingPrompts ? (
+                        <RefreshCw className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <Sparkles className="w-4 h-4" />
+                      )}
+                      Generar Prompts Creativos
+                    </button>
+                    
+                    <button
+                      type="button"
+                      onClick={handleGenerateLyrics}
+                      disabled={isGeneratingPrompts}
+                      className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all duration-300"
+                    >
+                      {isGeneratingPrompts ? (
+                        <RefreshCw className="w-4 h-4 animate-spin" />
+                      ) : (
+                        <BookOpen className="w-4 h-4" />
+                      )}
+                      Generar Letras Inteligentes
+                    </button>
+                  </div>
+                </div>
+
                 {/* Botón de generación */}
                 <button
                   type="submit"
@@ -340,6 +496,39 @@ export const MusicGenerator: React.FC = () => {
                     </>
                   )}
                 </button>
+
+                {/* Prompts Generados */}
+                {generatedPrompts && (
+                  <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-6 border border-purple-500/30">
+                    <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                      <Sparkles className="w-5 h-5 mr-2 text-purple-400" />
+                      Prompts Creativos Generados
+                    </h3>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-sm font-medium text-purple-300 mb-2">Prompt Mejorado:</h4>
+                        <p className="text-sm text-gray-300 bg-gray-800/50 p-3 rounded-lg">
+                          {generatedPrompts.enhancedPrompt}
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-purple-300 mb-2">Prompt Creativo:</h4>
+                        <p className="text-sm text-gray-300 bg-gray-800/50 p-3 rounded-lg">
+                          {generatedPrompts.creativePrompt}
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-purple-300 mb-2">Especificaciones Técnicas:</h4>
+                        <div className="text-sm text-gray-300 bg-gray-800/50 p-3 rounded-lg">
+                          <p><strong>Tempo:</strong> {generatedPrompts.technicalSpecs?.tempo}</p>
+                          <p><strong>Tonalidad:</strong> {generatedPrompts.technicalSpecs?.key}</p>
+                          <p><strong>Compás:</strong> {generatedPrompts.technicalSpecs?.timeSignature}</p>
+                          <p><strong>Dinámicas:</strong> {generatedPrompts.technicalSpecs?.dynamics}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Estado de conexión */}
                 {!isConnected && (
