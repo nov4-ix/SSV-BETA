@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "name": "son1kvers3-backend",
+  "builds": [
+    {
+      "src": "src/server.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/src/server.ts"
+    },
+    {
+      "src": "/health",
+      "dest": "/src/server.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/server.ts"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "src/server.ts": {
+      "maxDuration": 30
+    }
+  }
+}

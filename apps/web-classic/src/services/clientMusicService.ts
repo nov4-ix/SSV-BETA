@@ -1,5 +1,8 @@
 // src/services/clientMusicService.ts
 
+// Configuración de API
+const API_BASE_URL = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+
 interface ClientAccount {
   email: string;
   password: string;
@@ -86,7 +89,7 @@ class ClientMusicService {
       console.log('🔐 Registrando cuenta del cliente...', email);
 
       // Crear cuenta en imgkits usando el backend
-      const response = await fetch('http://localhost:3001/api/client/register', {
+      const response = await fetch(`${API_BASE_URL}/client-register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -140,7 +143,7 @@ class ClientMusicService {
       console.log('🎵 Generando música con cuenta del cliente...', this.clientAccount.email);
 
       // Usar la cuenta del cliente para generar música
-      const response = await fetch('http://localhost:3001/api/client/generate', {
+      const response = await fetch(`${API_BASE_URL}/client-generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -210,7 +213,7 @@ class ClientMusicService {
     try {
       console.log('🔄 Refrescando token del cliente...');
 
-      const response = await fetch('http://localhost:3001/api/client/refresh', {
+      const response = await fetch(`${API_BASE_URL}/client-refresh`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

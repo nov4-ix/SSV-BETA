@@ -1,6 +1,8 @@
 // src/services/son1kService.ts
 
-const BACKEND_URL = 'http://localhost:3001/api/suno';
+// Configuración de API
+const API_BASE_URL = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+const BACKEND_URL = `${API_BASE_URL}/suno-generate-and-wait`;
 
 export interface Son1kGenerationParams {
   prompt: string;

@@ -41,13 +41,13 @@ export interface CanGenerateResponse {
 }
 
 class MusicService {
-  private baseUrl = 'http://localhost:3001/api/suno'; // Backend Suno funcionando
+  private baseUrl = 'https://68ecf6352bc0b35bdc2f1ae5--son1k.netlify.app/api'; // Backend Netlify Functions
 
   async generateMusic(request: MusicGenerationRequest): Promise<MusicGeneration> {
     try {
       console.log('🎵 Generando música con backend Suno...', request);
       
-      const response = await fetch(`${this.baseUrl}/generate-and-wait`, {
+      const response = await fetch(`${this.baseUrl}/suno-generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

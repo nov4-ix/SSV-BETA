@@ -1,5 +1,8 @@
 // src/services/tieredTokenService.ts
 
+// Configuración de API
+const API_BASE_URL = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+
 interface ClientTier {
   type: 'free' | 'premium';
   userId?: string;
@@ -146,7 +149,7 @@ class TieredTokenService {
     try {
       console.log(`🔑 Obteniendo nuevo token ${this.clientTier.type}...`);
 
-      const response = await fetch('http://localhost:3001/api/token/get-tiered', {
+      const response = await fetch(`${API_BASE_URL}/token-get-tiered`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -183,7 +186,7 @@ class TieredTokenService {
     try {
       console.log(`🔄 Refrescando token ${this.clientTier.type}...`);
 
-      const response = await fetch('http://localhost:3001/api/token/refresh-tiered', {
+      const response = await fetch(`${API_BASE_URL}/token-refresh-tiered`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -250,7 +253,7 @@ class TieredTokenService {
       // Asegurar token válido
       const token = await this.ensureValidToken();
 
-      const response = await fetch('http://localhost:3001/api/suno/generate-and-wait', {
+      const response = await fetch(`${API_BASE_URL}/suno-generate-and-wait`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -274,7 +277,7 @@ class TieredTokenService {
           console.log('🔄 Token inválido, refrescando y reintentando...');
           const newToken = await this.refreshToken();
           
-          const retryResponse = await fetch('http://localhost:3001/api/suno/generate-and-wait', {
+          const retryResponse = await fetch(`${API_BASE_URL}/suno-generate-and-wait`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -330,7 +333,7 @@ class TieredTokenService {
     try {
       console.log('⬆️ Upgrading to premium...', email);
 
-      const response = await fetch('http://localhost:3001/api/tier/upgrade', {
+      const response = await fetch(`${API_BASE_URL}/tier-upgrade`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

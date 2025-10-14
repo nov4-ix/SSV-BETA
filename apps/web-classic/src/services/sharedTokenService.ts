@@ -1,5 +1,8 @@
 // src/services/sharedTokenService.ts
 
+// Configuración de API
+const API_BASE_URL = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+
 interface MusicGenerationParams {
   prompt: string;
   style?: string;
@@ -92,7 +95,7 @@ class SharedTokenService {
     try {
       console.log('🔑 Obteniendo nuevo token compartido...');
 
-      const response = await fetch('http://localhost:3001/api/token/get-shared', {
+      const response = await fetch(`${API_BASE_URL}/token-get-shared`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -137,7 +140,7 @@ class SharedTokenService {
     try {
       console.log('🔄 Refrescando token compartido...');
 
-      const response = await fetch('http://localhost:3001/api/token/refresh-shared', {
+      const response = await fetch(`${API_BASE_URL}/token-refresh-shared`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -188,7 +191,7 @@ class SharedTokenService {
       // Asegurar que tenemos un token válido
       const token = await this.ensureValidToken();
 
-      const response = await fetch('http://localhost:3001/api/suno/generate-and-wait', {
+      const response = await fetch(`${API_BASE_URL}/suno-generate-and-wait`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -212,7 +215,7 @@ class SharedTokenService {
           console.log('🔄 Token inválido, refrescando y reintentando...');
           const newToken = await this.refreshToken();
           
-          const retryResponse = await fetch('http://localhost:3001/api/suno/generate-and-wait', {
+          const retryResponse = await fetch(`${API_BASE_URL}/suno-generate-and-wait`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

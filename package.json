@@ -1,8 +1,8 @@
 {
-  "name": "super-son1k",
-  "private": true,
+  "name": "son1kvers3-alfa-ssv",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Democratización musical global mediante IA - Plataforma profesional full-stack",
+  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -10,25 +10,27 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "lint": "turbo run lint",
     "test": "turbo run test",
-    "storybook": "turbo run storybook",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
     "clean": "turbo run clean",
-    "dev:web-classic": "turbo run dev --filter=web-classic",
-    "dev:nexus-visual": "turbo run dev --filter=nexus-visual",
-    "dev:ghost-studio": "turbo run dev --filter=ghost-studio",
-    "dev:sonic-daw": "turbo run dev --filter=sonic-daw",
-    "dev:clone-station": "turbo run dev --filter=clone-station",
-    "dev:nova-post-pilot": "turbo run dev --filter=nova-post-pilot",
-    "dev:sanctuary-social": "turbo run dev --filter=sanctuary-social"
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:generate": "cd apps/backend && npx prisma generate",
+    "db:push": "cd apps/backend && npx prisma db push",
+    "db:migrate": "cd apps/backend && npx prisma migrate dev",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "turbo": "^1.10.0",
-    "typescript": "^5.0.0"
+    "@types/node": "^20.10.0",
+    "prettier": "^3.1.0",
+    "turbo": "^1.11.0",
+    "typescript": "^5.3.0"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  }
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
 }

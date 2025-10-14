@@ -1,399 +1,430 @@
-# 🌌 SSV-Beta - Super Son1k Universe
-## Ecosistema Completo con Aprendizaje Adaptativo de Píxeles
+# 🌌 SON1KVERS3 ALFA-SSV - HYBRID ULTIMATE
 
-![SSV-Beta](https://img.shields.io/badge/SSV-Beta-v1.0.0-00FFE7?style=for-the-badge&logo=react&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+> **Democratización musical global mediante IA** - Plataforma profesional full-stack con múltiples apps integradas y experiencia visual épica.
 
-## 🎯 **REVOLUCIÓN EN HERRAMIENTAS CREATIVAS**
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
-**SSV-Beta** es el primer ecosistema de herramientas creativas con **aprendizaje adaptativo de píxeles**, donde cada elemento visual aprende del comportamiento del usuario y se personaliza automáticamente.
+## 🎯 MISIÓN DEL PROYECTO
 
-### 🧠 **CARACTERÍSTICA ÚNICA: PÍXELES QUE APRENDEN**
-- **10,000 píxeles** que aprenden del comportamiento del usuario
-- **Aprendizaje en tiempo real** con patrones de comportamiento
-- **Personalización automática** sin configuración manual
-- **Adaptación contextual** por aplicación utilizada
-- **Integración con cuentas Pro** para aprendizaje avanzado
+Crear la plataforma más avanzada para democratización musical mediante IA, combinando:
 
----
+- **Generación musical con IA** (Suno AI)
+- **DAW profesional** (Ghost Studio)
+- **Marketing digital inteligente** (Nova Post Pilot)
+- **Red social musical** (Sanctuary Social)
+- **Experiencia visual épica** (Nexus Visual)
+- **Sistema de autenticación unificado**
 
-## 🚀 **ECOSISTEMA COMPLETO**
+## 🏗️ ARQUITECTURA MONOREPO
 
-### **7 Aplicaciones Integradas:**
+```
+ALFA-SSV/
+├── apps/
+│   ├── web-classic/           # Dashboard principal con Auth
+│   ├── nexus-visual/          # Lluvia de kanjis + modo NEXUS épico
+│   ├── ghost-studio/          # DAW con nueva interfaz
+│   ├── nova-post-pilot/       # AI Marketing con nueva UI
+│   ├── sanctuary-social/      # Chat activo + social
+│   ├── the-generator/         # Generación musical IA
+│   ├── pixel-perfect/         # App 100% funcional
+│   └── backend/               # API Node.js + TypeScript
+├── packages/
+│   ├── ui/                    # Componentes compartidos
+│   ├── auth/                  # Sistema auth unificado
+│   ├── database/              # Prisma + schemas
+│   └── utils/                 # Utilidades compartidas
+└── infrastructure/
+    ├── docker/
+    └── nginx/
+```
 
-| Aplicación | Puerto | Estado | Descripción |
-|------------|--------|--------|-------------|
-| **Web Classic** | 3000 | ✅ Completo | Dashboard principal con píxeles adaptativos |
-| **Nexus Visual** | 5173 | ✅ Completo | Experiencia Matrix inmersiva con aprendizaje |
-| **Ghost Studio** | 3001 | ✅ Completo | IA Musical + Mini DAW + Looper |
-| **Sonic DAW** | 3005 | ✅ Completo | DAW Profesional que supera a BandLab |
-| **Clone Station** | 3002 | ✅ Completo | Gestión de datasets con IA |
-| **Nova Post Pilot** | 3003 | ✅ Completo | Automatización social inteligente |
-| **Sanctuary Social** | 3004 | ✅ Completo | Red colaborativa con aprendizaje |
+## 🛠️ STACK TECNOLÓGICO COMPLETO
 
----
+### Frontend (Todas las Apps)
+- **Framework**: React 18 + TypeScript (strict mode)
+- **Build**: Vite 5+ (optimizado)
+- **Styling**: Tailwind CSS + Framer Motion
+- **State**: Zustand (global) + React Query (data fetching)
+- **Routing**: React Router v6
+- **Audio**: Tone.js + Web Audio API
+- **Animations**: Framer Motion + GSAP (para animaciones épicas)
+- **Forms**: React Hook Form + Zod validation
+- **Icons**: Lucide React
 
-## 🧠 **SISTEMA DE APRENDIZAJE ADAPTATIVO**
+### Backend (apps/backend/)
+- **Runtime**: Node.js 20+ + TypeScript
+- **Framework**: Express.js 4.18+ (producción-ready)
+- **ORM**: Prisma 5.8+ con PostgreSQL 16
+- **Cache**: Redis 7+ (sessions + rate limiting)
+- **Queue**: BullMQ (para generación musical async)
+- **Real-time**: Socket.io 4.6+ (para chat + colaboración)
+- **Storage**: AWS S3 / Supabase Storage (audio files)
+- **Auth**: JWT + OAuth2 (Google, Facebook, TikTok)
+- **Payments**: Stripe (subscriptions)
+- **AI**: OpenAI API / Qwen / SunoAPI para música
 
-### **Cómo Funciona:**
-1. **Cada píxel observa** el comportamiento del usuario
-2. **Aprende patrones** de interacción y preferencias
-3. **Se adapta automáticamente** a las preferencias del usuario
-4. **Mejora continuamente** con cada interacción
+### Database (PostgreSQL)
+```sql
+-- Tablas críticas:
+users (id, email, name, avatar, role, tier, oauth_provider)
+subscriptions (user_id, tier, stripe_id, active)
+generations (user_id, prompt, audio_url, status)
+projects (user_id, name, tracks[])
+chat_messages (user_id, room_id, content, timestamp)
+admin_users (user_id, permissions, alvae_symbol)
+```
 
-### **Tipos de Aprendizaje:**
-- **Interacciones**: Clicks, hover, drag & drop, scroll, keyboard
-- **Contextual**: Por aplicación (Nexus, Ghost Studio, Sonic DAW, etc.)
-- **Temporal**: Frecuencia, duración, horarios, sesiones
-- **Personalización**: Colores, intensidad, velocidad, efectos
+### DevOps
+- **Containers**: Docker + Docker Compose
+- **Reverse Proxy**: Nginx
+- **CI/CD**: GitHub Actions
+- **Hosting**:
+  - Frontend: Vercel (o Netlify)
+  - Backend: Render / Railway / AWS ECS
+  - DB: Supabase / Render PostgreSQL
 
-### **Métricas en Tiempo Real:**
-- **Total de Píxeles**: 10,000 píxeles activos
-- **Píxeles Adaptados**: Número que ha aprendido
-- **Tasa de Adaptación**: Porcentaje de píxeles adaptados
-- **Patrones Totales**: Número de patrones aprendidos
-- **Confianza Promedio**: Nivel de confianza del aprendizaje
+## 🎨 DESIGN SYSTEM UNIFIED
 
----
+### Colores Base
+```css
+/* Theme Principal */
+--bg-primary: #0A0C10;      /* Carbón profundo */
+--bg-secondary: #1a1d29;    /* Gris oscuro */
+--bg-glass: rgba(255,255,255,0.05); /* Glassmorphism */
 
-## 🎨 **SISTEMA DE DISEÑO SON1KVERSE**
+/* Colores Principales */
+--cyan: #00FFE7;            /* Cian brillante */
+--magenta: #B84DFF;         /* Magenta/púrpura */
+--accent: #9AF7EE;          /* Acento cian suave */
+--gold: #FFD700;            /* Oro (modo NEXUS) */
+--red: #FF1744;             /* Rojo épico (Super Saiyan) */
+```
 
-### **Paleta de Colores:**
-- **Carbón**: `#0A0C10` - Fondo principal
-- **Cian**: `#00FFE7` - Color primario
-- **Magenta**: `#B84DFF` - Color secundario/glitch
-- **Acento**: `#9AF7EE` - Color de acento
+### Efectos y Animaciones
+```css
+/* Glassmorphism */
+.glass {
+  backdrop-blur: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
-### **Efectos Visuales:**
-- **Glitch TV** con vibración, parpadeo y "borrado"
-- **Barras de interferencia** horizontal
-- **Glow effects** con múltiples capas
-- **Transiciones** cubic-bezier suaves
-- **Aprendizaje adaptativo** de efectos visuales
+/* Glow Effects */
+.glow-cyan { box-shadow: 0 0 20px rgba(0,255,231,0.5); }
+.glow-gold { box-shadow: 0 0 30px rgba(255,215,0,0.8); }
+.glow-red { box-shadow: 0 0 40px rgba(255,23,68,0.9); }
+```
 
----
+## 🚀 QUICK START
 
-## 🛠️ **TECNOLOGÍAS**
+### Prerequisites
+- Node.js 20+
+- pnpm 8+
+- PostgreSQL 16+
+- Redis 7+
 
-### **Frontend:**
-- **React 18** - Framework principal
-- **TypeScript** - Tipado estático
-- **Vite** - Build tool y dev server
-- **Framer Motion** - Animaciones
-- **React Router** - Navegación
-- **Zustand** - Estado global
-
-### **Aprendizaje Adaptativo:**
-- **Machine Learning** integrado en la interfaz
-- **Patrones de comportamiento** reconocidos automáticamente
-- **Adaptación en tiempo real** sin latencia
-- **Persistencia de aprendizaje** entre sesiones
-
-### **Optimizaciones:**
-- **Performance Monitoring** en tiempo real
-- **Cache Inteligente** con múltiples estrategias
-- **Error Handling** robusto
-- **Analytics** completos
-- **Mobile/Tablet** completamente optimizado
-
----
-
-## 🚀 **INICIO RÁPIDO**
-
-### **Instalación:**
+### Installation
 ```bash
-# Clonar repositorio
-git clone https://github.com/[usuario]/SSV-beta.git
-cd SSV-beta
+# Clone repository
+git clone https://github.com/son1kvers3/alfa-ssv.git
+cd alfa-ssv
 
-# Instalar dependencias
-npm install
+# Install dependencies
+pnpm install
 
-# Desarrollo de todas las apps
-npm run dev
+# Setup environment
+cp .env.example .env.local
+# Edit .env.local with your configuration
 
-# Desarrollo de app específica
-npm run dev:web-classic      # Puerto 3000
-npm run dev:nexus-visual     # Puerto 5173
-npm run dev:ghost-studio     # Puerto 3001
-npm run dev:sonic-daw        # Puerto 3005
-npm run dev:clone-station    # Puerto 3002
-npm run dev:nova-post-pilot  # Puerto 3003
-npm run dev:sanctuary-social # Puerto 3004
+# Setup database
+pnpm db:generate
+pnpm db:push
+
+# Start development
+pnpm dev
 ```
 
-### **Construcción:**
+### Development Commands
 ```bash
-# Construir todas las apps
-npm run build
+# Start all apps in development
+pnpm dev
 
-# Construir app específica
-npm run build --filter=web-classic
+# Build all apps
+pnpm build
+
+# Run tests
+pnpm test
+
+# Lint code
+pnpm lint
+
+# Type check
+pnpm type-check
+
+# Format code
+pnpm format
+
+# Database operations
+pnpm db:generate    # Generate Prisma client
+pnpm db:push        # Push schema to database
+pnpm db:migrate     # Run migrations
+
+# Docker operations
+pnpm docker:up      # Start containers
+pnpm docker:down    # Stop containers
+pnpm docker:build   # Build containers
 ```
 
----
+## 🎭 ANIMACIÓN ÉPICA - MODO NEXUS
 
-## 🎮 **FUNCIONALIDADES ÚNICAS**
+### Activación
+- **Click**: Botón "🌌 ACTIVATE NEXUS"
+- **Keyboard**: `Shift + N`
+- **Requirement**: Permisos de admin/tester o símbolo ALVAE
 
-### **1. Web Classic - Dashboard Central**
-- **Píxeles adaptativos** que aprenden de la navegación
-- **Personalización automática** de la interfaz
-- **Estadísticas de aprendizaje** en tiempo real
-- **Navegación inteligente** que se adapta al usuario
+### Secuencia de Animación
+1. **Screen Flash** (0-0.5s) - Flash blanco + sonido de trueno
+2. **ALVAE Symbol Emergence** (0.5-2s) - Símbolo aparece con glow dorado
+3. **Transformation** (2-4s) - Kanjis se vuelven dorados, velocidad 3x
+4. **Super Saiyan Peak** (4-5s) - Aura dorada, rayos continuos
+5. **Settle** (5-6s) - Estabilización del modo NEXUS
 
-### **2. Nexus Visual - Experiencia Matrix**
-- **AdaptiveMatrixRain** que aprende de interacciones
-- **Píxeles que responden** a patrones de usuario
-- **Efectos personalizados** basados en comportamiento
-- **Aprendizaje de preferencias** visuales
+### Efectos Visuales
+- **Kanjis dorados** cayendo a velocidad épica
+- **Rayos de energía** entre columnas
+- **Aura dorada** envolvente
+- **Sonidos épicos** sincronizados
+- **Duración**: 1 minuto activo
 
-### **3. Ghost Studio - IA Musical**
-- **Píxeles que aprenden** de patrones de producción
-- **Adaptación a flujos** de trabajo musical
-- **Personalización de efectos** basada en uso
-- **Mini DAW integrado** con aprendizaje
+## 📱 APPS ESPECÍFICAS
 
-### **4. Sonic DAW - DAW Profesional**
-- **Píxeles adaptativos** en la interfaz DAW
-- **Aprendizaje de patrones** de edición
-- **Personalización de plugins** basada en uso
-- **Adaptación a flujos** de trabajo profesionales
+### 1. WEB-CLASSIC (Dashboard Principal)
+- **Login/Register** con OAuth2 (Google, Facebook, TikTok)
+- **Dashboard** con navegación a todas las apps
+- **Profile Settings** con gestión de suscripciones
+- **Usage Metrics** y límites por tier
 
-### **5. Clone Station - Gestión de Datasets**
-- **Píxeles que aprenden** de patrones de datasets
-- **Adaptación a tipos** de datos utilizados
-- **Personalización de validación** basada en uso
-- **Aprendizaje de preferencias** de calidad
+### 2. NEXUS-VISUAL (Lluvia de Kanjis Épica)
+- **Canvas 2D** con kanjis cayendo
+- **Modo NEXUS** con animación épica completa
+- **Responsive** y optimizado para performance
+- **Sonidos sincronizados** con efectos visuales
 
-### **6. Nova Post Pilot - Automatización Social**
-- **Píxeles adaptativos** en el calendario
-- **Aprendizaje de patrones** de publicación
-- **Personalización de templates** basada en uso
-- **Adaptación a plataformas** sociales
+### 3. THE-GENERATOR (Generación Musical IA)
+- **Interfaz completa** con formulario avanzado
+- **Suno AI integration** para generación real
+- **Historial de generaciones** con descarga
+- **Límites por tier** y gestión de uso
 
-### **7. Sanctuary Social - Red Colaborativa**
-- **Píxeles que aprenden** de interacciones sociales
-- **Adaptación a patrones** de colaboración
-- **Personalización de feed** basada en comportamiento
-- **Aprendizaje de preferencias** de contenido
+### 4. GHOST-STUDIO (DAW Profesional)
+- **Multi-track editor** con waveform
+- **Real-time effects** (reverb, delay, EQ)
+- **MIDI support** con piano roll
+- **Collaboration mode** con Socket.io
 
----
+### 5. NOVA-POST-PILOT (AI Marketing)
+- **AI Hook Generator** para contenido viral
+- **Post Scheduler** multi-plataforma
+- **Analytics dashboard** con métricas
+- **Content Library** con templates
 
-## 📊 **MÉTRICAS DE IMPACTO**
+### 6. SANCTUARY-SOCIAL (Chat Activo)
+- **Real-time chat** con Socket.io
+- **Voice messages** con Web Audio API
+- **File sharing** y colaboración
+- **Moderation tools** para admins
 
-### **Desarrollo:**
-- **7 Aplicaciones** completamente implementadas
-- **2 Paquetes** compartidos con optimizaciones
-- **50+ Componentes** reutilizables
-- **100+ Utilidades** de optimización
-- **1 Sistema de Aprendizaje** adaptativo único
-- **10,000 Píxeles** que aprenden simultáneamente
+### 7. PIXEL-PERFECT APP
+- **UI/UX pixel-perfect** (0 errores visuales)
+- **Todas las interacciones** funcionando
+- **Performance optimizado**
+- **Mobile responsive** perfecto
 
-### **Innovación:**
-- **Primera plataforma** con píxeles adaptativos
-- **Aprendizaje automático** integrado en la interfaz
-- **Personalización contextual** única en el mercado
-- **Experiencia de usuario** verdaderamente revolucionaria
+## 🔐 SISTEMA DE AUTENTICACIÓN UNIFICADO
 
----
+### OAuth2 Providers
+- **Google OAuth** (primary)
+- **Facebook OAuth**
+- **TikTok OAuth** (si disponible)
+- **Email/Password** (fallback)
 
-## 🎯 **VENTAJAS COMPETITIVAS**
+### JWT Token Structure
+```typescript
+{
+  userId: string;
+  email: string;
+  role: 'user' | 'admin' | 'tester';
+  tier: 'free' | 'starter' | 'pro' | 'enterprise';
+  permissions: string[];
+  alvaeSymbol?: boolean; // Solo admins/testers
+  iat: number;
+  exp: number;
+}
+```
 
-### **1. Aprendizaje Adaptativo Único**
-- **Primera plataforma** con píxeles que aprenden del usuario
-- **Personalización automática** sin configuración manual
-- **Adaptación contextual** por aplicación
-- **Aprendizaje continuo** que mejora con el tiempo
+### Tiers y Permisos
+- **Free**: 3 generaciones/día, 1 proyecto
+- **Starter**: 10 generaciones/día, 5 proyectos
+- **Pro**: 50 generaciones/día, 20 proyectos + Nexus
+- **Enterprise**: Ilimitado + todas las features
 
-### **2. Experiencia de Usuario Revolucionaria**
-- **Interfaz que se adapta** al usuario automáticamente
-- **Respuestas personalizadas** en tiempo real
-- **Efectos visuales únicos** basados en comportamiento
-- **Navegación inteligente** que aprende patrones
+## 🎵 INTEGRACIÓN SUNO AI
 
-### **3. Tecnología de Vanguardia**
-- **Machine Learning** integrado en la interfaz
-- **Patrones de comportamiento** reconocidos automáticamente
-- **Adaptación en tiempo real** sin latencia
-- **Persistencia de aprendizaje** entre sesiones
+### Endpoints
+- `POST /api/suno-generate` - Generar música
+- `GET /api/suno-health` - Estado del servicio
+- `POST /api/suno-poll` - Polling de generación
 
-### **4. Integración Profesional**
-- **Cuentas Pro** con aprendizaje avanzado
-- **Control de privacidad** y datos
-- **Exportación de datos** de aprendizaje
-- **Integración empresarial** completa
+### Configuración
+```typescript
+// Configuración Suno
+const SUNO_CONFIG = {
+  BASE_URL: 'https://ai.imgkits.com/suno',
+  POLLING_URL: 'https://usa.imgkits.com/node-api/suno',
+  AUTH_TOKEN: 'Bearer YOUR_TOKEN'
+};
+```
 
----
+## 📊 MONITOREO Y ANALYTICS
 
-## 🔮 **ROADMAP**
+### Métricas Trackeadas
+- **Generaciones totales** por usuario/tier
+- **Tiempo promedio** de generación
+- **Usuarios activos** en tiempo real
+- **Rotación de tokens** y uso
+- **Performance** de funciones
+- **Errores** y debugging
 
-### **Inmediato (Próximas 2 semanas)**
-- ✅ **Sistema de Aprendizaje** implementado
-- ✅ **Integración con aplicaciones** completada
-- ✅ **Componentes de visualización** creados
-- 🔄 **Testing del sistema** de aprendizaje
+### Endpoints de Analytics
+- `GET /api/analytics` - Métricas completas
+- `GET /api/security` - Estado de seguridad
+- `GET /api/health` - Health check
 
-### **Corto Plazo (1-2 meses)**
-- **Machine Learning Avanzado** con algoritmos más sofisticados
-- **Aprendizaje Colaborativo** entre usuarios
-- **Predicción de Comportamiento** basada en patrones
-- **Integración con IA Externa** (GPT-4, DALL-E)
+## 🚀 DEPLOYMENT
 
-### **Mediano Plazo (3-6 meses)**
-- **Aprendizaje Federado** entre dispositivos
-- **Personalización Profunda** por industria
-- **Análisis Predictivo** de comportamiento
-- **Integración Empresarial** avanzada
-
-### **Largo Plazo (6+ meses)**
-- **Aprendizaje Cuántico** para patrones complejos
-- **Realidad Aumentada** con píxeles adaptativos
-- **Inteligencia Artificial** general integrada
-- **Ecosistema Autónomo** que se auto-optimiza
-
----
-
-## 📱 **RESPONSIVE DESIGN**
-
-Todas las aplicaciones están optimizadas para:
-- **Desktop**: 1920x1080+ (experiencia completa)
-- **Tablet**: 768px-1024px (adaptado)
-- **Mobile**: 320px-768px (simplificado)
-
----
-
-## ♿ **ACCESIBILIDAD**
-
-- **Contraste AA** - Cumple estándares WCAG
-- **Navegación por teclado** - Soporte completo
-- **ARIA roles** - Etiquetas semánticas
-- **Screen readers** - Compatibilidad total
-- **Reduced motion** - Respeta preferencias del usuario
-
----
-
-## 🧪 **TESTING**
-
+### Frontend (Vercel)
 ```bash
-# Tests unitarios
-npm run test
-
-# Tests E2E
-npm run test:e2e
-
-# Coverage
-npm run test:coverage
+# Deploy individual apps
+cd apps/web-classic && vercel --prod
+cd apps/nexus-visual && vercel --prod
+cd apps/ghost-studio && vercel --prod
+cd apps/nova-post-pilot && vercel --prod
+cd apps/sanctuary-social && vercel --prod
+cd apps/the-generator && vercel --prod
+cd apps/pixel-perfect && vercel --prod
 ```
 
----
-
-## 📚 **DOCUMENTACIÓN**
-
-- **README por app**: Guías específicas
-- **API Docs**: Documentación de endpoints
-- **UX Guidelines**: Principios de diseño
-- **Learning System**: Documentación del sistema de aprendizaje
-
----
-
-## 🚀 **DESPLIEGUE**
-
-### **Desarrollo:**
+### Backend (Netlify Functions)
 ```bash
-npm run dev
+# Deploy functions
+cd apps/backend && netlify deploy --prod
 ```
 
-### **Producción:**
+### Database (Supabase)
 ```bash
-npm run build
-npm run preview
+# Deploy schema
+pnpm db:push
 ```
 
-### **Docker:**
+## 🧪 TESTING
+
+### Test Commands
 ```bash
-docker-compose up
+# Run all tests
+pnpm test
+
+# Run tests for specific app
+pnpm test --filter=web-classic
+
+# Run tests with coverage
+pnpm test --coverage
+
+# Run E2E tests
+pnpm test:e2e
 ```
 
+### Test Coverage
+- **Unit Tests**: Jest + React Testing Library
+- **Integration Tests**: Supertest
+- **E2E Tests**: Playwright
+- **Coverage Target**: >80%
+
+## 📝 CÓDIGO RULES ESTRICTAS
+
+### TypeScript
+- ✅ **SIEMPRE**: Tipos explícitos en funciones públicas
+- ✅ **SIEMPRE**: Interfaces para objects complejos
+- ✅ **SIEMPRE**: Enums para conjuntos cerrados
+- ✅ **SIEMPRE**: Zod para validación runtime
+- ❌ **NUNCA**: `any` type (usar `unknown`)
+- ❌ **NUNCA**: Type assertions innecesarios
+
+### React Patterns
+- ✅ **SIEMPRE**: Componentes funcionales
+- ✅ **SIEMPRE**: Hooks primero, effects después
+- ✅ **SIEMPRE**: Early returns para loading/error
+- ❌ **NUNCA**: Class components
+- ❌ **NUNCA**: Lógica compleja en JSX
+
+### State Management
+- ✅ **SIEMPRE**: Zustand para global state
+- ✅ **SIEMPRE**: React Query para data fetching
+- ✅ **SIEMPRE**: Local state para UI state
+- ❌ **NUNCA**: Redux (overkill para este proyecto)
+
+## 🤝 CONTRIBUTING
+
+### Development Workflow
+1. **Fork** el repository
+2. **Create** feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** cambios (`git commit -m 'Add amazing feature'`)
+4. **Push** branch (`git push origin feature/amazing-feature`)
+5. **Open** Pull Request
+
+### Code Standards
+- **ESLint** + **Prettier** configurados
+- **Conventional Commits** para mensajes
+- **TypeScript strict mode** habilitado
+- **Test coverage** requerido
+
+## 📄 LICENSE
+
+Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+
+## 🎯 ROADMAP
+
+### Phase 1: Core Platform ✅
+- [x] Monorepo structure
+- [x] Authentication system
+- [x] Nexus Visual with epic animation
+- [x] Basic UI components
+
+### Phase 2: Music Generation 🚧
+- [ ] The Generator with Suno AI
+- [ ] Ghost Studio DAW
+- [ ] Audio processing pipeline
+
+### Phase 3: Social & Marketing 📋
+- [ ] Sanctuary Social chat
+- [ ] Nova Post Pilot
+- [ ] Content management
+
+### Phase 4: Advanced Features 📋
+- [ ] Pixel Perfect App
+- [ ] Advanced analytics
+- [ ] Mobile apps
+- [ ] Enterprise features
+
+## 🆘 SUPPORT
+
+- **Documentation**: [docs.son1kvers3.com](https://docs.son1kvers3.com)
+- **Discord**: [discord.gg/son1kvers3](https://discord.gg/son1kvers3)
+- **Email**: support@son1kvers3.com
+- **Issues**: [GitHub Issues](https://github.com/son1kvers3/alfa-ssv/issues)
+
 ---
 
-## 🤝 **CONTRIBUCIÓN**
-
-1. Fork del repositorio
-2. Crear feature branch
-3. Commit con mensajes descriptivos
-4. Push y crear Pull Request
-5. Review y merge
-
----
-
-## 📄 **LICENCIA**
-
-MIT License - Ver [LICENSE](LICENSE) para detalles.
-
----
-
-## 🎉 **CONCLUSIÓN**
-
-**SSV-Beta** representa una **revolución sin precedentes** en las herramientas creativas:
-
-### **Logros Únicos:**
-- ✅ **Primera plataforma** con píxeles que aprenden del usuario
-- ✅ **Sistema de aprendizaje** en tiempo real integrado
-- ✅ **Personalización automática** sin configuración manual
-- ✅ **Adaptación contextual** por aplicación
-- ✅ **Experiencia de usuario** verdaderamente única
-- ✅ **Tecnología de vanguardia** integrada
-
-### **Impacto en el Mercado:**
-- **Nuevo estándar** en personalización de interfaces
-- **Revolución** en experiencia de usuario
-- **Diferenciación** única en el mercado
-- **Ventaja competitiva** sostenible
-
----
-
-## 🎵 **Suno Integration**
-
-### ⚠️ IMPORTANTE
-Esta aplicación integra generación de música via Suno AI a través de una extensión de Chrome.
-
-**Antes de modificar código relacionado con Suno:**
-- Lee: `SUNO_INTEGRATION_DOCS.md`
-- Revisa: `.cursorrules`
-- NO modifiques sin entender el flujo completo
-
-### Arquitectura
-```
-Frontend React → Extensión Chrome → Suno API
-```
-
-**Componentes críticos:**
-- `src/config/apiTokens.ts` - Configuración del API
-- `src/services/sunoService.ts` - Servicio principal
-- `src/hooks/useSunoService.ts` - Hook de React
-- `src/components/suno/` - Componentes de UI
-
-**Reglas estrictas:**
-- ❌ NO modificar endpoints o headers
-- ❌ NO crear archivos alternativos
-- ❌ NO cambiar la estructura de requests
-- ✅ Solo modificar UI/UX y manejo de errores
-
-Ver documentación completa en `SUNO_INTEGRATION_DOCS.md`
-
----
-
-## 📞 **CONTACTO**
-
-**GitHub**: [SSV-Beta Repository]
-**Documentación**: [Comprehensive Documentation]
-**Demo**: [Live Applications on Ports 3000-3005]
-**Learning Demo**: [Adaptive Pixel Learning System]
-
----
-
-**Desarrollado con ❤️ y 🧠 para el Universo Son1kVerse** 🌌
-
-*SSV-Beta - Donde cada píxel aprende y se adapta a ti* ✨
+**🌌 SON1KVERS3 ALFA-SSV** - Democratizando la música con IA, una generación a la vez.

@@ -1,36 +1,266 @@
-# Reglas para Cursor AI Agent
+# 🌌 SON1KVERS3 ALFA-SSV - CURSOR RULES ÉPICAS
 
-## Suno Integration - CRÍTICO
-- NUNCA modificar archivos en src/services/suno* sin consultar SUNO_INTEGRATION_DOCS.md
-- NUNCA cambiar endpoints o headers del API de Suno
-- NUNCA crear archivos alternativos (sunoPolling, sunoComplement, etc.)
-- SIEMPRE verificar que los cambios no rompan la extensión Chrome original
+## 🎯 MISIÓN CRÍTICA
+Deploy completo de Son1kVers3 ALFA-SSV - Plataforma de democratización musical con IA
 
-## Antes de modificar código de Suno:
-1. Leer SUNO_INTEGRATION_DOCS.md completamente
-2. Hacer backup de archivos a modificar
-3. Probar en ambiente de desarrollo
-4. Verificar que extensión Chrome siga funcionando
+## 🏗️ ARQUITECTURA MONOREPO
+```
+ALFA-SSV/
+├── apps/
+│   ├── web-classic/           # Dashboard principal con Auth
+│   ├── nexus-visual/          # Lluvia de kanjis + modo NEXUS épico
+│   ├── ghost-studio/          # DAW con nueva interfaz
+│   ├── nova-post-pilot/       # AI Marketing con nueva UI
+│   ├── sanctuary-social/      # Chat activo + social
+│   ├── the-generator/         # Generación musical IA
+│   ├── pixel-perfect/         # App 100% funcional
+│   └── backend/               # API Node.js + TypeScript
+├── packages/
+│   ├── ui/                    # Componentes compartidos
+│   ├── auth/                  # Sistema auth unificado
+│   ├── database/              # Prisma + schemas
+│   └── utils/                 # Utilidades compartidas
+└── infrastructure/
+    ├── docker/
+    └── nginx/
+```
 
-## Archivos protegidos:
-- src/config/apiTokens.ts
-- src/services/tokenManager.ts
-- src/services/sunoService.ts
-- src/hooks/useSunoService.ts
+## 🛠️ STACK TECNOLÓGICO COMPLETO
 
-## Si ves error 401:
-- NO crear "soluciones alternativas"
-- Verificar token en apiTokens.ts
-- Comparar headers con extensión Chrome (DevTools)
-- Consultar SUNO_INTEGRATION_DOCS.md sección debugging
+### Frontend (Todas las Apps)
+- **Framework**: React 18 + TypeScript (strict mode)
+- **Build**: Vite 5+ (optimizado)
+- **Styling**: Tailwind CSS + Framer Motion
+- **State**: Zustand (global) + React Query (data fetching)
+- **Routing**: React Router v6
+- **Audio**: Tone.js + Web Audio API
+- **Animations**: Framer Motion + GSAP (para animaciones épicas)
+- **Forms**: React Hook Form + Zod validation
+- **Icons**: Lucide React
 
-## Arquitectura del Sistema:
-Frontend React → Extensión Chrome → Suno API
-- La extensión Chrome es el puente crítico
-- NO modificar la lógica de conexión sin entender el flujo completo
-- Mantener compatibilidad con la extensión original
+### Backend (apps/backend/)
+- **Runtime**: Node.js 20+ + TypeScript
+- **Framework**: Express.js 4.18+ (producción-ready)
+- **ORM**: Prisma 5.8+ con PostgreSQL 16
+- **Cache**: Redis 7+ (sessions + rate limiting)
+- **Queue**: BullMQ (para generación musical async)
+- **Real-time**: Socket.io 4.6+ (para chat + colaboración)
+- **Storage**: AWS S3 / Supabase Storage (audio files)
+- **Auth**: JWT + OAuth2 (Google, Facebook, TikTok)
+- **Payments**: Stripe (subscriptions)
+- **AI**: OpenAI API / Qwen / SunoAPI para música
 
-## Reglas de Deployment:
-- Verificar que la extensión Chrome funcione antes de deployar
-- NO cambiar endpoints en producción sin testing exhaustivo
-- Mantener headers exactos como están documentados
+## 🎨 DESIGN SYSTEM UNIFIED
+
+### Colores Base
+```css
+/* Theme Principal */
+--bg-primary: #0A0C10;      /* Carbón profundo */
+--bg-secondary: #1a1d29;    /* Gris oscuro */
+--bg-glass: rgba(255,255,255,0.05); /* Glassmorphism */
+
+/* Colores Principales */
+--cyan: #00FFE7;            /* Cian brillante */
+--magenta: #B84DFF;         /* Magenta/púrpura */
+--accent: #9AF7EE;          /* Acento cian suave */
+--gold: #FFD700;            /* Oro (modo NEXUS) */
+--red: #FF1744;             /* Rojo épico (Super Saiyan) */
+```
+
+### Efectos y Animaciones
+```css
+/* Glassmorphism */
+.glass {
+  backdrop-blur: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Glow Effects */
+.glow-cyan { box-shadow: 0 0 20px rgba(0,255,231,0.5); }
+.glow-gold { box-shadow: 0 0 30px rgba(255,215,0,0.8); }
+.glow-red { box-shadow: 0 0 40px rgba(255,23,68,0.9); }
+```
+
+## 🔐 SISTEMA DE AUTENTICACIÓN UNIFICADO
+
+### OAuth2 Providers
+- **Google OAuth** (primary)
+- **Facebook OAuth**
+- **TikTok OAuth** (si disponible)
+- **Email/Password** (fallback)
+
+### JWT Token Structure
+```typescript
+{
+  userId: string;
+  email: string;
+  role: 'user' | 'admin' | 'tester';
+  tier: 'free' | 'pro' | 'premium' | 'enterprise';
+  permissions: string[];
+  alvaeSymbol?: boolean; // Solo admins/testers
+  iat: number;
+  exp: number;
+}
+```
+
+### Tiers y Permisos
+- **Free**: 3 generaciones/día, 1 proyecto
+- **Pro**: 10 generaciones/día, 5 proyectos
+- **Premium**: 50 generaciones/día, 20 proyectos + Nexus
+- **Enterprise**: Ilimitado + todas las features
+
+## 🎭 ANIMACIÓN ÉPICA - MODO NEXUS
+
+### Activación
+- **Click**: Botón "🌌 ACTIVATE NEXUS"
+- **Keyboard**: `Shift + N`
+- **Requirement**: Permisos de admin/tester o símbolo ALVAE
+
+### Secuencia de Animación
+1. **Screen Flash** (0-0.5s) - Flash blanco + sonido de trueno
+2. **ALVAE Symbol Emergence** (0.5-2s) - Símbolo aparece con glow dorado
+3. **Transformation** (2-4s) - Kanjis se vuelven dorados, velocidad 3x
+4. **Super Saiyan Peak** (4-5s) - Aura dorada, rayos continuos
+5. **Settle** (5-6s) - Estabilización del modo NEXUS
+
+## 📝 CÓDIGO RULES ESTRICTAS
+
+### TypeScript
+- ✅ **SIEMPRE**: Tipos explícitos en funciones públicas
+- ✅ **SIEMPRE**: Interfaces para objects complejos
+- ✅ **SIEMPRE**: Enums para conjuntos cerrados
+- ✅ **SIEMPRE**: Zod para validación runtime
+- ❌ **NUNCA**: `any` type (usar `unknown`)
+- ❌ **NUNCA**: Type assertions innecesarios
+
+### React Patterns
+- ✅ **SIEMPRE**: Componentes funcionales
+- ✅ **SIEMPRE**: Hooks primero, effects después
+- ✅ **SIEMPRE**: Early returns para loading/error
+- ❌ **NUNCA**: Class components
+- ❌ **NUNCA**: Lógica compleja en JSX
+
+### State Management
+- ✅ **SIEMPRE**: Zustand para global state
+- ✅ **SIEMPRE**: React Query para data fetching
+- ✅ **SIEMPRE**: Local state para UI state
+- ❌ **NUNCA**: Redux (overkill para este proyecto)
+
+### Backend Patterns
+- ✅ **SIEMPRE**: Controllers → Services → Database
+- ✅ **SIEMPRE**: Middleware para cross-cutting concerns
+- ✅ **SIEMPRE**: Validation con Zod
+- ✅ **SIEMPRE**: Error handling centralizado
+- ✅ **SIEMPRE**: Logging estructurado
+- ❌ **NUNCA**: Lógica de negocio en controllers
+- ❌ **NUNCA**: SQL raw queries (usar Prisma)
+
+## 🎵 INTEGRACIÓN SUNO AI
+
+### Configuración
+```typescript
+const SUNO_CONFIG = {
+  BASE_URL: 'https://ai.imgkits.com/suno',
+  POLLING_URL: 'https://usa.imgkits.com/node-api/suno',
+  AUTH_TOKEN: 'Bearer YOUR_TOKEN'
+};
+```
+
+### Endpoints
+- `POST /api/suno-generate` - Generar música
+- `GET /api/suno-health` - Estado del servicio
+- `POST /api/suno-poll` - Polling de generación
+
+## 🚀 DEPLOYMENT STRATEGY
+
+### Frontend (Vercel)
+- Deploy individual apps
+- Environment variables por app
+- Custom domains por subdomain
+
+### Backend (Netlify Functions)
+- Serverless functions
+- Edge caching
+- Rate limiting
+
+### Database (Supabase)
+- PostgreSQL managed
+- Real-time subscriptions
+- Row Level Security
+
+## 🧪 TESTING STRATEGY
+
+### Unit Tests
+- Jest + React Testing Library
+- Coverage >80%
+- Mock external APIs
+
+### Integration Tests
+- Supertest para API
+- Database seeding
+- Cleanup automático
+
+### E2E Tests
+- Playwright
+- Critical user flows
+- Cross-browser testing
+
+## 📊 MONITOREO Y ANALYTICS
+
+### Métricas Trackeadas
+- Generaciones totales por usuario/tier
+- Tiempo promedio de generación
+- Usuarios activos en tiempo real
+- Rotación de tokens y uso
+- Performance de funciones
+- Errores y debugging
+
+## 🎯 SPRINT ÉPICO - FASES
+
+### FASE 1: FUNDACIÓN BACKEND (DÍA 1-2)
+- Estructura completa del backend
+- Auth OAuth múltiple
+- Database schema completo
+- Suno AI integration
+- Stripe payments
+
+### FASE 2: FRONTEND APPS (DÍA 3-5)
+- Web-classic dashboard
+- Nexus Visual épico
+- The Generator
+- Ghost Studio DAW
+
+### FASE 3: SOCIAL & MARKETING (DÍA 6-7)
+- Sanctuary Social chat
+- Nova Post Pilot
+- Pixel Perfect App
+
+### FASE 4: DEPLOYMENT & TESTING (DÍA 8-9)
+- Deploy completo
+- Testing exhaustivo
+- Performance optimization
+
+### FASE 5: POLISH & LAUNCH (DÍA 10)
+- UI/UX polish
+- Documentation
+- Launch preparation
+
+## 🚨 REGLAS CRÍTICAS
+
+1. **NUNCA** comprometer la calidad por velocidad
+2. **SIEMPRE** seguir TypeScript strict mode
+3. **SIEMPRE** implementar error handling completo
+4. **SIEMPRE** escribir tests para código crítico
+5. **SIEMPRE** documentar APIs y componentes complejos
+6. **NUNCA** hardcodear secrets o configuraciones
+7. **SIEMPRE** usar environment variables
+8. **SIEMPRE** implementar logging estructurado
+9. **NUNCA** dejar TODOs en código de producción
+10. **SIEMPRE** optimizar para performance
+
+## 🎭 MODO NEXUS ACTIVADO
+Cuando veas este símbolo: 🌌
+Significa que el código debe ser ÉPICO, no solo funcional.
+
+¡Democratizando la música con IA, una generación a la vez! 🎵

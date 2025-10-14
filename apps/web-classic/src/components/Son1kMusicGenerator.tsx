@@ -15,6 +15,7 @@ export default function Son1kMusicGenerator({ className = '' }: Son1kMusicGenera
     musicData,
     tokenStatus,
     hasValidToken,
+    canGenerate,
     generateMusic,
     refreshToken,
     logout

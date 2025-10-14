@@ -1,5 +1,8 @@
 // src/services/browserClientManager.ts
 
+// Configuración de API
+const API_BASE_URL = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+
 interface BrowserClient {
   id: string;
   token: string;
@@ -132,7 +135,7 @@ class BrowserClientManager {
     console.log(`🎵 Generando música con cliente ${client.id}...`);
 
     try {
-      const response = await fetch('http://localhost:3001/api/suno/generate-and-wait', {
+      const response = await fetch(`${API_BASE_URL}/suno-generate-and-wait`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -43,11 +43,11 @@ interface GhostState {
   currentVoice: string;
   
   // UI State
-  activeTab: 'music' | 'voice' | 'tts';
+  activeTab: 'covers' | 'music' | 'voice' | 'tts' | 'daw';
   isGenerating: boolean;
   
   // Actions
-  setActiveTab: (tab: 'music' | 'voice' | 'tts') => void;
+  setActiveTab: (tab: 'covers' | 'music' | 'voice' | 'tts' | 'daw') => void;
   setCurrentMusicPrompt: (prompt: string) => void;
   setCurrentMusicStyle: (style: string) => void;
   generateMusic: () => Promise<void>;
@@ -73,7 +73,7 @@ export const useGhostStore = create<GhostState>((set, get) => ({
   currentText: '',
   currentVoice: 'default',
   
-  activeTab: 'music',
+  activeTab: 'covers',
   isGenerating: false,
   
   // Actions
@@ -102,17 +102,59 @@ export const useGhostStore = create<GhostState>((set, get) => ({
       isGenerating: true
     }));
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // Llamada real al backend
+      const response = await fetch('https://68ecf6352bc0b35bdc2f1ae5--son1k.netlify.app/api/suno-generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: currentMusicPrompt,
+          style: currentMusicStyle,
+          title: `Ghost Studio - ${currentMusicStyle}`,
+          customMode: false,
+          instrumental: false,
+          lyrics: '',
+          gender: 'mixed'
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      
+      if (data.success && data.data.songs && data.data.songs.length > 0) {
+        const song = data.data.songs[0];
+        set((state) => ({
+          musicGenerations: state.musicGenerations.map((g) =>
+            g.id === generation.id
+              ? { 
+                  ...g, 
+                  status: 'completed', 
+                  audioUrl: song.stream_audio_url || song.audio_url,
+                  duration: song.duration || 30
+                }
+              : g
+          ),
+          isGenerating: false
+        }));
+      } else {
+        throw new Error('No se generaron canciones');
+      }
+    } catch (error) {
+      console.error('Error generating music:', error);
       set((state) => ({
         musicGenerations: state.musicGenerations.map((g) =>
           g.id === generation.id
-            ? { ...g, status: 'completed', audioUrl: '/api/mock-audio.mp3' }
+            ? { ...g, status: 'failed' }
             : g
         ),
         isGenerating: false
       }));
-    }, 3000);
+    }
   },
   
   setCurrentVoiceFile: (file) => set({ currentVoiceFile: file }),

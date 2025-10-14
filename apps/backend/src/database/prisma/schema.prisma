@@ -1,0 +1,334 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 🌌 USERS - Sistema de usuarios con tiers y roles
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  avatar        String?
+  password      String?   // Nullable para OAuth users
+  role          UserRole  @default(USER)
+  tier          UserTier  @default(FREE)
+  alvaeSymbol   Boolean   @default(false) // Solo admins/testers
+  isActive      Boolean   @default(true)
+  emailVerified Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  oauthAccounts OAuthAccount[]
+  subscription  Subscription?
+  generations    Generation[]
+  projects       Project[]
+  chatMessages   ChatMessage[]
+  chatRooms      ChatRoom[]      @relation("ChatRoomMembers")
+  ownedRooms     ChatRoom[]      @relation("ChatRoomOwner")
+  adminUsers     AdminUser[]
+  usageStats     UsageStats[]
+  tokenAllocations UserTokenAllocation[]
+
+  @@map("users")
+}
+
+// 🔐 OAUTH ACCOUNTS - Cuentas OAuth vinculadas
+model OAuthAccount {
+  id        String      @id @default(cuid())
+  provider  OAuthProvider
+  providerId String
+  userId    String
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime    @default(now())
+
+  @@unique([provider, providerId])
+  @@map("oauth_accounts")
+}
+
+// 💳 SUBSCRIPTIONS - Suscripciones con Stripe
+model Subscription {
+  id                String            @id @default(cuid())
+  userId            String            @unique
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tier              UserTier
+  stripeCustomerId  String?           @unique
+  stripeSubscriptionId String?        @unique
+  stripePriceId     String?
+  status            SubscriptionStatus @default(ACTIVE)
+  currentPeriodStart DateTime?
+  currentPeriodEnd   DateTime?
+  cancelAtPeriodEnd  Boolean          @default(false)
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+
+  @@map("subscriptions")
+}
+
+// 🎵 GENERATIONS - Generaciones musicales
+model Generation {
+  id          String            @id @default(cuid())
+  userId      String
+  user        User              @relation(fields: [userId], references [id], onDelete: Cascade)
+  prompt      String
+  style       String?
+  title       String?
+  model       String            @default("chirp-v3")
+  duration    Int?              // en segundos
+  status      GenerationStatus  @default(PENDING)
+  audioUrl    String?
+  imageUrl    String?
+  metadata    Json?             // Datos adicionales de Suno
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@map("generations")
+}
+
+// 🎛️ PROJECTS - Proyectos DAW
+model Project {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name        String
+  description String?
+  tracks      Json?     // Array de tracks
+  settings    Json?     // Configuración del proyecto
+  isPublic    Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("projects")
+}
+
+// 💬 CHAT ROOMS - Salas de chat
+model ChatRoom {
+  id          String    @id @default(cuid())
+  name        String
+  description String?
+  type        ChatRoomType @default(PUBLIC)
+  ownerId     String
+  owner       User      @relation("ChatRoomOwner", fields: [ownerId], references: [id])
+  members     User[]    @relation("ChatRoomMembers")
+  messages    ChatMessage[]
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("chat_rooms")
+}
+
+// 💬 CHAT MESSAGES - Mensajes de chat
+model ChatMessage {
+  id        String      @id @default(cuid())
+  roomId    String
+  room      ChatRoom    @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  content   String
+  type      MessageType @default(TEXT)
+  mediaUrl  String?     // Para archivos/imágenes
+  metadata  Json?       // Datos adicionales
+  isEdited  Boolean     @default(false)
+  isDeleted Boolean     @default(false)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@map("chat_messages")
+}
+
+// 👑 ADMIN USERS - Usuarios administradores
+model AdminUser {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  permissions String[]  // Array de permisos
+  level       AdminLevel @default(MODERATOR)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([userId])
+  @@map("admin_users")
+}
+
+// 📊 USAGE STATS - Estadísticas de uso
+model UsageStats {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date            DateTime  @default(now())
+  generationsUsed Int       @default(0)
+  projectsCreated Int       @default(0)
+  chatMessages    Int       @default(0)
+  downloadsUsed   Int       @default(0)
+  sharesUsed      Int       @default(0)
+  storageUsed     BigInt    @default(0) // en bytes
+  createdAt       DateTime  @default(now())
+
+  @@unique([userId, date])
+  @@map("usage_stats")
+}
+
+// 🔄 QUEUE JOBS - Jobs de cola para generación
+model QueueJob {
+  id        String    @id @default(cuid())
+  type      JobType
+  data      Json
+  status    JobStatus @default(PENDING)
+  result    Json?
+  error     String?
+  attempts  Int       @default(0)
+  maxAttempts Int     @default(3)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("queue_jobs")
+}
+
+// 🪙 TOKEN POOL - Pool de tokens diario
+model TokenPool {
+  id                String    @id @default(cuid())
+  date              DateTime  @unique
+  freeTokens        Int       @default(1000)
+  paidTokens        Int       @default(2000)
+  totalTokens       Int       @default(3000)
+  freeTokensRotated Int       @default(0)
+  lastRotation      DateTime  @default(now())
+  createdAt         DateTime  @default(now())
+
+  @@map("token_pools")
+}
+
+// 🪙 USER TOKEN ALLOCATION - Asignación de tokens por usuario
+model UserTokenAllocation {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date            DateTime  @default(now())
+  freeTokens      Int       @default(0)
+  paidTokens      Int       @default(0)
+  totalAllocated  Int       @default(0)
+  freeTokensUsed  Int       @default(0)
+  paidTokensUsed  Int       @default(0)
+  tokensUsed      Int       @default(0)
+  createdAt       DateTime  @default(now())
+
+  @@unique([userId, date])
+  @@map("user_token_allocations")
+}
+
+// 🌐 CLIENT TRACKING - Tracking de clientes únicos por navegador
+model ClientTracking {
+  id                String    @id @default(cuid())
+  browserFingerprint String    @unique
+  userAgent         String
+  ipAddress         String
+  country           String    @default("Unknown")
+  city              String    @default("Unknown")
+  tokensContributed Int       @default(10)
+  visitCount        Int       @default(1)
+  firstSeen         DateTime  @default(now())
+  lastSeen          DateTime  @default(now())
+  isActive          Boolean   @default(true)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@map("client_tracking")
+}
+
+// 📝 SYSTEM LOGS - Logs del sistema
+model SystemLog {
+  id        String    @id @default(cuid())
+  level     LogLevel
+  message   String
+  metadata  Json?
+  userId    String?
+  createdAt DateTime  @default(now())
+
+  @@map("system_logs")
+}
+
+// ENUMS
+enum UserRole {
+  USER
+  ADMIN
+  TESTER
+}
+
+enum UserTier {
+  FREE
+  PRO
+  PREMIUM
+  ENTERPRISE
+}
+
+enum OAuthProvider {
+  GOOGLE
+  FACEBOOK
+  TIKTOK
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELED
+  PAST_DUE
+  UNPAID
+  INCOMPLETE
+}
+
+enum GenerationStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum ChatRoomType {
+  PUBLIC
+  PRIVATE
+  DIRECT
+}
+
+enum MessageType {
+  TEXT
+  IMAGE
+  AUDIO
+  FILE
+  SYSTEM
+}
+
+enum AdminLevel {
+  MODERATOR
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum JobType {
+  GENERATE_MUSIC
+  PROCESS_AUDIO
+  SEND_EMAIL
+  CLEANUP_FILES
+}
+
+enum JobStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+enum LogLevel {
+  ERROR
+  WARN
+  INFO
+  DEBUG
+}

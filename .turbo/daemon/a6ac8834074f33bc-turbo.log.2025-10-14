@@ -1,0 +1,963 @@
+2025-10-14T00:48:40.654114Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sunoService.ts")}
+2025-10-14T00:48:40.708721Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T00:48:40.758591Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/daemon/a6ac8834074f33bc-turbo.log.2025-10-14"), AnchoredSystemPathBuf(".turbo/daemon/a6ac8834074f33bc-turbo.log.2025-10-13")}
+2025-10-14T00:48:40.758605Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T00:48:51.540633Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sunoService.ts")}
+2025-10-14T00:48:51.540657Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T00:49:07.741484Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sunoService.ts")}
+2025-10-14T00:49:07.741567Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T00:49:08.239368Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sunoService.ts")}
+2025-10-14T00:49:08.239382Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T00:49:14.745421Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sunoService.ts")}
+2025-10-14T00:49:14.745438Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T00:49:20.641941Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sunoService.ts")}
+2025-10-14T00:49:20.641955Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:41:22.393701Z  WARN build:build_inner: turborepo_repository::package_graph::builder: Unable to calculate transitive closures: Workspace 'apps/web-classic' not found in lockfile
+2025-10-14T01:41:44.584544Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("src"), AnchoredSystemPathBuf("src/App.jsx")}
+2025-10-14T01:41:44.585585Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T01:41:45.882335Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("src/App.jsx")}
+2025-10-14T01:41:45.882355Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T01:42:52.382787Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vercel.json")}
+2025-10-14T01:42:52.382894Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:43:03.483337Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T01:43:03.483353Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:43:07.782080Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T01:43:07.782094Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:43:11.081988Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760406191016-f4685b7d997af8.mjs")}
+2025-10-14T01:43:11.082008Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:43:14.606527Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T01:43:14.606545Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:48:36.894229Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T01:48:36.894302Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:48:36.983080Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T01:48:36.983095Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:49:07.382964Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760406547296-5ad98b2640d288.mjs")}
+2025-10-14T01:49:07.382980Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:49:07.483861Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760406547296-5ad98b2640d288.mjs")}
+2025-10-14T01:49:07.483877Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:50:15.684069Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T01:50:15.684093Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:54:22.985600Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/SubdomainDetector.tsx")}
+2025-10-14T01:54:22.985683Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:54:33.184476Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T01:54:33.184491Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:54:43.984033Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T01:54:43.984047Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:54:56.385514Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/TheGeneratorIntegration.tsx")}
+2025-10-14T01:54:56.385529Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:04.686358Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/SmartPrompts.tsx")}
+2025-10-14T01:55:04.686375Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:11.787789Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/GhostStudioIntegration.tsx")}
+2025-10-14T01:55:11.787803Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:20.184891Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Pixel.tsx")}
+2025-10-14T01:55:20.184907Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:36.984945Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx")}
+2025-10-14T01:55:36.984961Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:54.285617Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/NovaPostPilot.tsx")}
+2025-10-14T01:55:54.285631Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:58.884626Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9154!SunoIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!9153!SunoIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/SunoIntegration.tsx")}
+2025-10-14T01:55:58.884642Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:59.184667Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9163!LandingPage.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LandingPage.tsx")}
+2025-10-14T01:55:59.184691Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:59.284721Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9164!LandingPage.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LandingPage.tsx")}
+2025-10-14T01:55:59.284745Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:59.485307Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!9174!LyricsGenerator.tsx")}
+2025-10-14T01:55:59.485322Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:59.585274Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9180!LyricsGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx")}
+2025-10-14T01:55:59.585289Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:55:59.990653Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9190!Sanctuary.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Sanctuary.tsx")}
+2025-10-14T01:55:59.990671Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:00.092297Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Sanctuary.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!9191!Sanctuary.tsx")}
+2025-10-14T01:56:00.092318Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:00.390772Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9202!PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx")}
+2025-10-14T01:56:00.390786Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:00.485048Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!9203!PixelDashboard.tsx")}
+2025-10-14T01:56:00.485058Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:00.684975Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9217!NexusVisual.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/NexusVisual.tsx")}
+2025-10-14T01:56:00.684998Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:00.784599Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/NexusVisual.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!9218!NexusVisual.tsx")}
+2025-10-14T01:56:00.784613Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:01.084379Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!9227!Son1kverseLimits.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!9228!Son1kverseLimits.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseLimits.tsx")}
+2025-10-14T01:56:01.084393Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:07.385510Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T01:56:07.385525Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:11.984986Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760406971944-abe4f64470d58.mjs")}
+2025-10-14T01:56:11.985000Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:23.184930Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/LandingPage.tsx")}
+2025-10-14T01:56:23.184944Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:29.087800Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/LandingPage.tsx")}
+2025-10-14T01:56:29.087825Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:43.207536Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407003149-80d7496433d3c.mjs")}
+2025-10-14T01:56:43.207551Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:53.113152Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx")}
+2025-10-14T01:56:53.113168Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:56:57.413924Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407017312-8a9a50767479a.mjs")}
+2025-10-14T01:56:57.413942Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:06.316787Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/SunoIntegration.tsx")}
+2025-10-14T01:57:06.316804Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:11.718023Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/SunoIntegration.tsx")}
+2025-10-14T01:57:11.718038Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:16.118196Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!10005!LyricsGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx")}
+2025-10-14T01:57:16.118221Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:16.218646Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Sanctuary.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10006!Sanctuary.tsx")}
+2025-10-14T01:57:16.218660Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:16.318986Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/NexusVisual.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10007!PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10008!NexusVisual.tsx")}
+2025-10-14T01:57:16.319008Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:16.417639Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!10009!Son1kverseLimits.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseLimits.tsx")}
+2025-10-14T01:57:16.417653Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:21.718153Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407041683-f58f3c070c97d.mjs")}
+2025-10-14T01:57:21.718171Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:32.219402Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx")}
+2025-10-14T01:57:32.219418Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:38.019795Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx")}
+2025-10-14T01:57:38.019809Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:41.320070Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Sanctuary.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10206!Sanctuary.tsx")}
+2025-10-14T01:57:41.320095Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:41.420522Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10208!NexusVisual.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10207!PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/NexusVisual.tsx")}
+2025-10-14T01:57:41.420543Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:41.520427Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!10209!Son1kverseLimits.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseLimits.tsx")}
+2025-10-14T01:57:41.520442Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:47.519463Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407067460-ca2772fb01a848.mjs")}
+2025-10-14T01:57:47.519476Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:55.019607Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/SmartPrompts.tsx")}
+2025-10-14T01:57:55.019622Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:57:59.420211Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407079367-8c95a024705b.mjs")}
+2025-10-14T01:57:59.420235Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:07.920197Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/GhostStudioIntegration.tsx")}
+2025-10-14T01:58:07.920213Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:18.520881Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!10521!Pixel.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/TheGeneratorIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10520!TheGeneratorIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Pixel.tsx")}
+2025-10-14T01:58:18.520899Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:18.620781Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!10522!Son1kMusicGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T01:58:18.620804Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:18.720085Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/.!10523!Sanctuary.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Sanctuary.tsx")}
+2025-10-14T01:58:18.720097Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:18.820047Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10524!PixelDashboard.tsx")}
+2025-10-14T01:58:18.820072Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:24.320394Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407104304-5ac8b3715f369.mjs")}
+2025-10-14T01:58:24.320409Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:24.420429Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407104304-5ac8b3715f369.mjs")}
+2025-10-14T01:58:24.420444Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:32.921512Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T01:58:32.921540Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:33.120976Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T01:58:33.120992Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:37.419667Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407117391-25cc974b911b3.mjs")}
+2025-10-14T01:58:37.419683Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:47.921062Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T01:58:47.921076Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:52.520213Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407132456-b4af04d4c6cd3.mjs")}
+2025-10-14T01:58:52.520228Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:58:57.620654Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/.!10851!Son1kMusicGenerator.tsx")}
+2025-10-14T01:58:57.620670Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:01.220957Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407141176-e4fbec520fe3b.mjs")}
+2025-10-14T01:59:01.220983Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:05.820845Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T01:59:05.820858Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:11.720813Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407151617-076755f7f3f41.mjs")}
+2025-10-14T01:59:11.720837Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:19.321247Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx")}
+2025-10-14T01:59:19.321263Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:22.620687Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407162589-890c1c17fdd72.mjs")}
+2025-10-14T01:59:22.620703Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:27.021529Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/SubdomainDetector.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LandingPage.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/GhostStudioIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Sanctuary.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseLimits.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/NovaPostPilot.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/SmartPrompts.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Pixel.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/SunoIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/TheGeneratorIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx")}
+2025-10-14T01:59:27.021545Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T01:59:45.721519Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LyricsGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/LandingPage.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/SubdomainDetector.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/SmartPrompts.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/SunoIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/TheGeneratorIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/Pixel.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/GhostStudioIntegration.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/PixelDashboard.tsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/NovaPostPilot.tsx")}
+2025-10-14T01:59:45.721548Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:07:40.625957Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407660588-9f4d079643e1.mjs")}
+2025-10-14T02:07:40.626032Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:07:43.724708Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T02:07:43.724723Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:10:43.827050Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/1.cookie")}
+2025-10-14T02:10:43.827093Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T02:11:06.926519Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:11:06.926583Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:11:14.827898Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407874723-c260d7b81f22c.mjs")}
+2025-10-14T02:11:14.827913Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:12:09.538474Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407929463-262716427dbf48.mjs")}
+2025-10-14T02:12:09.538490Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:12:48.539208Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/test-simple.jsx")}
+2025-10-14T02:12:48.539233Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:12:49.038794Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/test-simple.jsx")}
+2025-10-14T02:12:49.038809Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:12:49.139386Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/test-simple.jsx")}
+2025-10-14T02:12:49.139401Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:12:59.541054Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T02:12:59.541068Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:13:04.039544Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760407983963-4628dbaabbe2b.mjs")}
+2025-10-14T02:13:04.039561Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:13:39.339504Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx"), AnchoredSystemPathBuf("apps/web-classic/test-simple.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:13:39.339520Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:22:29.046222Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/ErrorBoundary.jsx")}
+2025-10-14T02:22:29.046380Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:22:29.545778Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/ErrorBoundary.jsx")}
+2025-10-14T02:22:29.545792Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:22:42.246445Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T02:22:42.246469Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:22:48.848922Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760408568751-8488f767a6e85.mjs")}
+2025-10-14T02:22:48.869866Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:23:30.149828Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/components/ErrorBoundary.jsx")}
+2025-10-14T02:23:30.149842Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:45:22.559953Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/2.cookie")}
+2025-10-14T02:45:22.560014Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T02:46:01.052277Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-simple.jsx")}
+2025-10-14T02:46:01.053952Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:46:02.052159Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-simple.jsx")}
+2025-10-14T02:46:02.052175Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:46:06.752174Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-original.jsx")}
+2025-10-14T02:46:06.752189Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:46:11.151950Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:46:11.151964Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:46:16.453246Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760409976382-d67004d2f7b558.mjs")}
+2025-10-14T02:46:16.453259Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:46:49.150559Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:46:49.150577Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:47:12.349580Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:47:12.349596Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:47:12.452170Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:47:12.452187Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:47:18.250925Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760410038205-c24a2fe8a3beb8.mjs")}
+2025-10-14T02:47:18.250951Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T02:48:13.047417Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-simple.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T02:48:13.047492Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:25:56.349743Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T03:25:56.349822Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:26:00.047648Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760412359995-5cc0c7bf206ac.mjs")}
+2025-10-14T03:26:00.047667Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:26:45.249578Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T03:26:45.249594Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:28:04.953833Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator-simple.tsx")}
+2025-10-14T03:28:04.953910Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:28:06.076885Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator-simple.tsx")}
+2025-10-14T03:28:06.077049Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:28:09.054375Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator-original.tsx")}
+2025-10-14T03:28:09.054389Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:28:11.453693Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T03:28:11.453707Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:28:15.453680Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760412495387-6132ec44c6bb2.mjs")}
+2025-10-14T03:28:15.453694Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:28:54.970533Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator-simple.tsx")}
+2025-10-14T03:28:54.970555Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:29:36.023375Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:29:36.023538Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:29:36.155421Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:29:36.155440Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:29:40.953783Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760412580884-6ca1cbc5c89c58.mjs")}
+2025-10-14T03:29:40.953799Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:29:52.654024Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:29:52.654039Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:29:52.954642Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:29:52.954656Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:29:57.753973Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760412597653-0858cb9030c3d8.mjs")}
+2025-10-14T03:29:57.753987Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:30:51.618798Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:30:51.618818Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:30:52.153607Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:30:52.153621Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:38:55.854935Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-ultra-simple.jsx")}
+2025-10-14T03:38:55.855017Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:38:57.153766Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-ultra-simple.jsx")}
+2025-10-14T03:38:57.153783Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:38:57.254077Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-ultra-simple.jsx")}
+2025-10-14T03:38:57.254093Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:39:05.854016Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App-complex.jsx")}
+2025-10-14T03:39:05.854035Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:39:09.755966Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T03:39:09.755980Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:39:14.253726Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760413154159-c46a3f82ce9d.mjs")}
+2025-10-14T03:39:14.253742Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:39:51.753502Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T03:39:51.753515Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:39:55.553763Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T03:39:55.553778Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:39:58.854828Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kverseMain.tsx")}
+2025-10-14T03:39:58.854842Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:40:04.653729Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:40:04.653747Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:40:10.453685Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760413210415-218e5da52bde68.mjs")}
+2025-10-14T03:40:10.453700Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:41:51.653987Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main-debug.jsx")}
+2025-10-14T03:41:51.654061Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:41:52.954189Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main-debug.jsx")}
+2025-10-14T03:41:52.954224Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:42:26.756177Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:42:26.756194Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:42:32.753841Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760413352693-12a2cce0b30988.mjs")}
+2025-10-14T03:42:32.753859Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:43:16.653689Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:43:16.653789Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:43:19.453804Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:43:19.453825Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:43:19.553827Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:43:19.553843Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:57:44.615925Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:57:44.626772Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:57:51.793626Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760414271718-48fe606f4bdd9.mjs")}
+2025-10-14T03:57:51.793640Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:58:33.932064Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:58:33.932083Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:58:33.993806Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/main.jsx")}
+2025-10-14T03:58:33.993816Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:59:33.292392Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T03:59:33.292431Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T03:59:37.791773Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760414377752-23fe5e5cb49c.mjs")}
+2025-10-14T03:59:37.791788Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:00:15.791496Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T04:00:15.791510Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:05:53.688300Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T04:05:53.688386Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:05:58.887281Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T04:05:58.887300Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:06:06.287130Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760414766192-9b8bc1e8730e88.mjs")}
+2025-10-14T04:06:06.287153Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:06:35.687103Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/Son1kMusicGenerator.tsx")}
+2025-10-14T04:06:35.687118Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:00.286207Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:08:00.286221Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:08.485685Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:08:08.485711Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:13.885326Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:08:13.885339Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:19.085502Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:08:19.085569Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:24.685287Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:08:24.685303Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:29.785210Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:08:29.785224Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:37.487403Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:08:37.487417Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:44.285294Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:08:44.285308Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:08:55.386331Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:08:55.386348Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:01.384711Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:09:01.384726Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:07.284156Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:09:07.284172Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:15.284684Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:09:15.284699Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:23.884893Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:09:23.884909Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:31.384359Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:09:31.384374Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:48.484138Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:09:48.484160Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:56.183476Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts")}
+2025-10-14T04:09:56.183492Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:09:56.284204Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts")}
+2025-10-14T04:09:56.284219Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:10:05.184997Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts")}
+2025-10-14T04:10:05.185012Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:10:12.883967Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/son1kService.ts")}
+2025-10-14T04:10:12.883984Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:10:22.383916Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/api.ts")}
+2025-10-14T04:10:22.383931Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:10:22.483840Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/api.ts")}
+2025-10-14T04:10:22.483855Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:10:26.383607Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760415026357-e989b4364057.mjs")}
+2025-10-14T04:10:26.383621Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:10:26.483653Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760415026357-e989b4364057.mjs")}
+2025-10-14T04:10:26.483667Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:11:11.614850Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/api.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/son1kService.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:11:11.614879Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:11:59.189513Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:11:59.189574Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:05.388856Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:12:05.388868Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:14.289061Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:12:14.289078Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:22.688350Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:12:22.688365Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:29.788175Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:12:29.788190Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:35.187654Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:12:35.187668Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:40.987549Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:12:40.987564Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:41.089062Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:12:41.089076Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:47.487981Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:12:47.487995Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:53.687878Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:12:53.687894Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:12:58.987935Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:12:58.987952Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:13:08.187430Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:13:08.187447Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:13:14.786977Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:13:14.787409Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:13:21.086863Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts")}
+2025-10-14T04:13:21.086877Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:13:26.686654Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/son1kService.ts")}
+2025-10-14T04:13:26.686668Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:13:38.396119Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/token-get-tiered.ts")}
+2025-10-14T04:13:38.396134Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:13:38.786434Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/token-get-tiered.ts")}
+2025-10-14T04:13:38.786449Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:13:48.391166Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/token-refresh-tiered.ts")}
+2025-10-14T04:13:48.391189Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:13:48.787264Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/token-refresh-tiered.ts")}
+2025-10-14T04:13:48.787277Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:13:59.385323Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/suno-generate-and-wait.ts")}
+2025-10-14T04:13:59.385337Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:13:59.787955Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/suno-generate-and-wait.ts")}
+2025-10-14T04:13:59.787968Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:41:15.037983Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760416875019-d25459e3c6f4a.mjs")}
+2025-10-14T04:41:15.038079Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T04:41:17.238171Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760416875019-d25459e3c6f4a.mjs")}
+2025-10-14T04:41:17.238188Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T04:43:26.912545Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417006885-e134cafe728428.mjs")}
+2025-10-14T04:43:26.912633Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:43:27.012158Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417006885-e134cafe728428.mjs")}
+2025-10-14T04:43:27.012174Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:44:09.010608Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417048976-0dd1af9faf8a18.mjs")}
+2025-10-14T04:44:09.010622Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:44:09.110399Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417048976-0dd1af9faf8a18.mjs")}
+2025-10-14T04:44:09.110413Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:48:22.205966Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:48:22.206034Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:48:26.305712Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417306226-df1bc4c25c42b8.mjs")}
+2025-10-14T04:48:26.305726Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:48:29.305403Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:48:29.305422Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:48:47.005465Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/.env.production")}
+2025-10-14T04:48:47.005482Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:48:56.505850Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:48:56.505864Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:48:58.005018Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417337891-086a8f2f2807b8.mjs")}
+2025-10-14T04:48:58.005039Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:49:00.804570Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:49:00.804593Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:50:39.504081Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:50:39.504214Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:50:39.603564Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:50:39.603580Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:50:51.602376Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:50:51.602393Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:50:58.615427Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:50:58.615442Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:04.102308Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:51:04.102321Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:04.302425Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:51:04.302504Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:12.402596Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:51:12.402611Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:20.901910Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:51:20.901927Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:29.802318Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:51:29.802332Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:35.201616Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:51:35.201630Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:41.202236Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts")}
+2025-10-14T04:51:41.202250Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:47.101981Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:51:47.101996Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:51:56.301206Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:51:56.301219Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:02.201664Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts")}
+2025-10-14T04:52:02.201678Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:08.207744Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts")}
+2025-10-14T04:52:08.207759Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:14.501414Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/son1kService.ts")}
+2025-10-14T04:52:14.501430Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:23.602831Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T04:52:23.602847Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:26.603062Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:52:26.603076Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:28.600760Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417548566-2c46ee270f0168.mjs")}
+2025-10-14T04:52:28.600777Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:52:31.001591Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:52:31.001608Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:53:13.167456Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/services/browserClientManager.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/clientMusicService.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/son1kService.ts"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/services/sharedTokenService.ts"), AnchoredSystemPathBuf("apps/web-classic/src/services/tieredTokenService.ts")}
+2025-10-14T04:53:13.167476Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:54:04.298694Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/health.ts")}
+2025-10-14T04:54:04.298707Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:54:05.199008Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/health.ts")}
+2025-10-14T04:54:05.199021Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:54:14.699257Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/token-get-tiered.ts")}
+2025-10-14T04:54:14.699271Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:54:20.699560Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/token-refresh-tiered.ts")}
+2025-10-14T04:54:20.699576Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:54:26.399169Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("netlify/functions/suno-generate-and-wait.ts")}
+2025-10-14T04:54:26.399184Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:54:48.098638Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760417688033-99fb5ddb14f498.mjs")}
+2025-10-14T04:54:48.098670Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T04:55:20.906684Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/.env.production")}
+2025-10-14T04:55:20.906698Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:55:32.197810Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/.env.production")}
+2025-10-14T04:55:32.197824Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:55:41.397671Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T04:55:41.397685Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:55:44.297663Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:55:44.297677Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:55:45.797184Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760417745763-c1c7e82bcbe16.mjs")}
+2025-10-14T04:55:45.797198Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:55:48.496920Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T04:55:48.496934Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T04:56:31.968320Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx"), AnchoredSystemPathBuf("netlify/functions/health.ts"), AnchoredSystemPathBuf("netlify/functions/token-refresh-tiered.ts"), AnchoredSystemPathBuf("netlify/functions/suno-generate-and-wait.ts"), AnchoredSystemPathBuf("netlify/functions/token-get-tiered.ts")}
+2025-10-14T04:56:31.996386Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T04:56:31.997877Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T04:56:31.997886Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:20:25.299243Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:20:25.299326Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:20:30.798410Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760419230784-2ff9112ed87ac8.mjs")}
+2025-10-14T05:20:30.798425Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:20:30.898927Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760419230784-2ff9112ed87ac8.mjs")}
+2025-10-14T05:20:30.898945Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:22:43.605192Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx")}
+2025-10-14T05:22:43.605352Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:22:43.696740Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx")}
+2025-10-14T05:22:43.696753Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:22:49.596793Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760419369539-0a505dbf48f5a.mjs")}
+2025-10-14T05:22:49.596807Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:23:50.996343Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx")}
+2025-10-14T05:23:50.996433Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:23:53.582616Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/components/PixelCharacterized.tsx")}
+2025-10-14T05:23:53.582635Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:45:03.252449Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:45:03.252542Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:45:25.949252Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:45:25.949277Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:45:26.026039Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:45:26.026053Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:45:38.928183Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:45:38.928197Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:45:44.026058Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760420744000-f57e829eae65d.mjs")}
+2025-10-14T05:45:44.026072Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:45:44.125814Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760420744000-f57e829eae65d.mjs")}
+2025-10-14T05:45:44.125830Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:48:25.725572Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:48:25.725656Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:48:26.924709Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:48:26.924723Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:48:43.624861Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:48:43.624877Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:48:44.125855Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:48:44.125870Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:49:36.224347Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:49:36.224361Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:49:37.525513Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:49:37.525528Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:49:53.424380Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760420993319-1e013cb74f42.mjs")}
+2025-10-14T05:49:53.424396Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:52:31.924410Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:52:31.924425Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T05:52:32.125386Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T05:52:32.125410Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:05:05.863266Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:05:05.868756Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:05:06.447935Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:05:06.447952Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:06:07.476163Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:06:07.476177Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:06:14.862637Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/3.cookie")}
+2025-10-14T06:06:14.862650Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T06:06:16.047912Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("packages/shared-ui/.turbo"), AnchoredSystemPathBuf(".turbo/cookies/10.cookie"), AnchoredSystemPathBuf(".turbo/cookies/9.cookie"), AnchoredSystemPathBuf(".turbo/cookies/4.cookie"), AnchoredSystemPathBuf("apps/web-classic/.turbo"), AnchoredSystemPathBuf("packages/shared-utils/.turbo"), AnchoredSystemPathBuf(".turbo/cookies/7.cookie"), AnchoredSystemPathBuf("apps/ghost-studio/.turbo"), AnchoredSystemPathBuf("apps/backend/.turbo"), AnchoredSystemPathBuf(".turbo/cookies/5.cookie"), AnchoredSystemPathBuf("apps/backend-clean/.turbo"), AnchoredSystemPathBuf(".turbo/cookies/8.cookie"), AnchoredSystemPathBuf(".turbo/cookies/6.cookie")}
+2025-10-14T06:06:16.047929Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@son1kvers3/backend"), path: AnchoredSystemPathBuf("apps/backend") }, WorkspacePackage { name: Other("ghost-studio"), path: AnchoredSystemPathBuf("apps/ghost-studio") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("son1kvers3-backend"), path: AnchoredSystemPathBuf("apps/backend-clean") }, WorkspacePackage { name: Other("@son1k/shared-ui"), path: AnchoredSystemPathBuf("packages/shared-ui") }, WorkspacePackage { name: Other("@son1k/shared-utils"), path: AnchoredSystemPathBuf("packages/shared-utils") }, WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:06:24.947250Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T06:06:24.947271Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:06:26.346641Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760421986267-57c51ce87c5618.mjs")}
+2025-10-14T06:06:26.346658Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:06:28.545762Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T06:06:28.545777Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:07:15.248519Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:07:15.248535Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:17:53.659574Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:17:53.659650Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:18:06.158638Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:18:06.158653Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:18:06.258719Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:18:06.258786Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:18:30.558376Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:18:30.558400Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:18:49.857875Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:18:49.857890Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:18:57.158078Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:18:57.158092Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:19:17.457217Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:19:17.457231Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:19:33.158979Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:19:33.158993Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:19:44.957764Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:19:44.957782Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:19:54.258191Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:19:54.258209Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:03.057669Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:20:03.057683Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:22.757856Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:20:22.757870Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:40.057991Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:20:40.058011Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:49.167740Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:20:49.167766Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:51.057579Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T06:20:51.057595Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:53.258414Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760422853183-cc20f3c321e06.mjs")}
+2025-10-14T06:20:53.258436Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:20:55.766392Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T06:20:55.766423Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:21:28.957823Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:21:28.957838Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:21:37.658539Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:21:37.658558Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:25:19.658708Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:25:19.658771Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:25:36.758432Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:25:36.758450Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:26:01.259141Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T06:26:01.259156Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:26:09.658188Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:26:09.658214Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:26:19.876936Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:26:19.876952Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:26:28.758278Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:26:28.758294Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:26:42.171905Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:26:42.171922Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:27:12.467228Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:27:12.467244Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:27:44.071146Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:27:44.071161Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:27:58.861346Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:27:58.861365Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:28:26.958967Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T06:28:26.958984Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:28:29.458908Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760423309373-58cccb77602888.mjs")}
+2025-10-14T06:28:29.458922Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:28:31.965782Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T06:28:31.965797Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T06:29:20.759003Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T06:29:20.759019Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:18.650278Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T07:44:18.661313Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:32.781211Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T07:44:32.781224Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:43.183883Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T07:44:43.183901Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:43.280487Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T07:44:43.280503Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:46.680654Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T07:44:46.680672Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:51.280212Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760427891260-d22807f7c72d7.mjs")}
+2025-10-14T07:44:51.280236Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:51.381080Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760427891260-d22807f7c72d7.mjs")}
+2025-10-14T07:44:51.381107Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:44:53.982219Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T07:44:53.982234Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T07:45:32.980686Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T07:45:32.980711Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:12:32.950063Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:12:32.950140Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:12:48.051359Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:12:48.051386Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:01.182660Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:13:01.182675Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:01.350659Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:13:01.350675Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:19.650419Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:13:19.650439Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:19.750791Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:13:19.750807Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:27.350910Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:13:27.350926Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:29.950846Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760429609894-91461f502170b.mjs")}
+2025-10-14T08:13:29.950860Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:13:32.550612Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:13:32.550628Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:14:06.051967Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:14:06.051982Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:27:26.060512Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:27:26.060581Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:27:53.759839Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:27:53.759855Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:28:09.660889Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:28:09.660904Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:28:22.460815Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:28:22.460829Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:28:25.961550Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:28:25.961566Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:28:28.560712Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760430508506-b43bd25c98eff.mjs")}
+2025-10-14T08:28:28.560725Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:28:31.462617Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:28:31.462638Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:29:27.861016Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:29:27.861037Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:30:53.561948Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:30:53.561982Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:32:36.062968Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:32:36.062982Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:32:54.063723Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:32:54.063740Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:33:08.273353Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:33:08.273368Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:33:08.363274Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:33:08.363289Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:33:21.663860Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:33:21.663875Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:33:23.563821Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760430803494-6b1afac2b0a45.mjs")}
+2025-10-14T08:33:23.563836Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:33:25.975285Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:33:25.975300Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:34:17.764450Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:34:17.764468Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:36:01.765821Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:36:01.765840Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:36:04.666644Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:36:04.666665Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:36:06.964881Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760430966870-3ee9683e4d1ab.mjs")}
+2025-10-14T08:36:06.964896Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:36:09.565506Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:36:09.565521Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:37:11.165586Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:37:11.165600Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:37:11.266110Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:37:11.266125Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:38:05.467585Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:38:05.467602Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:38:19.066237Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:38:19.066252Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:38:21.067369Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:38:21.067385Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:38:22.766131Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760431102701-25bdbe1181d76.mjs")}
+2025-10-14T08:38:22.766145Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:38:25.367558Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:38:25.367576Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:39:00.667104Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:39:00.667120Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:39:00.768405Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:39:00.768425Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:39:08.268004Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:39:08.268023Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:39:55.664834Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:39:55.664852Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:40:08.664323Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:40:08.664341Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:40:35.665301Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:40:35.665320Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:40:49.764840Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:40:49.764865Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:41:14.464539Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:41:14.464554Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:41:17.171951Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:41:17.171971Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:41:19.364368Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760431279290-de360c5ef355f8.mjs")}
+2025-10-14T08:41:19.364390Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:41:22.464952Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:41:22.464967Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:42:05.364660Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:42:05.364682Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:42:07.264719Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:42:07.264734Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:03.070116Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:43:03.070134Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:03.166903Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:43:03.166919Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:13.194825Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:43:13.194848Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:38.766529Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:43:38.766546Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:40.867681Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:43:40.867699Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:42.566201Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760431422485-10525be123dfe.mjs")}
+2025-10-14T08:43:42.566343Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:43:45.265790Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:43:45.265803Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:44:18.766607Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx"), AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:44:18.766620Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:44:47.667144Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:44:47.667163Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:45:01.367308Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:45:01.367322Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:45:03.467197Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:45:03.467212Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:45:05.366898Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760431505342-8893f5b865fad8.mjs")}
+2025-10-14T08:45:05.366914Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:45:05.467750Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760431505342-8893f5b865fad8.mjs")}
+2025-10-14T08:45:05.467775Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:45:08.569248Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:45:08.569271Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:45:52.867788Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:45:52.867804Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:48:44.691514Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:48:44.691528Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:49:32.470889Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:49:32.470904Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:49:34.969357Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760431774860-20eeacaf4d6798.mjs")}
+2025-10-14T08:49:34.969371Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:49:37.170256Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:49:37.170272Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:50:40.723947Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:50:40.723962Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:50:54.370665Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:50:54.370682Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:52:22.979773Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:52:22.989189Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:52:45.971879Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:52:45.971894Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:53:02.778407Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:53:02.778423Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:53:16.484238Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:53:16.484252Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:53:20.173323Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:53:20.173338Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:53:22.571952Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760432002477-e40875839fa66.mjs")}
+2025-10-14T08:53:22.571967Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:53:25.373447Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:53:25.373463Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:53:52.373726Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:53:52.373743Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:54:15.273293Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:54:15.273309Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:54:18.274488Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:54:18.274509Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:54:18.472471Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:54:18.472486Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:56:08.174124Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:56:08.174139Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:56:22.174138Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:56:22.174151Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:56:32.174344Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:56:32.174357Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:56:41.175081Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:56:41.175100Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:56:48.975370Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:56:48.975386Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:57:00.873960Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:57:00.873975Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:57:05.474940Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:57:05.474955Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:57:08.274630Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760432228251-2d557ebc8a1a58.mjs")}
+2025-10-14T08:57:08.274643Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:57:08.374409Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760432228251-2d557ebc8a1a58.mjs")}
+2025-10-14T08:57:08.374423Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:57:10.874556Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:57:10.874576Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:57:48.875415Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:57:48.875429Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:59:06.981247Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T08:59:06.981308Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:59:23.275362Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:59:23.275382Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:59:39.077578Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:59:39.077594Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:59:49.976502Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T08:59:49.976517Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T08:59:59.076740Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T08:59:59.076760Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:00:01.676393Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760432401595-12ec1aba189ed.mjs")}
+2025-10-14T09:00:01.676407Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:00:04.076277Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T09:00:04.076292Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:00:38.776210Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:00:38.776234Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:02:57.378090Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:02:57.378115Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:03:08.778397Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:03:08.778412Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:03:23.579457Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:03:23.579472Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:03:35.479623Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:03:35.479638Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:03:46.579520Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:03:46.579539Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:04:13.379216Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:04:13.379243Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:05:39.410859Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:05:39.410872Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:06:04.779804Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T09:06:04.779818Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:06:04.880567Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.css")}
+2025-10-14T09:06:04.880583Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:06:08.881208Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T09:06:08.881223Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:06:11.579822Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760432771487-4219a59fba6788.mjs")}
+2025-10-14T09:06:11.579837Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:06:14.880237Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T09:06:14.880255Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:06:20.180726Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:06:20.180742Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:09:57.014510Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:09:57.015043Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:09:57.088494Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:09:57.088522Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:10:02.194393Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T09:10:02.194410Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:10:05.383328Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/vite.config.js.timestamp-1760433005270-8cf097657780d8.mjs")}
+2025-10-14T09:10:05.383343Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:10:09.482865Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/dist")}
+2025-10-14T09:10:09.482882Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:11:04.289961Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:11:04.290221Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:11:04.983033Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:11:04.983047Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:13:33.285083Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:13:33.285413Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:13:34.686192Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:13:34.686372Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:13:51.226796Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:13:51.226864Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:13:56.762795Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:13:56.762827Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:13:57.385126Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:13:57.385153Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:14:55.585312Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:14:55.585327Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:14:56.085484Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:14:56.085501Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:14:56.186700Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:14:56.186723Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:12.185659Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:15:12.185674Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:15.086226Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:15:15.086240Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:25.386720Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:15:25.386734Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:27.185864Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:15:27.185890Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:15:27.385505Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:15:27.385524Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:28.385147Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:15:28.385167Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:44.585754Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:15:44.585767Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:44.686648Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:15:44.686662Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:47.186349Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:15:47.186365Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:15:47.287965Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:15:47.287988Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:15:47.986447Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:15:47.986462Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:03.085775Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:03.085787Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:04.486694Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:16:04.486708Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:16:04.687564Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:16:04.687579Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:05.386509Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:16:05.386539Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }, WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:09.587253Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:09.587268Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:18.387425Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:18.387437Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:28.586109Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:28.586125Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:28.686739Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:28.686754Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:30.987411Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:16:30.987426Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:16:31.085923Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:16:31.085936Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:32.086719Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg"), AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:16:32.086734Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }, WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:16:51.087089Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:51.087103Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:51.188208Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("es.svg")}
+2025-10-14T09:16:51.188223Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:52.886576Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:16:52.886591Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:16:52.986880Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:16:52.986895Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2025-10-14T09:16:53.593220Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/web-classic/src/App.jsx")}
+2025-10-14T09:16:53.593240Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("web-classic"), path: AnchoredSystemPathBuf("apps/web-classic") }}))
+2025-10-14T09:16:53.686354Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("ALVAE.svg")}
+2025-10-14T09:16:53.686370Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))

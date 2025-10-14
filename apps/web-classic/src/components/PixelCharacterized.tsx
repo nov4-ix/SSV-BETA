@@ -204,7 +204,7 @@ export function Pixel({
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // 🎭 OBTENER CARACTERIZACIÓN ACTUAL
-  const characterization = PIXEL_CHARACTERIZATIONS[tool];
+  const characterization = PIXEL_CHARACTERIZATIONS[tool] || PIXEL_CHARACTERIZATIONS['frontend'];
 
   // 🧠 INICIALIZAR SISTEMA DE APRENDIZAJE
   useEffect(() => {
