@@ -1029,3 +1029,5 @@
 2025-10-14T09:34:51.397607Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
 2025-10-14T09:40:14.101871Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/vite.config.js.timestamp-1760434814002-eaa83f345f639.mjs")}
 2025-10-14T09:40:14.101999Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
+2025-10-14T10:07:12.640368Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/the-generator/src/components/ui/Knob.tsx")}
+2025-10-14T10:07:12.640453Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("the-generator"), path: AnchoredSystemPathBuf("apps/the-generator") }}))
