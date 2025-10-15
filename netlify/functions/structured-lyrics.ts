@@ -18,13 +18,15 @@ interface LyricsGenerationRequest {
     characterDevelopment: number; // 0-100
     thematicConsistency: number; // 0-100
   };
-  structure: {
+  voiceGender?: string;
+  isInstrumental?: boolean;
+  structure?: {
     type: 'verse-chorus' | 'verse-prechorus-chorus' | 'verse-chorus-bridge' | 'intro-verse-chorus-bridge' | 'custom';
     customStructure?: string;
   };
-  style: string;
-  genre: string;
-  mood: string;
+  style?: string;
+  genre?: string;
+  mood?: string;
   userId?: string;
 }
 
@@ -59,10 +61,27 @@ interface LyricsGenerationResponse {
 
 // 📝 FUNCIÓN PRINCIPAL
 export const handler: Handler = async (event) => {
+  // CORS Headers
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-id',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Content-Type': 'application/json'
+  };
+
+  // Handle preflight requests
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: corsHeaders,
+      body: ''
+    };
+  }
+
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
-      headers: { 'Content-Type': 'application/json' },
+      headers: corsHeaders,
       body: JSON.stringify({ error: 'Method not allowed' })
     };
   }
@@ -88,7 +107,7 @@ export const handler: Handler = async (event) => {
 
     return {
       statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: corsHeaders,
       body: JSON.stringify(lyricsResponse)
     };
 
@@ -96,7 +115,7 @@ export const handler: Handler = async (event) => {
     console.error('Error generating structured lyrics:', error);
     return {
       statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers: corsHeaders,
       body: JSON.stringify({ 
         error: 'Internal server error',
         details: error instanceof Error ? error.message : 'Unknown error'
@@ -113,7 +132,13 @@ async function generateStructuredLyrics(request: LyricsGenerationRequest): Promi
     throw new Error('QWEN_API_KEY not configured');
   }
 
-  const { prompt, literaryKnobs, structure, style, genre, mood } = request;
+  const { prompt, literaryKnobs, voiceGender, isInstrumental } = request;
+  
+  // Valores por defecto
+  const structure = request.structure || { type: 'verse-chorus' };
+  const style = request.style || 'pop';
+  const genre = request.genre || 'contemporary';
+  const mood = request.mood || 'uplifting';
 
   // 📝 PROMPT PARA LETRAS ESTRUCTURADAS
   const lyricsPrompt = `Eres un compositor experto y poeta con conocimientos profundos en estructura musical, teoría literaria y composición de canciones.
@@ -223,7 +248,10 @@ function parseLyricsResponse(lyricsText: string, request: LyricsGenerationReques
 
 // 📝 LETRAS SIMULADAS (FALLBACK)
 function generateFallbackLyrics(request: LyricsGenerationRequest): LyricsGenerationResponse {
-  const { prompt, literaryKnobs, structure } = request;
+  const { prompt, literaryKnobs } = request;
+  
+  // Valores por defecto
+  const structure = request.structure || { type: 'verse-chorus' };
 
   // 🎵 GENERAR ESTRUCTURA SÓLIDA
   const solidStructure = generateSolidStructure(structure.type);
@@ -252,7 +280,7 @@ function generateFallbackLyrics(request: LyricsGenerationRequest): LyricsGenerat
 }
 
 // 🎵 GENERAR ESTRUCTURA SÓLIDA
-function generateSolidStructure(type: string) {
+function generateSolidStructure(type?: string) {
   const structures = {
     'verse-chorus': {
       sections: [
@@ -296,7 +324,7 @@ function generateSolidStructure(type: string) {
     }
   };
 
-  return structures[type] || structures['verse-chorus'];
+  return structures[type || 'verse-chorus'] || structures['verse-chorus'];
 }
 
 // 📝 GENERAR LETRAS BASADAS EN PERILLAS
@@ -448,11 +476,11 @@ async function saveLyricsToSupabase(userId: string, lyricsResponse: LyricsGenera
         user_id: userId,
         prompt: request.prompt,
         literary_knobs: request.literaryKnobs,
-        structure_type: request.structure.type,
+        structure_type: request.structure?.type || 'verse-chorus',
         lyrics_data: lyricsResponse,
-        style: request.style,
-        genre: request.genre,
-        mood: request.mood,
+        style: request.style || 'pop',
+        genre: request.genre || 'contemporary',
+        mood: request.mood || 'uplifting',
         created_at: new Date().toISOString()
       })
     });

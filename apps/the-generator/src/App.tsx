@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './store/authStore';
-import { MusicGenerator } from './MusicGenerator';
+import TheGeneratorClean from './pages/TheGeneratorClean';
 import { Button } from './components/ui/Button';
 
 // ────────────────────────────────────────────────────────────────────────────────
@@ -40,7 +40,9 @@ const Login: React.FC = () => {
       <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 w-full max-w-md border border-gray-700">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="text-4xl mb-4">🎵</div>
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span className="text-2xl font-bold text-white">S</span>
+          </div>
           <h1 className="text-3xl font-bold text-white mb-2">The Generator</h1>
           <p className="text-gray-400">
             {isLogin ? 'Inicia sesión para generar música' : 'Crea tu cuenta'}
@@ -182,7 +184,7 @@ export default function App() {
           <Route 
             path="/" 
             element={
-              isAuthenticated ? <MusicGenerator /> : <Navigate to="/login" replace />
+              isAuthenticated ? <TheGeneratorClean /> : <Navigate to="/login" replace />
             } 
           />
           
