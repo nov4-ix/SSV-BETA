@@ -16,9 +16,10 @@ export default async function handler(req, res) {
 
   return res.status(200).json({
     success: true,
-    message: 'API funcionando correctamente',
+    message: 'API funcionando correctamente - DEPLOY LIMPIO',
     timestamp: new Date().toISOString(),
     method: req.method,
-    version: '2.0.0'
+    version: '3.0.0 - CLEAN DEPLOY',
+    sunoIntegration: 'REAL API - NO MOCK'
   });
 }
